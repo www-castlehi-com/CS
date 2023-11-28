@@ -1,8 +1,8 @@
 {
   "commitMessage": "{{hostname}}'s brain ({{date}})",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 1,
-  "autoPushInterval": 5,
+  "autoSaveInterval": 1440,
+  "autoPushInterval": 1440,
   "autoPullInterval": 1,
   "autoPullOnBoot": true,
   "disablePush": false,
