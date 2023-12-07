@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1422391702b526d6",
+            "id": "2b2078d9d1e445c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "IT Keyword/마이데이터.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1422391702b526d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IT Keyword/클라우드.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -147,9 +160,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1422391702b526d6",
+  "active": "2b2078d9d1e445c3",
   "lastOpenFiles": [
+    "IT Keyword/클라우드.md",
     "IT Keyword/마이데이터.md",
+    "IT Keyword/빅데이터.md",
     "IT Keyword",
     "무제 파일.canvas",
     "2023-11-28.md",
