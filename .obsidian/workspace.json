@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e8c70d0fb71e2c7b",
+            "id": "6db3216901609157",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IT Keyword/Web 3.0.md",
+                "file": "IT Keyword/빅데이터.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IT Keyword/Web 3.0.md",
+                "file": "IT Keyword/빅데이터.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IT Keyword/Web 3.0.md",
+                "file": "IT Keyword/빅데이터.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IT Keyword/Web 3.0.md"
+                "file": "IT Keyword/빅데이터.md"
               }
             }
           }
@@ -147,21 +147,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e8c70d0fb71e2c7b",
+  "active": "6db3216901609157",
   "lastOpenFiles": [
     "IT Keyword/블록체인.md",
-    "IT Keyword/Web 3.0.md",
-    "IT Keyword/AI.md",
-    "IT Keyword/마이데이터.md",
     "IT Keyword/클라우드.md",
-    "무제 파일.canvas",
+    "IT Keyword/디지털 트윈.md",
+    "IT Keyword/DAO.md",
+    "IT Keyword/생성형 AI.md",
     "IT Keyword/IoT.md",
-    "IT Keyword/빅데이터.md",
+    "IT Keyword/핀테크.md",
+    "image/무제 파일.canvas",
+    "image",
+    "IT Keyword/NFT.md",
+    "IT Keyword/AI.md",
+    "CS for Java Spring Developer.md",
     "IT Keyword/스마트팜.md",
+    "IT Keyword/빅데이터.md",
+    "IT Keyword/마이데이터.md",
+    "IT Keyword/Web 3.0.md",
     "인공지능.md",
     "IT Keyword",
     "2023-11-28.md",
-    "CS for Java Spring Developer.md",
     "Computer Architecture.md",
     "Spring",
     "Java",
