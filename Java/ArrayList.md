@@ -1,5 +1,6 @@
 # ArrayList란?
 - [[List]] 인터페이스의 가변 배열
+- `RandomAccess` 자료구조이기 때문에 인덱스를 알고 있다면 O(1) 시간에 접근 가능
 - [[Vector]]와 유사하지만 동기화되어있지 않음
 - `size`, `isEmpty`, `get`, `set`, `iterator`, `listIterator` 연산은 상수 시간 내에 실행 
 	-> `add`의 경우 o(1)이지만 용량을 늘려줘야할 수 있기 때문에 분할 상환 상수 시간이라고 함 (Amortized)
@@ -136,3 +137,235 @@ private Object[] grow(int minCapacity) {
     }  
 }
 ```
+
+1️⃣ 비어있지 않거나
+2️⃣ EMPTY_ELEMENTDATA일 경우
+- **minCapacity - oldCapacity** : 최소한으로 필요한 추가 용량
+- **oldCapacity >> 1** : 선호되는 증가량, 현재 크기의 절반만큼 증가
+
+### Create
+#### 맨 뒤에 원소 삽입
+```java
+@Override  
+public boolean add(T e) {  
+    if (size == elementData.length)  
+        elementData = grow(size + 1);  
+    elementData[size] = e;  
+    size++;  
+    return true;
+}  
+```
+
+1️⃣ elementData가 가득 찼을 경우
+- `grow()`를 이용하여 elementData의 크기를 증가시킴
+
+2️⃣ 배열의 맨 뒤에 원소 삽입
+- size 인덱스에 원소를 삽입하고 size를 1 증가시킴
+
+#### 특정 idx에 원소 삽입
+```java
+@Override  
+public void add(int index, T element) {  
+    if (index >= size || index < 0)
+        throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);  
+    if (size == elementData.length)  
+        elementData = grow(size + 1);  
+    System.arraycopy(elementData, index, elementData, index + 1, size - index);  
+    elementData[index] = element;  
+    size++;  
+}
+```
+
+1️⃣ 특정 index가 범위 밖일 경우
+- `IndexOutOfBoundsException`을 던짐
+
+2️⃣ elementData가 가득 찼을 경우
+- `grow()`를 이용하여 elementData의 크기를 증가시킴
+
+3️⃣ index 인덱스를 기준으로 원소를 뒤로 미룸
+- `System.arraycopy`를 이용할 경우 JVM이 아닌 운영 체제의 기능을 사용하고 직접적으로 메모리에 접근하여 블록을 복사하므로 반복문보다 시간 성능이 좋음
+```java
+for (int i = size; i > index; i--) {
+	elementData[i] = elementData[i - 1];
+}
+```
+
+4️⃣ 특정 index에 원소 삽입
+- index에 원소를 삽입하고 size를 1 증가시킴
+
+### Read
+```java
+@Override  
+public T get(int index) {  
+    if (index >= size || index < 0)  
+        throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);  
+    return (T) elementData[index];  
+}
+```
+
+1️⃣ 특정 index가 범위 밖일 경우
+- `IndexOutOfBoundsException`을 던짐
+
+2️⃣ 형변환한 index에 존재하는 원소를 반환
+
+### Update
+```java
+@Override  
+public T set(int index, T element) {  
+    if (index >= size || index < 0)  
+        throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);  
+    T oldValue = (T) elementData[index];  
+    elementData[index] = element;  
+    return oldValue;  
+}
+```
+
+1️⃣ 특정 index가 범위 밖일 경우
+- `IndexOutOfBoundsException`을 던짐
+
+2️⃣ index 원소 저장
+- `oldValue`에 index에 원래 있던 원소를 저장 후 함수 종료 시 반환
+
+3️⃣ index에 새로운 원소 저장
+
+### Delete
+#### 특정 index의 원소 삭제
+```java
+@Override  
+public T remove(int index) {  
+    if (index >= size || index < 0)  
+        throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);  
+    T oldValue = (T) elementData[index];  
+    if (size - 1 > index)   
+System.arraycopy(elementData, index + 1, elementData, index, size - 1 - index);  
+    elementData[size--] = null;  
+    return oldValue;  
+}
+```
+
+1️⃣ 특정 index가 범위 밖일 경우
+- `IndexOutOfBoundsException`을 던짐
+
+2️⃣ index 원소 저장
+- `oldValue`에 index에 원래 있던 원소를 저장 후 함수 종료 시 반환
+
+3️⃣ 맨 끝 원소가 삭제된 것이 아닐 경우
+- `System.arraycopy`를 이용하여 index + 1 ~ 끝 원소를 앞으로 하나씩 당김
+
+4️⃣ 맨 끝 원소를 null로 변경
+
+#### 특정 원소 삭제
+```java
+@Override  
+public boolean remove(Object o) {  
+    int i = 0;  
+    found : {  
+        if (o == null) {  
+            for (; i < size; i++) {  
+                if (elementData[i] == null) break found;  
+            }  
+        }  
+        else {  
+            for (; i < size; i++) {  
+                if (o.equals(elementData[i])) break found;  
+            }  
+        }  
+        return false;  
+    }  
+    if (size - 1 > i)  
+        System.arraycopy(elementData, i + 1, elementData, i, size - 1 - i);  
+    elementData[size--] = null;  
+    return true;
+}
+```
+
+1️⃣ 삭제하려는 원소 o가 `null`일 경우
+- `==` 연산자를 이용하여 맨 앞에 나오는 null을 찾음
+
+2️⃣ 삭제하려는 원소 o가 `null`이 아닐 경우
+- `equals` 메소드를 이용하여 o와 같은 내용을 가진 원소 중 가장 앞의 원소를 찾음
+
+>**`null` 비교와 `Non-null` 비교**
+> - `==` 연산자
+> 	- null 비교 시 사용
+> 	- 메모리의 주소를 비교
+> 	- 객체 간의 비교 시 추천되지 않는 방식
+> - `equals` 메소드
+> 	- null 비교 시 `NullPointerException` 
+> 	- 메모리의 주소를 비교
+> 	- `@Override` 시 내용을 비교할 수 있음 (보통 `hashCode`와 함께 재정의)
+> 	- 객체 간의 비교 시 추천되는 방식
+
+### indexOf / lastIndexOf
+```java
+@Override  
+public int indexOf(Object o) {  
+    if (o == null) {  
+        for (int i = 0; i < size; i++) {  
+            if (elementData[i] == null) return i;  
+        }  
+    }  
+    else {  
+        for (int i = 0; i < size; i++) {  
+            if (o.equals(elementData[i])) return i;  
+        }  
+    }  
+    return -1;  
+}  
+  
+@Override  
+public int lastIndexOf(Object o) {  
+    if (o == null) {  
+        for (int i = size - 1; i >= 0; i--) {  
+            if (elementData[i] == null) return i;  
+        }  
+    }  
+    else {  
+        for (int i = size - 1; i >= 0; i--) {  
+            if (o.equals(elementData[i])) return i;  
+        }  
+    }  
+    return -1;  
+}
+```
+
+위의 `null`과 `Non-null` 비교의 원리가 `indexOf` / `lastIndexOf`에도 쓰인다
+위의 함수들을 `remove` 함수에도 사용할 수 있다
+
+### 기타 구현
+#### size
+```java
+@Override  
+public int size() {  
+    return size;  
+}
+```
+
+#### isEmpty
+```java
+@Override  
+public boolean isEmpty() {  
+    return size == 0;  
+}
+```
+
+### contains
+```java
+@Override  
+public boolean contains(Object o) {  
+    return indexOf(o) >= 0;  
+}
+```
+
+### clear
+```java
+@Override  
+public void clear() {  
+    for (int to = size, i = size = 0; i < to; i++) {  
+        elementData[i] = null;  
+    }  
+}
+```
+
+- elementData는 새로운 배열로 대체되는 것이 아니고, length (할당된 공간)도 그대로 유지
+- 모든 size내의 값들이 null로 설정됨
