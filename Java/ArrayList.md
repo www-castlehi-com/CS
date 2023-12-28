@@ -7,7 +7,7 @@
 - 연속된 자료구조이기 때문에 빈 공간을 허용하지 않음
 - Wrapper 클래스이기 때문에 적은 양의 데이터가 있는 경우 [[Array]]보다 차지하는 메모리가 커짐
 - [[LinkedList]]에 비해 약간 빠름
-- 동기화되지 않기 때문에 스레드 환경에서 사용할 경우 다음과 같이 선언해야 함
+- 동기화되지 않기 때문에 스레드 환경에서 사용할 경우 다음과 같이 선언해야 함 -> 스레드 안전하지 않음
 	```java
 	List list = Collections.synchronizedList(new ArrayList(...));
 	```
@@ -21,9 +21,9 @@
 | `indexOf(Object o)`, `lastIndexOf(Object o)`, `contains(Object o)` |      O(n)      |
 |                              `size()`                              |      O(1)      |
 |                            `isEmpty()`                             |      O(1)      |
-|                       `clear()`, `toArray()`                       |      O(n)      |
+|                       `clear()`                      |      O(n)      |
 
-> **조회**는 빠르지만, **삽입/삭제**는 느림'
+> **조회**는 빠르지만, **삽입/삭제**는 느림
 
 # 구현
 ## List 인터페이스

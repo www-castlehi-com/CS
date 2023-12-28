@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "02b890b2e6ede97e",
+            "id": "240e5faa51380761",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Java/ArrayList.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "02b890b2e6ede97e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/LinkedList.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -157,8 +168,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "02b890b2e6ede97e",
+  "active": "240e5faa51380761",
   "lastOpenFiles": [
+    "Java/LinkedList.md",
     "Java/ArrayList.md",
     "프로젝트 기술서/IRC 프로젝트.md",
     "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
@@ -191,7 +203,6 @@
     "IT Keyword/핀테크.md",
     "IT Keyword/클라우드.md",
     "IT Keyword/디지털 트윈.md",
-    "IT Keyword/AI.md",
     "image",
     "IT Keyword",
     "Spring",
