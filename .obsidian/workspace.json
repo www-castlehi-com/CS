@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/ArrayList.md",
+                "file": "Java/LinkedList.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/ArrayList.md",
+                "file": "Java/LinkedList.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/ArrayList.md"
+                "file": "Java/LinkedList.md"
               }
             }
           },
@@ -168,10 +169,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "240e5faa51380761",
+  "active": "02b890b2e6ede97e",
   "lastOpenFiles": [
-    "Java/LinkedList.md",
     "Java/ArrayList.md",
+    "Java/LinkedList.md",
     "프로젝트 기술서/IRC 프로젝트.md",
     "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
     "Network/동기&비동기, 블로킹&논블로킹.md",

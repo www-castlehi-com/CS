@@ -1,3 +1,4 @@
+[오라클 docs : ArrayList](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html)
 # ArrayList란?
 - [[List]] 인터페이스의 가변 배열
 - `RandomAccess` 자료구조이기 때문에 인덱스를 알고 있다면 O(1) 시간에 접근 가능
@@ -194,6 +195,7 @@ for (int i = size; i > index; i--) {
 - index에 원소를 삽입하고 size를 1 증가시킴
 
 ### Read
+#### get
 ```java
 @Override  
 public T get(int index) {  
@@ -207,6 +209,50 @@ public T get(int index) {
 - `IndexOutOfBoundsException`을 던짐
 
 2️⃣ 형변환한 index에 존재하는 원소를 반환
+
+#### indexOf / lastIndexOf
+```java
+@Override  
+public int indexOf(Object o) {  
+    if (o == null) {  
+        for (int i = 0; i < size; i++) {  
+            if (elementData[i] == null) return i;  
+        }  
+    }  
+    else {  
+        for (int i = 0; i < size; i++) {  
+            if (o.equals(elementData[i])) return i;  
+        }  
+    }  
+    return -1;  
+}  
+  
+@Override  
+public int lastIndexOf(Object o) {  
+    if (o == null) {  
+        for (int i = size - 1; i >= 0; i--) {  
+            if (elementData[i] == null) return i;  
+        }  
+    }  
+    else {  
+        for (int i = size - 1; i >= 0; i--) {  
+            if (o.equals(elementData[i])) return i;  
+        }  
+    }  
+    return -1;  
+}
+```
+
+>**`null` 비교와 `Non-null` 비교**
+> - `==` 연산자
+> 	- null 비교 시 사용
+> 	- 메모리의 주소를 비교
+> 	- 객체 간의 비교 시 추천되지 않는 방식
+> - `equals` 메소드
+> 	- null 비교 시 `NullPointerException` 
+> 	- 메모리의 주소를 비교
+> 	- `@Override` 시 내용을 비교할 수 있음 (보통 `hashCode`와 함께 재정의)
+> 	- 객체 간의 비교 시 추천되는 방식
 
 ### Update
 ```java
@@ -284,53 +330,6 @@ public boolean remove(Object o) {
 
 2️⃣ 삭제하려는 원소 o가 `null`이 아닐 경우
 - `equals` 메소드를 이용하여 o와 같은 내용을 가진 원소 중 가장 앞의 원소를 찾음
-
->**`null` 비교와 `Non-null` 비교**
-> - `==` 연산자
-> 	- null 비교 시 사용
-> 	- 메모리의 주소를 비교
-> 	- 객체 간의 비교 시 추천되지 않는 방식
-> - `equals` 메소드
-> 	- null 비교 시 `NullPointerException` 
-> 	- 메모리의 주소를 비교
-> 	- `@Override` 시 내용을 비교할 수 있음 (보통 `hashCode`와 함께 재정의)
-> 	- 객체 간의 비교 시 추천되는 방식
-
-### indexOf / lastIndexOf
-```java
-@Override  
-public int indexOf(Object o) {  
-    if (o == null) {  
-        for (int i = 0; i < size; i++) {  
-            if (elementData[i] == null) return i;  
-        }  
-    }  
-    else {  
-        for (int i = 0; i < size; i++) {  
-            if (o.equals(elementData[i])) return i;  
-        }  
-    }  
-    return -1;  
-}  
-  
-@Override  
-public int lastIndexOf(Object o) {  
-    if (o == null) {  
-        for (int i = size - 1; i >= 0; i--) {  
-            if (elementData[i] == null) return i;  
-        }  
-    }  
-    else {  
-        for (int i = size - 1; i >= 0; i--) {  
-            if (o.equals(elementData[i])) return i;  
-        }  
-    }  
-    return -1;  
-}
-```
-
-위의 `null`과 `Non-null` 비교의 원리가 `indexOf` / `lastIndexOf`에도 쓰인다
-위의 함수들을 `remove` 함수에도 사용할 수 있다
 
 ### 기타 구현
 #### size
