@@ -368,3 +368,190 @@ public void clear() {
 
 - elementData는 새로운 배열로 대체되는 것이 아니고, length (할당된 공간)도 그대로 유지
 - 모든 size내의 값들이 null로 설정됨
+
+# Iterable
+## Iterator 인터페이스
+```java
+public interface Iterator<E> {  
+    boolean hasNext();  
+    E next();
+    default void remove() {throw new UnsupportedOperationException("remove");}  
+}
+```
+
+## Iterator
+### 필드
+```java
+private class Itr implements Iterator<T> {  
+    int cursor;  
+    int lastRet = -1;
+
+	//...
+}
+```
+
+1️⃣ **cursor**
+- 현재 가리키고 있는 원소의 인덱스
+2️⃣ **lastRet**
+- 이전에 가리키고 있는 원소의 인덱스 -> `remove()`에 사용
+
+### 생성자
+```java
+public Itr() {  
+}
+```
+
+### hasNext
+```java
+@Override  
+public boolean hasNext() {  
+    return cursor != size;  
+}
+```
+
+### next
+```java
+@Override  
+public T next() {  
+    int i = cursor;  
+    if (i >= size) {  
+        throw new NoSuchElementException();  
+    }  
+    if (i >= elementData.length) {  
+        throw new NoSuchElementException();  
+    }  
+    cursor = i + 1;  
+    return (T) elementData[lastRet = i];  
+}
+```
+
+1️⃣ cursor가 size보다 크거나 같을 경우 : 원소의 개수보다 많을 경우
+- `NoSuchElementException`을 던짐
+2️⃣ cursor가 elementData.length보다 크거나 같을 경우 : 할당받은 메모리보다 클 경우
+- `NoSuchElementException`을 던짐
+3️⃣ cursor값 이동 후, 이전 값 반환
+- cursor값을 한 칸 큰 값으로 이동
+- 이전 값을 이전 cursor값으로 업데이트 한 후 해당 값을 반환
+
+### remove
+```java
+@Override  
+public void remove() {  
+    if (lastRet < 0) {  
+        throw new IllegalStateException();  
+    }  
+    try {  
+        ArrayList.this.remove(lastRet);  
+        cursor = lastRet;  
+        lastRet = -1;  
+    } catch (IndexOutOfBoundsException ex) {  
+        throw new ConcurrentModificationException();  
+    }  
+}
+```
+
+1️⃣ lastRet이 음수일 경우 : `next()`이후 `remove()`를 한 번만 호출한 것이 아닐 경우
+- `IllegalStateException()`을 반환
+2️⃣ 원소 삭제 후 필드 값 업데이트
+- ArrayList의 `remove(int index)`로 원소 삭제
+- 원소를 한 칸씩 앞으로 당겼기 때문에 cursor를 lastRet으로 돌리고 lastRet을 -1로 초기화함으로써 `remove()`를 다시 호출하는 경우를 방지
+- 외부 상황에 의해 Iterator 순회 도중 컬렉션이 변경되면 `ConcurrentModificationException()` 반환
+
+## ListIterator 인터페이스
+```java
+public interface ListIterator<E> extends Iterator<E> {  
+    boolean hasNext();  
+    E next();  
+	boolean hasPrevious();  
+	E previous();  
+	int nextIndex();  
+	int previousIndex();  
+    void remove();  
+    void set(E e);  
+	void add(E e);  
+}
+```
+
+## ListIterator
+### 생성자
+```java
+private class ListItr extends Itr implements ListIterator<T> {  
+    ListItr(int index) {  
+        super();  
+        cursor = index;  
+    }
+
+	//...
+}
+```
+
+1️⃣ **기본 생성자**
+- Iterator의 생성자 이용
+- 시작부분부터 순회 시작
+2️⃣ **index 기반 생성자**
+- Iterator의 기본 생성자 이용, cursor를 index로 초기화
+- index부터 순회 시작
+
+### 순회 메소드
+```java
+@Override  
+public boolean hasPrevious() {  
+    return cursor != 0;  
+}  
+  
+@Override  
+public T previous() {  
+    int i = cursor - 1;  
+    if (i < 0) {  
+        throw new NoSuchElementException();  
+    }  
+    if (i >= elementData.length) {  
+        throw new ConcurrentModificationException();  
+    }  
+  
+    cursor = i;  
+    return (T) elementData[lastRet = i];  
+}
+
+@Override  
+public int previousIndex() {  
+    return cursor - 1;  
+}
+
+@Override  
+public int nextIndex() {  
+    return cursor;  
+}
+```
+
+Iterator의 메소드 또한 ListIterator에서 사용이 가능함
+
+### CRUD 메소드
+```java
+@Override  
+public void set(T t) {  
+    if (lastRet < 0) {  
+        throw new IllegalStateException();  
+    }  
+  
+    try {  
+        ArrayList.this.set(lastRet, t);  
+    } catch (IndexOutOfBoundsException ex) {  
+        throw new ConcurrentModificationException();  
+    }  
+}  
+  
+@Override  
+public void add(T t) {  
+    try {  
+        int i = cursor;  
+        ArrayList.this.add(i, t);  
+        cursor = i + 1;  
+        lastRet = -1;  
+    } catch (IndexOutOfBoundsException ex) {  
+        throw new ConcurrentModificationException();  
+    }  
+}
+```
+
+Iterator의 `remove()` 또한 사용 가능

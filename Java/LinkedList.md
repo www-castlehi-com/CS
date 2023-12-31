@@ -501,3 +501,10 @@ public void clear() {
 - 모든 노드를 순회하며 item, next, prev필드를 null로 메모리 초기화
 - first와 last 변수도 null로 초기화
 - size 0으로 초기화
+
+# Iterable
+## Iterator
+## ListIterator
+## DescendingIterator
+- ListIterator 구현
+- `private final ListItr itr = new ListItr(size());`로 초기화

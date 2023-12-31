@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/LinkedList.md",
+                "file": "Java/List.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/LinkedList.md",
+                "file": "Java/List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/LinkedList.md",
+                "file": "Java/List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/LinkedList.md"
+                "file": "Java/List.md"
               }
             }
           },
@@ -171,8 +172,9 @@
   },
   "active": "02b890b2e6ede97e",
   "lastOpenFiles": [
-    "Java/ArrayList.md",
     "Java/LinkedList.md",
+    "Java/List.md",
+    "Java/ArrayList.md",
     "프로젝트 기술서/IRC 프로젝트.md",
     "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
     "Network/동기&비동기, 블로킹&논블로킹.md",
@@ -203,7 +205,6 @@
     "프로젝트 기술서",
     "IT Keyword/핀테크.md",
     "IT Keyword/클라우드.md",
-    "IT Keyword/디지털 트윈.md",
     "image",
     "IT Keyword",
     "Spring",
