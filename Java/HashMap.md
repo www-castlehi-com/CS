@@ -145,15 +145,76 @@ static class Node<K, V> implements Map.Entry<K,V> {
 }
 ```
 
-- 기본 데이터 구조, HashTable의 항목
-    - **hash** : 키의 해시코드
-    - **key** : 키
-    - **value** : 값
-    - **next** : 같은 버킷에 있는 다음 노드를 가리키는 포인터
+1️⃣ 기본 데이터 구조, HashTable의 항목
+2️⃣ 변수
+- **hash** : 키의 해시코드
+- **key** : 키
+- **value** : 값
+- **next** : 같은 버킷에 있는 다음 노드를 가리키는 포인터
+3️⃣ hashcode
+- `Objects.hashCode()`로 각각의 변수에 대한 hashcode 반환 -> JVM 구현에 따라 달라짐
+- XOR연산을 통해 해시 코드를 결합 -> Map.Entry에 대한 고유한 해시 코드 생성, 균일한 분포
+	``` java
+	Integer a = 3;  
+	Integer b = 3;  
+	  
+	System.out.println(a.hashCode() == b.hashCode()); // true  
+	  
+	Integer c = 3;  
+	Integer d = 4;  
+	  
+	System.out.println(c.hashCode() == d.hashCode()); // false  
+	  
+	String e = "kim";  
+	String f = "kim";  
+	  
+	System.out.println(e.hashCode() == f.hashCode()); // true  
+	  
+	String g = "kim";  
+	String h = "kin";  
+	  
+	System.out.println(g.hashCode() == h.hashCode()); // false  
+	  
+	Person p1 = new Person("kim");  
+	Person p2 = p1;  
+	  
+	System.out.println(p1.hashCode() == p2.hashCode()); // true  
+	  
+	Person p3 = new Person("kim");  
+	Person p4 = new Person("kim");  
+	  
+	System.out.println(p3.hashCode() == p4.hashCode()); // false  
+	  
+	Person p5 = new Person("kim");  
+	Person p6 = new Person("kin");  
+	  
+	System.out.println(p5.hashCode() == p6.hashCode()); // false  
+	  
+	Person p7 = new Person("kim", 2);  
+	Person p8 = new Person("kim", 3);  
+	  
+	System.out.println(p7.hashCode() == p8.hashCode()); // false  
+	  
+	Person p9 = new Person("kim", 2);  
+	Person p10 = p9;  
+	  
+	System.out.println(p9.hashCode() == p10.hashCode()); // true  
+	  
+	p10 = new Person("kin", 2);  
+	  
+	System.out.println(p9.hashCode() == p10.hashCode()); // false
+	```
+
+### 변수 필드
+```java
+Node<K, V>[] table;  
+Set<Map.Entry<K, V>> entrySet;  
+int size;  
+int threshold;  
+final flaot loadFactor;
+```
 
 ### 생성자
-
-
 1️⃣ **기본 생성자**
 - 기본 초기 용량 16 사용
 - 기본 부하 계수 0.75 사용
