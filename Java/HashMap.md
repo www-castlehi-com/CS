@@ -213,7 +213,24 @@ int size;
 int threshold;  
 final flaot loadFactor;
 ```
-
+1️⃣ **table**
+- HashMap의 Key-Value 저장
+- 연결리스트 또는 트리구조
+- 2의 거듭제곱
+2️⃣ **entrySet**
+- HashMap의 모든 Key-Value를 Set 형태로 제공
+- View 형태로 제공되어 HashMap을 순회하거나 특정 작업을 수행할 때 사용
+- entrySet을 통해 변경된 내용은 HashMap에도 반영
+3️⃣ **size**
+- HashMap에 저장된 Key-Value 쌍의 총 개수
+- Map의 크기
+4️⃣ **threshold**
+- HashTable의 크기를 변경해야하는 시점을 결정
+- `loadFacotr * capacity` 를 구체적인 숫자로 변환
+5️⃣ **loadFactor**
+- HashTable의 부하 계수
+- 용량 대비 Key-Value 쌍이 얼마나 차있는지를 나타냄
+- HashTable의 크기가 확장되는 시점을 결정
 ### 생성자
 1️⃣ **기본 생성자**
 - 기본 초기 용량 16 사용
