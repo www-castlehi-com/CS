@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/HashMap.md",
+                "file": "Spring/Spring Framework.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/HashMap.md",
+                "file": "Spring/Spring Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/HashMap.md",
+                "file": "Spring/Spring Framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/HashMap.md"
+                "file": "Spring/Spring Framework.md"
               }
             }
           },
@@ -159,39 +158,39 @@
   },
   "active": "02b890b2e6ede97e",
   "lastOpenFiles": [
-    "Java/LinkedList.md",
+    "Design Pattern/MVC Pattern.md",
+    "Database/MariaDB (vs RDBMS).md",
+    "Spring/Spring Framework.md",
+    "Spring/Framework.md",
+    "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
+    "Spring/Lombok.md",
+    "프로젝트 기술서/IRC 프로젝트.md",
+    "IT Keyword/클라우드.md",
+    "Network/소켓 프로그래밍.md",
+    "Spring/DTO & VO.md",
+    "Spring/Gradle (vs Maven).md",
+    "Spring/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/JPA.md",
+    "Network/Amazon EC2.md",
     "Java/HashMap.md",
+    "Java/LinkedList.md",
     "Java/List.md",
     "Java/ArrayList.md",
     "Java",
     "Java/Map.md",
-    "프로젝트 기술서/IRC 프로젝트.md",
-    "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
     "Network/동기&비동기, 블로킹&논블로킹.md",
     "Network/IO multiplexing.md",
     "I",
-    "Network/소켓 프로그래밍.md",
-    "Database/MariaDB (vs RDBMS).md",
     "image/무제 파일.canvas",
-    "Spring/JPA.md",
     "Network/Amazon RDS.md",
-    "Spring/Gradle (vs Maven).md",
-    "Spring/DTO & VO.md",
     "Spring/TDD.md",
     "Network/Nginx.md",
-    "Network/Amazon EC2.md",
-    "Spring/Lombok.md",
-    "Spring/Spring Security - BCryptPasswordEncoder.md",
     "IT Keyword/생성형 AI.md",
     "Spaces/Home/Untitled.md",
-    "Spaces/Home",
+    "Home",
     "Spaces",
-    "Jenkins.md",
     "Pasted image 20231210222009.png",
     "Pasted image 20231213022320.png",
-    "Spring/Spring Boot.md",
-    "Spring/Spring Framework.md",
-    "Spring/spring.md",
     "프로젝트 기술서",
     "image",
     "IT Keyword",

@@ -1,3 +1,6 @@
+# Framework란?
+- 소프트웨어의 구체적인 부분에 해당하는 설계와 구현을 재사용이 가능하게끔 협업화된 형태의 클래스들을 제공
+- 프로그램이 흐름을 제어 (Library의 경우 개발자가 제어)
 # Spring Framework란?
 - 자바 플랫폼을 위한 오픈소스 애플리케이션 프레임워크
 - 엔터프라이즈급 애플리케이션을 개발하기 위한 모든 기능을 종합적으로 제공하는 경량화된 솔루션
@@ -18,6 +21,7 @@
 - **Inversion of Control : 제어의 역전**
 - 일반적인 프로그래밍 : 객체 결정 및 생성 -> 의존성 객체 생성 -> 객체 내의 메소드 호출
 - Spring framework : 제어의 흐름을 컨트롤 하지 않고 위임한 특별한 객체에 모든 것을 맡김
+- 제어의 주체가 개발자가 아닌 프레임워크가 작성된 코드를 호출함
 
 1. **DI**
 	- Dependency Injection
@@ -55,3 +59,18 @@
 3. **Web**: 웹 애플리케이션 개발에 관련된 기능
     - **Web MVC**: Spring의 Model-View-Controller
     - **Web Socket**: 웹소켓 기반 통신
+# 동작 원리
+![](https://i.imgur.com/RRdoTx2.png)
+1. **Dispather Servlet**
+	- 애플리케이션으로 돌아오는 모든 Request를 받는 부분
+	- Request를 실제로 처리할 Controller에게 전달하고 그 결과를 받아서 View에 전달함
+2. **Handler Mapping**
+	- Request URL에 따라 각각 어떤 Controller가 실제로 처리할 것인지 찾아줌
+3. **Controller**
+	- Request를 직접 처리한 후 결과를 다시 Dispather Servlet에게 돌려줌
+4. **Model, View**
+	- Controller가 처리한 결과와 그 결과를 보여줄 View에 관한 정보를 담고 있음
+5. **View Resolver**
+	- View 정보를 갖고 클라이언트에게 포워딩할 실제 View 파일을 찾아줌
+
+[[MVC Pattern]]의 MVC 2 Pattern을 따름
