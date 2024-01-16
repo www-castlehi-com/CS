@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Framework.md",
+                "file": "Spring/Lombok.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Framework.md",
+                "file": "Spring/Lombok.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Framework.md",
+                "file": "Spring/Lombok.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Framework.md"
+                "file": "Spring/Lombok.md"
               }
             }
           },
@@ -158,9 +158,17 @@
   },
   "active": "02b890b2e6ede97e",
   "lastOpenFiles": [
+    "Software Engineering/MSA.md",
+    "Operating System/로드밸런싱.md",
+    "Software Engineering",
+    "Data Structure/트리.md",
+    "Computer Architecture/로드밸런싱.md",
+    "Computer Architecture/캐시 메모리.md",
+    "Java/자바 컴파일 과정.md",
+    "Computer Architecture/미들웨어.md",
+    "Spring/Spring Framework.md",
     "Design Pattern/MVC Pattern.md",
     "Database/MariaDB (vs RDBMS).md",
-    "Spring/Spring Framework.md",
     "Spring/Framework.md",
     "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
     "Spring/Lombok.md",
@@ -178,15 +186,8 @@
     "Java/ArrayList.md",
     "Java",
     "Java/Map.md",
-    "Network/동기&비동기, 블로킹&논블로킹.md",
-    "Network/IO multiplexing.md",
     "I",
     "image/무제 파일.canvas",
-    "Network/Amazon RDS.md",
-    "Spring/TDD.md",
-    "Network/Nginx.md",
-    "IT Keyword/생성형 AI.md",
-    "Spaces/Home/Untitled.md",
     "Home",
     "Spaces",
     "Pasted image 20231210222009.png",
@@ -195,7 +196,6 @@
     "image",
     "IT Keyword",
     "Spring",
-    "Design Pattern",
-    "Database"
+    "Design Pattern"
   ]
 }
