@@ -232,6 +232,37 @@ final flaot loadFactor;
 - 용량 대비 Key-Value 쌍이 얼마나 차있는지를 나타냄
 - HashTable의 크기가 확장되는 시점을 결정
 ### 생성자
+```java
+public HashMap() {  
+    this.loadFactor = DEFAULT_LOAD_FACTOR;  
+}
+
+public HashMap(int initialCapacity) {  
+    this(initialCapacity, DEFAULT_LOAD_FACTOR);  
+}
+
+public HashMap(int initialCapacity, float loadFactor) {  
+    if (initialCapacity < 0) {  
+        throw new IllegalArgumentException("Illegal initial capacity: " + initialCapacity);  
+    }  
+  
+    if (initialCapacity > MAXIMUM_CAPACITY) {  
+        initialCapacity = MAXIMUM_CAPACITY;  
+    }  
+  
+    if (loadFactor <= 0 || Float.isNaN(loadFactor)) {  
+        throw new IllegalArgumentException("Illegal load factor: " + loadFactor);  
+    }  
+  
+    this.loadFactor = loadFactor;  
+    this.threshold = tableSizeFor(initialCapacity);  
+}
+
+static final int tableSizeFor(int cap) {  
+    int n = -1 >>> Integer.numberOfLeadingZeros(cap - 1);  
+    return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;  
+}
+```
 1️⃣ **기본 생성자**
 - 기본 초기 용량 16 사용
 - 기본 부하 계수 0.75 사용
@@ -242,6 +273,5 @@ final flaot loadFactor;
 - 초기 버킷 수 지정
 - 초기 부하 계수 지정
 - `initialCapacity < 0 || loadFactor <= 0 || loadFactor == NaN` 일 경우 `IllegalArgumentException` 발생
-4️⃣ **복사 생성자**
-- 기본 부하 계수 (0.75) 사용
-- 복사할 클래스가 null일 경우 `NullPointerException` 발생
+- **tableSizeFor**
+	- cap보다 크거나 같은 2의 거듭제곱 수
