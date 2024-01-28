@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "702e91d0160891fc",
+        "id": "ad0a84d0c7b172b7",
         "type": "tabs",
         "children": [
           {
-            "id": "02b890b2e6ede97e",
+            "id": "6b207d2510da31ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/HashMap.md",
+                "file": "Operating System/시스템 콜.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "15a63a1fab91560f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/HashMap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/HashMap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Java/HashMap.md"
-              }
+              "state": {}
             }
           },
           {
@@ -156,13 +161,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "02b890b2e6ede97e",
+  "active": "15a63a1fab91560f",
   "lastOpenFiles": [
-    "Java/ArrayList.md",
-    "Java/HashMap.md",
-    "Network/IO multiplexing.md",
+    "Operating System/시스템 콜.md",
+    "Operating System/커널.md",
+    "Operating System/인터럽트.md",
+    "Operating System/운영체제.md",
     "Network/동기&비동기, 블로킹&논블로킹.md",
     "Operating System/로드밸런싱.md",
+    "Java/ArrayList.md",
+    "Array.md",
+    "Java/HashMap.md",
+    "Network/IO multiplexing.md",
     "Spring/TDD.md",
     "Spring/Spring Boot.md",
     "Spring/Spring Framework.md",
@@ -180,11 +190,6 @@
     "Java/자바 컴파일 과정.md",
     "Computer Architecture/미들웨어.md",
     "Design Pattern/MVC Pattern.md",
-    "Database/MariaDB (vs RDBMS).md",
-    "Spring/Framework.md",
-    "프로젝트 기술서/캡스톤 디자인 프로젝트.md",
-    "프로젝트 기술서/IRC 프로젝트.md",
-    "IT Keyword/클라우드.md",
     "Java",
     "I",
     "image/무제 파일.canvas",
