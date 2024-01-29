@@ -11,8 +11,12 @@
             "id": "15a63a1fab91560f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Operating System/시스템 콜.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
