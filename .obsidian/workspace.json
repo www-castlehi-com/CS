@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/IPC.md",
+                "file": "Operating System/스레드.md",
                 "mode": "source",
                 "source": false
               }
@@ -39,7 +39,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +106,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/IPC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/IPC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Operating System/IPC.md"
-              }
+              "state": {}
             }
           },
           {
@@ -176,11 +173,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "15a63a1fab91560f",
+  "active": "34d9ab44efc3fb89",
   "lastOpenFiles": [
-    "Operating System/프로세스.md",
-    "Operating System/IPC.md",
     "Operating System/인터럽트.md",
+    "Operating System/스레드.md",
+    "Operating System/IPC.md",
+    "Operating System/프로세스.md",
     "Operating System/Context Switch.md",
     "Data Structure/트리.md",
     "Operating System/시스템 콜.md",
@@ -204,7 +202,6 @@
     "Software Engineering/MSA.md",
     "Software Engineering",
     "Computer Architecture/로드밸런싱.md",
-    "Computer Architecture/캐시 메모리.md",
     "Java",
     "I",
     "image/무제 파일.canvas",
