@@ -8,26 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1a1da9adc8235e23",
+            "id": "40c8589fb87883ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/CPU Scheduling.md",
+                "file": "Operating System/데드락.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "40c8589fb87883ea",
+            "id": "67f67bc3ba91a874",
             "type": "leaf",
             "state": {
               "type": "graph",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/CPU Scheduling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/CPU Scheduling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Operating System/CPU Scheduling.md"
-              }
+              "state": {}
             }
           },
           {
@@ -164,18 +161,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1a1da9adc8235e23",
+  "active": "161950c1edd8f3f9",
   "lastOpenFiles": [
-    "Operating System/Multilevel Feedback Queue Scheduling.md",
-    "Operating System/CPU Scheduling.md",
+    "Operating System/데드락.md",
+    "Operating System/Semaphore.md",
+    "Operating System/Mutex.md",
+    "Operating System/Monitor.md",
+    "Operating System/Data race.md",
+    "Operating System/임계구역 문제.md",
+    "Computer Architecture/NUMA system.md",
+    "Computer Architecture/HMP.md",
     "Operating System/Multilevel Queue Scheduling.md",
     "Operating System/Priority Scheduling.md",
     "Operating System/RR.md",
     "Operating System/SJF.md",
     "Operating System/FCFS.md",
-    "Computer Architecture/HMP.md",
-    "Computer Architecture/NUMA system.md",
+    "Operating System/CPU Scheduling.md",
     "Operating System/프로세스.md",
+    "Operating System/Multilevel Feedback Queue Scheduling.md",
     "Operating System/운영체제.md",
     "Operating System/인터럽트.md",
     "Operating System/Context Switch.md",
@@ -186,12 +189,6 @@
     "Operating System/커널.md",
     "IT Keyword/클라우드.md",
     "Computer Architecture/미들웨어.md",
-    "Software Engineering/MSA.md",
-    "Data Structure/트리.md",
-    "Network/동기&비동기, 블로킹&논블로킹.md",
-    "Operating System/로드밸런싱.md",
-    "Java/ArrayList.md",
-    "Array.md",
     "Software Engineering",
     "Java",
     "I",

@@ -37,16 +37,6 @@
 3️⃣ : I/O 작업 완료 인터럽트가 발생할 때 운영체제가 프로세스를 `ready` 상태로 변경
 
 > 💡 운영체제가 선점을 통해 프로세스를 관리
-
-⚠ Data Race 발생 가능성 있음 ⚠️
-다른 곳에서 읽을 가능성이 있는 어떤 메모리 위치에 쓰기 작업을 하는 것
-![](https://i.imgur.com/h4rdYQl.png)
--> 600ms에 죽어야 할 철학자의 죽음을 monitoring하지 못해서 다른 프로세스는 철학자가 살아있다고 생각해서 발생
-![](https://i.imgur.com/PvgyiUB.png)
-
-시스템 콜로 컨텍스트 스위칭 도중 데이터가 변경되면 위와 같이 data race가 감지될 수 있음
--> I/O 요청을 기다리는 조건으로 mutex, semaphore 등이 필요
-
 ## Dispatcher
 ### 역할
 1. 한 프로세스에서 다른 프로세스로 Context Switch
