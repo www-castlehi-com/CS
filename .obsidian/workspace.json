@@ -8,35 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c0737035c1ac4781",
+            "id": "5c4d8e8160b2fbad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/메모리 할당.md",
+                "file": "Operating System/가상 메모리.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ccd1d7baebf65b4a",
+            "id": "c29fa472d6b8ec76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/Paging.md",
+                "file": "Computer Architecture/NUMA system.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "67f67bc3ba91a874",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ],
@@ -90,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -107,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/Paging.md",
+                "file": "Computer Architecture/NUMA system.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/Paging.md",
+                "file": "Computer Architecture/NUMA system.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Operating System/Paging.md"
+                "file": "Computer Architecture/NUMA system.md"
               }
             }
           },
@@ -178,12 +169,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ccd1d7baebf65b4a",
+  "active": "c29fa472d6b8ec76",
   "lastOpenFiles": [
+    "Operating System/가상 메모리.md",
+    "Computer Architecture/NUMA system.md",
+    "Operating System/Segmentation.md",
     "Operating System/Paging.md",
     "Operating System/메모리 할당.md",
-    "Operating System/Swapping.md",
+    "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
+    "Operating System/Swapping.md",
     "Operating System/데드락.md",
     "Spring/JPA.md",
     "Spring/Lombok.md",
@@ -201,11 +196,7 @@
     "Operating System/Monitor.md",
     "Operating System/Data race.md",
     "Operating System/임계구역 문제.md",
-    "Computer Architecture/NUMA system.md",
     "Computer Architecture/HMP.md",
-    "Operating System/Multilevel Queue Scheduling.md",
-    "Operating System/Priority Scheduling.md",
-    "Operating System/RR.md",
     "Software Engineering",
     "Java",
     "I",
