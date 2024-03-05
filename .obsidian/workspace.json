@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5c4d8e8160b2fbad",
+            "id": "c29fa472d6b8ec76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/가상 메모리.md",
+                "file": "Operating System/Segmentation.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c29fa472d6b8ec76",
+            "id": "4be913b72a35a139",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Architecture/NUMA system.md",
+                "file": "Operating System/가상 메모리.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Architecture/NUMA system.md",
+                "file": "Operating System/가상 메모리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Architecture/NUMA system.md",
+                "file": "Operating System/가상 메모리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Architecture/NUMA system.md"
+                "file": "Operating System/가상 메모리.md"
               }
             }
           },
@@ -169,13 +169,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c29fa472d6b8ec76",
+  "active": "4be913b72a35a139",
   "lastOpenFiles": [
-    "Operating System/가상 메모리.md",
-    "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation.md",
-    "Operating System/Paging.md",
+    "Operating System/가상 메모리.md",
     "Operating System/메모리 할당.md",
+    "Computer Architecture/NUMA system.md",
+    "Operating System/Paging.md",
     "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
     "Operating System/Swapping.md",
