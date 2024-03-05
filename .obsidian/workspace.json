@@ -20,30 +20,6 @@
             }
           },
           {
-            "id": "18c0e8f23a150e66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Operating System/Segmentation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6e58eeb08ac2e7dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Operating System/메모리 할당.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c29fa472d6b8ec76",
             "type": "leaf",
             "state": {
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/Segmentation.md",
+                "file": "Spring/WebClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/Segmentation.md",
+                "file": "Spring/WebClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Operating System/Segmentation.md"
+                "file": "Spring/WebClient.md"
               }
             }
           },
@@ -193,13 +169,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "18c0e8f23a150e66",
+  "active": "c29fa472d6b8ec76",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Spring/RestTemplate.md",
     "Operating System/Segmentation.md",
+    "conflict-files-obsidian-git.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
-    "Spring/RestTemplate.md",
     "Spring/WebClient.md",
     "Spring/WebFlux.md",
     "Spring/Spring Boot.md",
