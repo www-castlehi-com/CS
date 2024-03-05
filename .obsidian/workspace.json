@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Operating System/가상 메모리.md",
+                "file": "Spring/Spring Boot.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/가상 메모리.md",
+                "file": "Spring/Spring Boot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/가상 메모리.md",
+                "file": "Spring/Spring Boot.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Operating System/가상 메모리.md"
+                "file": "Spring/Spring Boot.md"
               }
             }
           },
@@ -171,8 +171,8 @@
   },
   "active": "4be913b72a35a139",
   "lastOpenFiles": [
-    "Operating System/Segmentation.md",
     "Operating System/가상 메모리.md",
+    "Operating System/Segmentation.md",
     "Operating System/메모리 할당.md",
     "Computer Architecture/NUMA system.md",
     "Operating System/Paging.md",
