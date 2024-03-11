@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "955a5bcc14eda0d2",
+        "id": "22f684593f9578ca",
         "type": "tabs",
         "children": [
           {
-            "id": "4be913b72a35a139",
+            "id": "a98a921e78909ee8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/RestTemplate.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c29fa472d6b8ec76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/WebClient.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "46d85d9a7cfd7b73",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Operating System/가상 메모리.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Operating System/가상 메모리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Operating System/가상 메모리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Operating System/가상 메모리.md"
-              }
+              "state": {}
             }
           },
           {
@@ -181,18 +148,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "46d85d9a7cfd7b73",
+  "active": "a98a921e78909ee8",
   "lastOpenFiles": [
-    "Spring/WebClient.md",
-    "Operating System/데드락.md",
     "Spring/RestTemplate.md",
+    "Spring/WebClient.md",
+    "Operating System/가상 메모리.md",
+    "Operating System/데드락.md",
     "Operating System/Segmentation.md",
     "conflict-files-obsidian-git.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
     "Spring/WebFlux.md",
     "Spring/Spring Boot.md",
-    "Operating System/가상 메모리.md",
     "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
