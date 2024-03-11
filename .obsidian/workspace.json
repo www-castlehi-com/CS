@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "22f684593f9578ca",
+        "id": "299a0bf3522bfb22",
         "type": "tabs",
         "children": [
           {
-            "id": "a98a921e78909ee8",
+            "id": "3d1413ccdf95edcf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           },
           {
@@ -148,14 +156,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a98a921e78909ee8",
+  "active": "3d1413ccdf95edcf",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Spring/RestTemplate.md",
     "Spring/WebClient.md",
     "Operating System/가상 메모리.md",
     "Operating System/데드락.md",
     "Operating System/Segmentation.md",
-    "conflict-files-obsidian-git.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
     "Spring/WebFlux.md",

@@ -56,3 +56,332 @@ public WebClient build() {
 - **ExchangeFunction** : `ClientHttpConnector`를 통해 전송된 HTTP 요청에 대한 응답을 처리 (고수준)
 - **ExchangeFilterFunction** : 요청을 전송하기 전이나 받은 응답을 처리하기 전에 실행될 필터 목록
 - **defaultCookies** : 기본 HTTP 헤더와 쿠키를 저장하며 모든 요청에 기본적으로 적용 -> 인증 토큰, 콘텐츠 타입 등
+### 사용 예시
+```java
+public static void main(String[] args) { 
+	WebClient webClientByCreate = WebClient.create("http://jsonplaceholder.typicode.com"); 
+
+	WebClient webClientByBuilder = WebClient.builder()
+				.build();
+}
+```
+## Request 메소드
+### 1️⃣ GET
+#### Mono
+```java
+Mono<User> userMono = webClient.get() 
+	.uri("/users/{id}", 1) 
+	.retrieve() 
+	.bodyToMono(User.class);
+```
+GET /users/{id}
+Request : Single user by id
+#### Flux
+```java
+Flux<User> usersFlux = webClient.get()
+	.uri("/users") 
+	.retrieve() 
+	.bodyToFlux(User.class);
+```
+GET /users
+Request : collection of employees
+### 2️⃣ POST
+#### Mono
+```java
+Mono<User> createdUser = webClient.post() 
+	.uri("/users") 
+	.body(Mono.just(new User("John Doe", "john@example.com")), User.class) 
+	.retrieve() 
+	.bodyToMono(User.class);
+```
+POST /users
+Request : creates a new user from request body
+Response : returns the created user
+#### Flux
+```java
+Flux<User> createdUsers = webClient.post()
+	.uri("/users/batch")
+	.body(Flux.just(new User("Alice"), new User("Bob")), User.class)
+	.retrive()
+	.bodyToFlux(User.class);
+```
+
+> patch, delete, put의 경우 위와 유사
+## Response 메소드
+### 1️⃣ retrieve
+#### return Entity
+```java
+Mono<ResponseEntity<User>> entityMono = client.get()
+     .uri("/users/1")
+     .retrieve()
+     .toEntity(User.class);
+```
+#### return Mono, Flux
+```java
+Mono<Person> entityMono = client.get()
+    .uri("/users/1")
+    .retrieve()
+    .bodyToMono(User.class);
+```
+### 2️⃣ exchangeToMono
+```java
+Mono<User> userMono = webClient.get() 
+	.uri("/users/{id}", 1) 
+	.exchangeToMono(response -> { if (response.statusCode().is2xxSuccessful()) { 
+		return response.bodyToMono(User.class); 
+	} else if (response.statusCode().is4xxClientError()) { 
+		return Mono.error(new RuntimeException("API not found")); 
+	} else { 
+		return Mono.error(new RuntimeException("Unknown error"));
+	} 
+});
+```
+### 3️⃣ exchangeToFlux
+```java
+Flux<User> userFlux = webClient.get() 
+	.uri("/users/{id}", 1) 
+	.exchangeToFlux(response -> { if (response.statusCode().is2xxSuccessful()) { 
+		return response.bodyToFlux(User.class); 
+	} else if (response.statusCode().is4xxClientError()) { 
+		return Mono.error(new RuntimeException("API not found")); 
+	} else { 
+		return Mono.error(new RuntimeException("Unknown error"));
+	} 
+});
+```
+
+> exchange는 deprecated
+## 원리
+### 1. HTTP method -> RequestBodyUriSpec
+```java
+Mono<String> createdUser = client.get()
+	//...
+```
+WebClient.{HTTP method}
+```java
+@Override
+public RequestHeadersUriSpec<?> get() {
+	return methodInternal(HttpMethod.GET);
+}
+
+private RequestBodyUriSpec methodInternal(HttpMethod httpMethod) {
+	return new DefaultRequestBodyUriSpec(httpMethod);
+}
+```
+`DefaultWebClient`에서  `methodInternal`을 호출하며 해당 함수에서 httpMethod를 설정한 `RequestBodyUriSpec` 반환
+### 2. body -> Mono\<T>
+요청 응답에 body가 있는 경우
+```java
+Mono<String> createdUser = client.post() 
+			.uri("/users") 
+			.body(Mono.just(new String("John Doe")), String.class)
+			//...
+```
+
+```java
+@Override
+public <T, P extends Publisher<T>> RequestHeadersSpec<?> body(P publisher, Class<T> elementClass) {
+	this.inserter = BodyInserters.fromPublisher(publisher, elementClass);
+	return this;
+}
+```
+- **publisher** : 본문 데이터를 비동기적으로 제공
+- **elementClass** : 제공 받은 데이터 타입
+- **BodyInserter** : HTTP 요청 실행 시 실제 본문 데이터를 HTTP 메시지로 씀
+```java
+public static <T, P extends Publisher<T>> BodyInserter<P, ReactiveHttpOutputMessage> fromPublisher(
+			P publisher, Class<T> elementClass) {
+
+	Assert.notNull(publisher, "'publisher' must not be null");
+	Assert.notNull(elementClass, "'elementClass' must not be null");
+	return (message, context) ->
+			writeWithMessageWriters(message, context, publisher, ResolvableType.forClass(elementClass), null);
+	}
+```
+- `BodyInserter`의 정적 팩토리 메소드
+- `BodyInserter` 생성
+- `writeWithMessageWriters` 호출하여 실제 쓰기 작업 수행할 람다 생성 -> `BodyInserter`에 의해 사용
+```java
+private static <M extends ReactiveHttpOutputMessage> Mono<Void> writeWithMessageWriters(
+			M outputMessage, BodyInserter.Context context, Object body, ResolvableType bodyType, @Nullable ReactiveAdapter adapter) {
+
+	Publisher<?> publisher;
+	if (body instanceof Publisher<?> publisherBody) {
+		publisher = publisherBody;
+	}
+	else if (adapter != null) {
+		publisher = adapter.toPublisher(body);
+	}
+	else {
+		publisher = Mono.just(body);
+	}
+	MediaType mediaType = outputMessage.getHeaders().getContentType();
+	for (HttpMessageWriter<?> messageWriter : context.messageWriters()) {
+		if (messageWriter.canWrite(bodyType, mediaType)) {
+			HttpMessageWriter<Object> typedMessageWriter = cast(messageWriter);
+			return write(publisher, bodyType, mediaType, outputMessage, context, typedMessageWriter);
+		}
+	}
+	return Mono.error(unsupportedError(bodyType, context, mediaType));
+}
+```
+- **outputMessage** : HTTP 요청이나 응답 메시지
+- **context** : 쓰기 작업을 수행하는데 필요한 컨텍스트 정보
+- `publisher`로부터 데이터를 읽고, `context`에 맞는 `HttpMessageWriter` 목록을 사용해 데이터를 HTTP 메시지로 변환 -> `outputMessage`에 작성
+```java
+private static <T> Mono<Void> write(Publisher<? extends T> input, ResolvableType type,
+			@Nullable MediaType mediaType, ReactiveHttpOutputMessage message,
+			BodyInserter.Context context, HttpMessageWriter<T> writer) {
+
+	return context.serverRequest()
+			.map(request -> {
+				ServerHttpResponse response = (ServerHttpResponse) message;
+				return writer.write(input, type, type, mediaType, request, response, context.hints());
+			})
+			.orElseGet(() -> writer.write(input, type, mediaType, message, context.hints()));
+}
+```
+- `ReactiveHttpOutputMessage`의 구현체인 `ServerHttpResponse`에 담아 해당 구현체의 `write` 호출
+```java
+// 구현체 중 하나인 EncoderHttpMessageWriter
+
+@Override
+public Mono<Void> write(Publisher<? extends T> inputStream, ResolvableType elementType,
+		@Nullable MediaType mediaType, ReactiveHttpOutputMessage message, Map<String, Object> hints) {
+
+	MediaType contentType = updateContentType(message, mediaType);
+
+	Flux<DataBuffer> body = this.encoder.encode(
+			inputStream, message.bufferFactory(), elementType, contentType, hints);
+
+	if (inputStream instanceof Mono) {
+		return body
+				.singleOrEmpty()
+				.switchIfEmpty(Mono.defer(() -> {
+					message.getHeaders().setContentLength(0);
+					return message.setComplete().then(Mono.empty());
+				}))
+				.flatMap(buffer -> {
+					Hints.touchDataBuffer(buffer, hints, logger);
+					message.getHeaders().setContentLength(buffer.readableByteCount());
+					return message.writeWith(Mono.just(buffer)
+							.doOnDiscard(DataBuffer.class, DataBufferUtils::release));
+				})
+				.doOnDiscard(DataBuffer.class, DataBufferUtils::release);
+	}
+
+	if (isStreamingMediaType(contentType)) {
+		return message.writeAndFlushWith(body.map(buffer -> {
+			Hints.touchDataBuffer(buffer, hints, logger);
+			return Mono.just(buffer).doOnDiscard(DataBuffer.class, DataBufferUtils::release);
+		}));
+	}
+
+	if (logger.isDebugEnabled()) {
+		body = body.doOnNext(buffer -> Hints.touchDataBuffer(buffer, hints, logger));
+	}
+	return message.writeWith(body);
+}
+```
+- Mono, Flux로 나누어 처리하며 Mono일 경우 단일 버퍼에 담음
+- `return message.writeWith(body)`를 통해 데이터 버퍼 body를 응답 메시지에 작성
+### 3. retrieve -> ResponseSpec
+```java
+@Override
+public ResponseSpec retrieve() {
+	return new DefaultResponseSpec(
+			this.httpMethod, initUri(), exchange(), DefaultWebClient.this.defaultStatusHandlers);
+}
+```
+
+```java
+DefaultResponseSpec(HttpMethod httpMethod, URI uri, Mono<ClientResponse> responseMono,
+			List<StatusHandler> defaultStatusHandlers) {
+
+	this.httpMethod = httpMethod;
+	this.uri = uri;
+	this.responseMono = responseMono;
+	this.statusHandlers.addAll(defaultStatusHandlers);
+	this.statusHandlers.add(DEFAULT_STATUS_HANDLER);
+	this.defaultStatusHandlerCount = this.statusHandlers.size();
+}
+```
+`retrieve` 메소드는 `ResponseSpec` 인터페이스의 구현체인 `DefaultResponseSpec` 객체 반환
+-> `bodyToMono`, `bodyToFlux`와 같은 응답 처리에 필요한 메서드 제공
+
+```java
+@SuppressWarnings("deprecation")
+@Override
+public Mono<ClientResponse> exchange() {
+	ClientRequest.Builder requestBuilder = initRequestBuilder();
+	ClientRequestObservationContext observationContext = new ClientRequestObservationContext(requestBuilder);
+	return Mono.deferContextual(contextView -> {
+		Observation observation = ClientHttpObservationDocumentation.HTTP_REACTIVE_CLIENT_EXCHANGES.observation(observationConvention,
+				DEFAULT_OBSERVATION_CONVENTION, () -> observationContext, observationRegistry);
+		observation
+				.parentObservation(contextView.getOrDefault(ObservationThreadLocalAccessor.KEY, null))
+				.start();
+		ExchangeFilterFunction filterFunction = new ObservationFilterFunction(observationContext);
+		if (filterFunctions != null) {
+			filterFunction = filterFunctions.andThen(filterFunction);
+		}
+		ClientRequest request = requestBuilder
+				.attribute(ClientRequestObservationContext.CURRENT_OBSERVATION_CONTEXT_ATTRIBUTE, observationContext)
+				.build();
+		observationContext.setUriTemplate((String) request.attribute(URI_TEMPLATE_ATTRIBUTE).orElse(null));
+		observationContext.setRequest(request);
+		Mono<ClientResponse> responseMono = filterFunction.apply(exchangeFunction)
+				.exchange(request)
+				.checkpoint("Request to " +
+						WebClientUtils.getRequestDescription(request.method(), request.url()) +
+						" [DefaultWebClient]")
+				.switchIfEmpty(NO_HTTP_CLIENT_RESPONSE_ERROR);
+		if (this.contextModifier != null) {
+			responseMono = responseMono.contextWrite(this.contextModifier);
+		}
+		final AtomicBoolean responseReceived = new AtomicBoolean();
+		return responseMono
+				.doOnNext(response -> responseReceived.set(true))
+				.doOnError(observationContext::setError)
+				.doFinally(signalType -> {
+					if (signalType == SignalType.CANCEL && !responseReceived.get()) {
+						observationContext.setAborted(true);
+					}
+					observation.stop();
+				})
+				.contextWrite(context -> context.put(ObservationThreadLocalAccessor.KEY, observation));
+	});
+}
+```
+- 실제 HTTP 요청 실행
+```java
+private ClientRequest.Builder initRequestBuilder() {
+	if (defaultRequest != null) {
+		defaultRequest.accept(this);
+	}
+	ClientRequest.Builder builder = ClientRequest.create(this.httpMethod, initUri())
+			.headers(this::initHeaders)
+			.cookies(this::initCookies)
+			.attributes(attributes -> attributes.putAll(this.attributes));
+	if (this.httpRequestConsumer != null) {
+		builder.httpRequest(this.httpRequestConsumer);
+	}
+	if (this.inserter != null) {
+		builder.body(this.inserter);
+	}
+	return builder;
+}
+```
+HTTP 요청에 대한 정보를 객체에 저장
+- HTTP 메소드, URI 설정
+- 헤더, 쿠키 초기화
+- 속성 설정
+- body 설정
+```java
+public ClientRequestObservationContext(ClientRequest.Builder request) {
+	super(ClientRequestObservationContext::setRequestHeader);
+	setCarrier(request);
+	setRequest(request.build());
+}
+```
+요청 실행 과정에서 발생하는 이벤트 추적, 관련 정보 저장
