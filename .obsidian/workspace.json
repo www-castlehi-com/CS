@@ -11,8 +11,12 @@
             "id": "13af2f500a0950c4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Network/Application Layer.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Network/Application Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Network/Application Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Network/Application Layer.md"
+              }
             }
           },
           {
@@ -150,6 +158,9 @@
   },
   "active": "13af2f500a0950c4",
   "lastOpenFiles": [
+    "Network/소켓 프로그래밍.md",
+    "Network/Application Layer.md",
+    "Network/프로토콜.md",
     "conflict-files-obsidian-git.md",
     "Spring/RestTemplate.md",
     "Spring/WebClient.md",
@@ -173,9 +184,6 @@
     "IT Keyword/스마트팜.md",
     "IT Keyword/임베디드.md",
     "IT Keyword/클라우드.md",
-    "IT Keyword/핀테크.md",
-    "Operating System/Semaphore.md",
-    "Operating System/Mutex.md",
     "Software Engineering",
     "Java",
     "I",
