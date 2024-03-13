@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "f0a28d4a955cbe93",
+        "id": "76aa411b42612419",
         "type": "tabs",
         "children": [
           {
-            "id": "13af2f500a0950c4",
+            "id": "eeb09ed824455462",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/Application Layer.md",
+                "file": "Spring/WebClient.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e1d5f55bb6beeffc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/RestTemplate.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/Application Layer.md",
+                "file": "Spring/WebClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/Application Layer.md",
+                "file": "Spring/WebClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/Application Layer.md"
+                "file": "Spring/WebClient.md"
               }
             }
           },
@@ -147,43 +159,43 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:그래프 뷰 열기": false,
-      "switcher:퀵 스위처 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13af2f500a0950c4",
+  "active": "eeb09ed824455462",
   "lastOpenFiles": [
-    "Network/소켓 프로그래밍.md",
+    "Spring/WebFlux.md",
+    "Spring/WebClient.md",
     "Network/Application Layer.md",
     "Network/프로토콜.md",
-    "conflict-files-obsidian-git.md",
     "Spring/RestTemplate.md",
-    "Spring/WebClient.md",
-    "Operating System/가상 메모리.md",
-    "Operating System/데드락.md",
-    "Operating System/Segmentation.md",
-    "Operating System/메모리 할당.md",
-    "Operating System/Paging.md",
-    "Spring/WebFlux.md",
-    "Spring/Spring Boot.md",
+    "Network/동기&비동기, 블로킹&논블로킹.md",
+    "Java/ArrayList.md",
+    "프로젝트 기술서/IRC 프로젝트.md",
     "Computer Architecture/NUMA system.md",
+    "Operating System/가상 메모리.md",
+    "Operating System/Segmentation.md",
+    "Operating System/Paging.md",
+    "Operating System/메모리 할당.md",
     "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
     "Operating System/Swapping.md",
+    "Operating System/데드락.md",
     "Spring/JPA.md",
     "Spring/Lombok.md",
+    "Spring/Spring Boot.md",
     "Spring/TDD.md",
     "Spring/Spring Security - BCryptPasswordEncoder.md",
     "Spring/Spring Framework.md",
     "Spring/Gradle (vs Maven).md",
     "IT Keyword/스마트팜.md",
     "IT Keyword/임베디드.md",
-    "IT Keyword/클라우드.md",
     "Software Engineering",
     "Java",
     "I",

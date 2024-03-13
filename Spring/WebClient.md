@@ -286,6 +286,32 @@ public Mono<Void> write(Publisher<? extends T> inputStream, ResolvableType eleme
 - Mono, Flux로 나누어 처리하며 Mono일 경우 단일 버퍼에 담음
 - `return message.writeWith(body)`를 통해 데이터 버퍼 body를 응답 메시지에 작성
 ### 3. retrieve -> ResponseSpec
+응답값을 추출
+```java
+Mono<ResponseEntity<Person>> entityMono = client.get()
+      .uri("/persons/1")
+      .accept(MediaType.APPLICATION_JSON)
+      .retrieve()
+      .toEntity(Person.class);
+
+Mono<Person> entityMono = client.get()
+      .uri("/persons/1")
+      .accept(MediaType.APPLICATION_JSON)
+      .retrieve()
+      .bodyToMono(Person.class);
+
+Mono<Person> entityMono = client.get()  
+       .uri("/person/1")  
+       .accept(MediaType.APPLICATION_JSON)  
+       .retrieve()  
+       .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(), response -> {  
+          return Mono.error(new IllegalAccessException("4xx client error occurred"));  
+       })  
+       .bodyToMono(Person.class);
+```
+- **toEntity** : status를 포함한 header, body를 가지고 있는 `ResponseEntity`를 추출
+- **bodyToMono, bodyToFlux** : body만 추출할 경우
+-  **onStatus** : status code로 분기를 설정할 경우
 ```java
 @Override
 public ResponseSpec retrieve() {
@@ -385,3 +411,165 @@ public ClientRequestObservationContext(ClientRequest.Builder request) {
 }
 ```
 요청 실행 과정에서 발생하는 이벤트 추적, 관련 정보 저장
+```java
+Mono.deferContextual(contextView ->
+```
+리액터가 리액티브 컨텍스트에 접근
+**Context** : 어떠한 상황에서 그 상황을 처리하기 위해 필요한 정보
+> 예시
+> - ServletContext : Servlet이 Setvlet Container와 통신하기 위해 필요한 정보를 제공하는 인터페이스
+> - ApplicationContext : 애플리케이션의 정보를 제공하는 인터페이스
+> - SecurityContext : 애플리케이션 사용자의 인증 정보를 제공하는 인터페이스
+
+ReactiveContext 
+- Reactor 간의 구성 요소 간에 전파되는 key/value 형태의 저장소
+- Subscriber와 매핑되어 구독이 발생할 때마다 해당 구독과 연결된 하나의 Context가 생성
+- **전파** : Downstream -> Upstream으로 컨텍스트가 전달되며 모든 Operator가 컨텍스트의 정보를 동일하게 이용할 수 있음
+	- Downstream : 현재 작업으로부터 이후에 발생하는 작업들
+	- Upstream : 현재 작업 이전에 발생하는 작업
+```java
+Observation observation = ClientHttpObservationDocumentation.HTTP_REACTIVE_CLIENT_EXCHANGES.observation(observationConvention,
+		DEFAULT_OBSERVATION_CONVENTION, () -> observationContext, observationRegistry);
+observation
+		.parentObservation(contextView.getOrDefault(ObservationThreadLocalAccessor.KEY, null))
+		.start();
+```
+reative context가 `Observation` 인스턴스를 시작하여 HTTP 요청 및 응답에 대한 세부 정보 수집하고 모니터링함
+부모 관찰 시작 -> 현재 요청이 독립적인 요청인지, 상위 요청에 의해 발생되었는지 확인
+```java
+ExchangeFilterFunction filterFunction = new ObservationFilterFunction(observationContext);  
+if (filterFunctions != null) {  
+    filterFunction = filterFunctions.andThen(filterFunction);  
+}  
+
+ClientRequest request = requestBuilder  
+       .attribute(ClientRequestObservationContext.CURRENT_OBSERVATION_CONTEXT_ATTRIBUTE, observationContext)  
+       .build();
+
+observationContext.setUriTemplate((String) request.attribute(URI_TEMPLATE_ATTRIBUTE).orElse(null));  
+observationContext.setRequest(request);
+```
+filter, clientRequest에 관찰 컨텍스트를 저장
+관찰 컨텍스트에 요청 url과 clientRequest 객체 정보 저장
+```java
+Mono<ClientResponse> responseMono = filterFunction.apply(exchangeFunction)
+	.exchange(request) 
+	.checkpoint("Request to " + WebClientUtils.getRequestDescription(request.method(), request.url()) + " [DefaultWebClient]")
+	.switchIfEmpty(NO_HTTP_CLIENT_RESPONSE_ERROR);
+```
+비동기 요청 처리 과정에서, 결과로 받은 응답을 처리함
+- **apply** : 필터 적용 -> 요청이나 응답 수정 혹은 추가적인 사이드 이펙트를 발생시킬 수 있는 로직 실행됨
+- **exchange** : `clientRequset` 객체를 매개변수로 전달하고 HTTP 요청을 실행하여 비동기적으로 응답 처리 후, 응답을 리엑터 형태로 반환
+- **switchIfEmpty** : 에러로 인해 응답을 받지 못해 Mono가 비어있을 때 에러 반환
+	```java
+	private static final Mono<ClientResponse> NO_HTTP_CLIENT_RESPONSE_ERROR = Mono.error(  
+       () -> new IllegalStateException("The underlying HTTP client completed without emitting a response."));
+	```
+
+```java
+final AtomicBoolean responseReceived = new AtomicBoolean();  
+return responseMono  
+       .doOnNext(response -> responseReceived.set(true))  
+       .doOnError(observationContext::setError)  
+       .doFinally(signalType -> {  
+          if (signalType == SignalType.CANCEL && !responseReceived.get()) {  
+             observationContext.setAborted(true);  
+          }  
+          observation.stop();  
+       })  
+       .contextWrite(context -> context.put(ObservationThreadLocalAccessor.KEY, observation));
+```
+- **responseReceived** : 응답 수신 여부를 조사하면 초기값은 false
+- **doOnNext** : 스트림에서 응답이 방출될 때마다 지정된 작업 수행
+	>응답이 성공적으로 수신되면 `responseReceived`를 true로 설정
+- **doOnError** : 스트림에서 오류가 발생했을 때 지정된 작업 수행
+	> 오류 발생 시 관찰 컨텍스트에 오류 정보 설정
+- **doFinally** : 스트림이 완료되면 실행
+	> 응답이 취소되고, 도착하지 않았다면 관찰 컨텍스트의 상태를 aborted로 설정
+	> 어떤 경우든 관찰 중단
+- **contextWrite** : 스트림의 컨텍스트에 관찰 데이터를 포함시켜 다운스트림 시 관찰 컨텍스트에 접근할 수 있도록 함
+### 4. exchangeToXXX
+```java
+Mono<Person> entityMono = client.get()
+	.uri("/persons/1")
+	.accept(MediaType.APPLICATION_JSON)
+	.exchangeToMono(response -> {
+	  if (response.statusCode().equals(HttpStatus.OK)) {
+		  return response.bodyToMono(Person.class);
+	  }
+	  else {
+		  return response.createError();
+	  }
+	});
+
+Flux<Person> entityFlux = client.get()
+	.uri("/persons")
+	.accept(MediaType.APPLICATION_JSON)
+	.exchangeToFlux(response -> {
+	  if (response.statusCode().equals(HttpStatus.OK)) {
+		  return response.bodyToFlux(Person.class);
+	  }
+	  else {
+		  return response.createError().flux();
+	  }
+	});
+```
+`clientResponse`에 대한 접근을 가능하게 하며, 응답 상태에 따라 응답을 다르게 디코딩할 수 있음
+
+1) `exchangeToMono`
+	```java
+	@Override  
+	public <V> Mono<V> exchangeToMono(Function<ClientResponse, ? extends Mono<V>> responseHandler) {  
+	    return exchange().flatMap(response -> {  
+	       try {  
+	          return responseHandler.apply(response)  
+	                .flatMap(value -> releaseIfNotConsumed(response).thenReturn(value))  
+	                .switchIfEmpty(Mono.defer(() -> releaseIfNotConsumed(response).then(Mono.empty())))  
+	                .onErrorResume(ex -> releaseIfNotConsumed(response, ex));  
+	       }  
+	       catch (Throwable ex) {  
+	          return releaseIfNotConsumed(response, ex);  
+	       }  
+	    });  
+	}
+	```
+	- **flatMap(~ releaseIfNotConsumed)** : response가 읽혔다면 연결 리소스를 해제하고, `responseHandler`에서 반환된 결과 값을 그대로 반환
+	- **switchIfEmpty** : `responseHandler`가 빈 Mono를 반환하는 경우, 연결 리소스를 해제하고 빈 Mono를 반환
+	- **onErrorResume** : 처리 과정에서 오류 발생 시 연결 리소스 해제 후 해당 오류 처리
+2) `exchangeToFlux`
+	```java
+	@Override  
+	public <V> Flux<V> exchangeToFlux(Function<ClientResponse, ? extends Flux<V>> responseHandler) {  
+	    return exchange().flatMapMany(response -> {  
+	       try {  
+	          return responseHandler.apply(response)  
+	                .concatWith(Flux.defer(() -> releaseIfNotConsumed(response).then(Mono.empty())))  
+	                .onErrorResume(ex -> releaseIfNotConsumed(response, ex));  
+	       }  
+	       catch (Throwable ex) {  
+	          return releaseIfNotConsumed(response, ex);  
+	       }  
+	    });  
+	}
+	```
+
+>Mono와 Flux의 차이점은 `flatMap`, `flatMapMany`에 있음
+## 정리
+```
+WebClient.builder() -> WebClient 생성
+  |
+  v
+HTTP 메서드 선택 (.get(), .post(), ...) -> RequestHeadersUriSpec
+  |
+  v
+URI 설정 (.uri()) -> RequestHeadersSpec
+  |
+  v
+헤더/본문 설정 (.header(), .body(), ...) -> RequestHeadersSpec
+  |
+  v
+요청 실행 (.retrieve() / .exchange()) -> ResponseSpec / ClientResponse
+  |
+  v
+응답 처리 (.bodyToMono(), .bodyToFlux(), .onStatus(), .onErrorMap(), ...)
+```
