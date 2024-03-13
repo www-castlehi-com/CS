@@ -46,6 +46,7 @@ public interface Publisher<T> {
 ```
 - 데이터 스트림 생성, 발행
 - 구독 요청을 받으면 데이터 항목을 `Subscriber`에게 전송
+- 데이터의 생산과 소비가 동시에 이루어지지 않아도 됨 -> 비동기
 #### 2. Subscriber
 ```java
 public interface Subscriber<T> {

@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0a90ecd1f7a74241",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/Application Layer.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/Application Layer.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/Application Layer.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -156,13 +169,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13af2f500a0950c4",
+  "active": "0a90ecd1f7a74241",
   "lastOpenFiles": [
-    "Operating System/가상 메모리.md",
     "Network/Application Layer.md",
+    "conflict-files-obsidian-git.md",
+    "Java/EJB.md",
+    "Operating System/가상 메모리.md",
     "Network/소켓 프로그래밍.md",
     "Network/프로토콜.md",
-    "conflict-files-obsidian-git.md",
     "Spring/RestTemplate.md",
     "Spring/WebClient.md",
     "Operating System/데드락.md",
@@ -183,7 +197,6 @@
     "Spring/Gradle (vs Maven).md",
     "IT Keyword/스마트팜.md",
     "IT Keyword/임베디드.md",
-    "IT Keyword/클라우드.md",
     "Software Engineering",
     "Java",
     "I",
