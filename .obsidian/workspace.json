@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ac372bbbdeeea67a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringCloudStream.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7d01eda7d0bf0967",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Kafka.md",
+                "file": "Spring/Spring Batch.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringCloudStream.md",
+                "file": "Spring/Spring Batch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringCloudStream.md",
+                "file": "Spring/Spring Batch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringCloudStream.md"
+                "file": "Spring/Spring Batch.md"
               }
             }
           },
@@ -168,8 +156,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac372bbbdeeea67a",
+  "active": "7d01eda7d0bf0967",
   "lastOpenFiles": [
+    "Spring/Spring Batch.md",
     "Spring/Kafka.md",
     "Spring/SpringCloudStream.md",
     "Java/EJB.md",
@@ -195,7 +184,6 @@
     "Spring/TDD.md",
     "Spring/Spring Security - BCryptPasswordEncoder.md",
     "Spring/Spring Framework.md",
-    "Spring/Gradle (vs Maven).md",
     "Software Engineering",
     "Java",
     "I",
