@@ -1,3 +1,4 @@
+- [[MSA]]의 통신 지원
 # 상속
 `InterceptingHttpAccessor` 상속 -> `HttpAccessor` 상속
 ## HTTPAccessor란?

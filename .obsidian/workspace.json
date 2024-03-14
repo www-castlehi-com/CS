@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/WebFlux.md",
+                "file": "Spring/RestTemplate.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/WebFlux.md",
+                "file": "Spring/RestTemplate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/WebFlux.md",
+                "file": "Spring/RestTemplate.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/WebFlux.md"
+                "file": "Spring/RestTemplate.md"
               }
             }
           },
@@ -171,6 +171,7 @@
   },
   "active": "badde0845a14af92",
   "lastOpenFiles": [
+    "Spring/WebFlux.md",
     "Spring/WebClient.md",
     "Java/EJB.md",
     "Network/Application Layer.md",
@@ -183,7 +184,6 @@
     "Operating System/Segmentation.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
-    "Spring/WebFlux.md",
     "Spring/Spring Boot.md",
     "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation with Paging.md",
