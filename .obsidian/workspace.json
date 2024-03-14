@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "f0a28d4a955cbe93",
+        "id": "a8cbca60e13824ec",
         "type": "tabs",
         "children": [
           {
-            "id": "0a90ecd1f7a74241",
+            "id": "ac372bbbdeeea67a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/EJB.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "badde0845a14af92",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Java/EJB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Java/EJB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Java/EJB.md"
+              }
             }
           },
           {
@@ -161,7 +152,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "badde0845a14af92",
+  "active": "161950c1edd8f3f9",
   "lastOpenFiles": [
     "Spring/WebClient.md",
     "Spring/WebFlux.md",
