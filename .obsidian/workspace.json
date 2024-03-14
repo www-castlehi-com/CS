@@ -23,8 +23,12 @@
             "id": "badde0845a14af92",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spring/WebFlux.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spring/WebFlux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spring/WebFlux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spring/WebFlux.md"
+              }
             }
           },
           {
@@ -163,6 +171,7 @@
   },
   "active": "badde0845a14af92",
   "lastOpenFiles": [
+    "Spring/WebClient.md",
     "Java/EJB.md",
     "Network/Application Layer.md",
     "conflict-files-obsidian-git.md",
@@ -170,7 +179,6 @@
     "Network/소켓 프로그래밍.md",
     "Network/프로토콜.md",
     "Spring/RestTemplate.md",
-    "Spring/WebClient.md",
     "Operating System/데드락.md",
     "Operating System/Segmentation.md",
     "Operating System/메모리 할당.md",
