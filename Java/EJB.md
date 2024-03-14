@@ -4,9 +4,7 @@
 - 자바 EE(Enterprise Edition) 애플리케이션을 개발하기 위한 서버측 컴포넌트 모델
 - 애플리케이션의 업무 로직을 가지고 있음
 - 분산 환경에서도 안정적으로 실행 가능
-## EJB 컴포넌트
-## EJB 컨테이너
-# 유형
+# EJB 컴포넌트
 ## 1️⃣ Session Beans
 ### Stateless Session Beans
 ```java
@@ -74,7 +72,7 @@ public class SimpleMessageBean implements MessageListener {
 - DB관련 쿼리가 자동으로 만들어지고 개발자는 비즈니스 로직에만 집중할 수 있음
 - DB가 수정되면 코드 수정 없이 다시 배포
 - JavaEE 6부터 일반적으로 JPA를 사용
-# 장점
+# EJB 컨테이너
 ## 트랜잭션 관리
 ```java
 import javax.ejb.Stateless;
