@@ -1,4 +1,5 @@
 # WebClient란?
+- [[MSA]]의 통신 지원
 - [[WebFlux]]에서 작동하는 HTTP Client
 - 논블로킹
 - 스트림 지원
