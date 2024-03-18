@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Batch.md",
+                "file": "Java/JTA.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Batch.md",
+                "file": "Java/JTA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Batch.md",
+                "file": "Java/JTA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Batch.md"
+                "file": "Java/JTA.md"
               }
             }
           },
@@ -158,10 +158,13 @@
   },
   "active": "7d01eda7d0bf0967",
   "lastOpenFiles": [
-    "Spring/Spring Batch.md",
-    "Spring/Kafka.md",
-    "Spring/SpringCloudStream.md",
     "Java/EJB.md",
+    "Java/JTA.md",
+    "Database/XA.md",
+    "Java/XA 트랜잭션.md",
+    "Spring/Kafka.md",
+    "Spring/Spring Batch.md",
+    "Spring/SpringCloudStream.md",
     "Spring/WebClient.md",
     "Spring/WebFlux.md",
     "Spring/RestTemplate.md",
@@ -181,9 +184,6 @@
     "Operating System/Swapping.md",
     "Spring/JPA.md",
     "Spring/Lombok.md",
-    "Spring/TDD.md",
-    "Spring/Spring Security - BCryptPasswordEncoder.md",
-    "Spring/Spring Framework.md",
     "Software Engineering",
     "Java",
     "I",

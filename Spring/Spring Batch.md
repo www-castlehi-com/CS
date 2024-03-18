@@ -35,7 +35,7 @@
 - JobLauncher와 JobRepository에 대한 직접적인 접근 없이도 배치 작업을 수행하고 상태 조회
 ### 8️⃣ JobExplorer
 - Job의 실행 이력을 조회
-- JobRepository와 유사하지만 읽기 전용 접근에 초
+- JobRepository와 유사하지만 읽기 전용 접근에 초점
 ### Step
 ### 1️⃣ Step
 - Job의 하위 단계
