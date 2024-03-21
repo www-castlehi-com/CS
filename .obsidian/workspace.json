@@ -11,8 +11,12 @@
             "id": "1090b0316e5376aa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Java/ObjectMapper.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Java/ObjectMapper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Java/ObjectMapper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Java/ObjectMapper.md"
+              }
             }
           },
           {
@@ -150,6 +158,9 @@
   },
   "active": "1090b0316e5376aa",
   "lastOpenFiles": [
+    "Java/ModelMapper.md",
+    "Java/ObjectMapper.md",
+    "Java/flatMap.md",
     "Spring/WebFlux.md",
     "Java/JTA.md",
     "Java/EJB.md",
@@ -173,9 +184,6 @@
     "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
-    "Operating System/Swapping.md",
-    "Spring/JPA.md",
-    "Spring/Lombok.md",
     "Software Engineering",
     "Java",
     "I",
