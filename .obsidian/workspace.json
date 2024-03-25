@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Network/무제 파일.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Network/무제 파일.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Network/무제 파일.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Network/무제 파일.md"
               }
             }
           },
@@ -171,8 +171,9 @@
   },
   "active": "6f5c5902f6989d75",
   "lastOpenFiles": [
-    "Network/소켓 프로그래밍.md",
     "conflict-files-obsidian-git.md",
+    "Network/무제 파일.md",
+    "Network/소켓 프로그래밍.md",
     "Network/Application Layer.md",
     "Java/JTA.md",
     "Database/XA.md",
@@ -196,7 +197,6 @@
     "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation with Paging.md",
     "Operating System/외부 단편화.md",
-    "Operating System/Swapping.md",
     "Software Engineering",
     "Java",
     "I",
