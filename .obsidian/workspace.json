@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6f5c5902f6989d75",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/소켓 프로그래밍.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/소켓 프로그래밍.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/소켓 프로그래밍.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -156,10 +169,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13af2f500a0950c4",
+  "active": "6f5c5902f6989d75",
   "lastOpenFiles": [
-    "Network/Application Layer.md",
     "Network/소켓 프로그래밍.md",
+    "conflict-files-obsidian-git.md",
+    "Network/Application Layer.md",
     "Java/JTA.md",
     "Database/XA.md",
     "Spring/SpringCloudStream.md",
@@ -169,7 +183,6 @@
     "Java/ObjectMapper.md",
     "Java/ModelMapper.md",
     "Java/EJB.md",
-    "conflict-files-obsidian-git.md",
     "Operating System/가상 메모리.md",
     "Network/프로토콜.md",
     "Spring/RestTemplate.md",
