@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/무제 파일.md",
+                "file": "Network/Transport Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/무제 파일.md",
+                "file": "Network/Transport Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/무제 파일.md",
+                "file": "Network/Transport Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/무제 파일.md"
+                "file": "Network/Transport Layer.md"
               }
             }
           },
@@ -172,7 +172,7 @@
   "active": "6f5c5902f6989d75",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
-    "Network/무제 파일.md",
+    "Network/Transport Layer.md",
     "Network/소켓 프로그래밍.md",
     "Network/Application Layer.md",
     "Java/JTA.md",
