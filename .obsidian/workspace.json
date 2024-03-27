@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "13af2f500a0950c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Network/소켓 프로그래밍.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6f5c5902f6989d75",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,14 +158,15 @@
   },
   "active": "6f5c5902f6989d75",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Pasted image 20240327234543.png",
+    "Spring/Spring Batch.md",
     "Network/Transport Layer.md",
-    "Network/소켓 프로그래밍.md",
     "Network/Application Layer.md",
+    "conflict-files-obsidian-git.md",
+    "Network/소켓 프로그래밍.md",
     "Java/JTA.md",
     "Database/XA.md",
     "Spring/SpringCloudStream.md",
-    "Spring/Spring Batch.md",
     "Spring/Kafka.md",
     "Java/flatMap.md",
     "Java/ObjectMapper.md",
@@ -196,7 +184,6 @@
     "Spring/Spring Boot.md",
     "Computer Architecture/NUMA system.md",
     "Operating System/Segmentation with Paging.md",
-    "Operating System/외부 단편화.md",
     "Software Engineering",
     "Java",
     "I",
