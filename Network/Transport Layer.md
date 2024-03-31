@@ -181,3 +181,4 @@ TCP 이용 시, Transport Layer에서 신뢰적인 채널이 사용됨
 ![](https://i.imgur.com/jtrZPGc.png)
 Receiver의 윈도우는 a, b모두 같지만 a의 경우 두번째 pkt0은 재전송이고, b의 경우 두번째 pkt0은 새 전송임
 Receiver의 윈도우는 모두 pkt0을 받아야 할 차례이기 때문에 이를 구분하지 못함
+## 세그먼트
