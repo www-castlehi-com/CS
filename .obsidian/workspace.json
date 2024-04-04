@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/MyBatis.md",
+                "file": "Spring/FactoryBean.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "1a10e08e8988e403",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.12"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/MyBatis.md",
+                "file": "Spring/FactoryBean.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/MyBatis.md",
+                "file": "Spring/FactoryBean.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/MyBatis.md"
+                "file": "Spring/FactoryBean.md"
               }
             }
           },
@@ -167,9 +156,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1a10e08e8988e403",
+  "active": "5af81780535b356f",
   "lastOpenFiles": [
     "Spring/MyBatis.md",
+    "Spring/FactoryBean.md",
     "Java/EJB.md",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
@@ -199,7 +189,6 @@
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
     "Spring/Spring Boot.md",
-    "Computer Architecture/NUMA system.md",
     "Software Engineering",
     "Java",
     "I",
