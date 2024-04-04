@@ -4,22 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "f0a28d4a955cbe93",
+        "id": "e5ad46f04fb010fc",
         "type": "tabs",
         "children": [
           {
-            "id": "6f5c5902f6989d75",
+            "id": "5af81780535b356f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/Transport Layer.md",
+                "file": "Spring/MyBatis.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "1a10e08e8988e403",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/Transport Layer.md",
+                "file": "Spring/MyBatis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/Transport Layer.md",
+                "file": "Spring/MyBatis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/Transport Layer.md"
+                "file": "Spring/MyBatis.md"
               }
             }
           },
@@ -147,45 +158,46 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:그래프 뷰 열기": false,
-      "switcher:퀵 스위처 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6f5c5902f6989d75",
+  "active": "1a10e08e8988e403",
   "lastOpenFiles": [
-    "Pasted image 20240401224815.png",
+    "Spring/MyBatis.md",
+    "Java/EJB.md",
     "Pasted image 20240401224344.png",
+    "Pasted image 20240401224815.png",
     "Pasted image 20240401224236.png",
     "Pasted image 20240401224230.png",
-    "Network/Transport Layer.md",
-    "().md",
     "Pasted image 20240327234543.png",
-    "Spring/Spring Batch.md",
-    "Network/Application Layer.md",
-    "conflict-files-obsidian-git.md",
-    "Network/소켓 프로그래밍.md",
+    "Java/ModelMapper.md",
+    "Network/Transport Layer.md",
+    "Java/ObjectMapper.md",
+    "Java/flatMap.md",
+    "Spring/WebFlux.md",
     "Java/JTA.md",
     "Database/XA.md",
-    "Spring/SpringCloudStream.md",
+    "Java/XA 트랜잭션.md",
     "Spring/Kafka.md",
-    "Java/flatMap.md",
-    "Java/ObjectMapper.md",
-    "Java/ModelMapper.md",
-    "Java/EJB.md",
-    "Operating System/가상 메모리.md",
-    "Network/프로토콜.md",
-    "Spring/RestTemplate.md",
+    "Spring/Spring Batch.md",
+    "Spring/SpringCloudStream.md",
     "Spring/WebClient.md",
+    "Spring/RestTemplate.md",
+    "Network/Application Layer.md",
+    "conflict-files-obsidian-git.md",
+    "Operating System/가상 메모리.md",
+    "Network/소켓 프로그래밍.md",
+    "Network/프로토콜.md",
     "Operating System/데드락.md",
     "Operating System/Segmentation.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
-    "Spring/WebFlux.md",
     "Spring/Spring Boot.md",
     "Computer Architecture/NUMA system.md",
     "Software Engineering",
