@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e5ad46f04fb010fc",
+        "id": "09fe1e3f4eadd2f9",
         "type": "tabs",
         "children": [
           {
-            "id": "5af81780535b356f",
+            "id": "63febd79538725b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5af81780535b356f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/다이나믹 프록시.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/FactoryBean.md",
+                "file": "Java/다이나믹 프록시.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/FactoryBean.md",
+                "file": "Java/다이나믹 프록시.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/FactoryBean.md"
+                "file": "Java/다이나믹 프록시.md"
               }
             }
           },
@@ -158,8 +171,9 @@
   },
   "active": "5af81780535b356f",
   "lastOpenFiles": [
-    "Spring/MyBatis.md",
     "Spring/FactoryBean.md",
+    "Java/다이나믹 프록시.md",
+    "Spring/MyBatis.md",
     "Java/EJB.md",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
@@ -188,7 +202,6 @@
     "Operating System/Segmentation.md",
     "Operating System/메모리 할당.md",
     "Operating System/Paging.md",
-    "Spring/Spring Boot.md",
     "Software Engineering",
     "Java",
     "I",
