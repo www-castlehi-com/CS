@@ -4,31 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "09fe1e3f4eadd2f9",
+        "id": "f0a28d4a955cbe93",
         "type": "tabs",
         "children": [
           {
-            "id": "63febd79538725b4",
+            "id": "a86ea6cd5624e45b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/FactoryBean.md",
+                "file": "Spring/Security Filter.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "5af81780535b356f",
+            "id": "efff1e71ac3d49ba",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Java/다이나믹 프록시.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.5.12"
               }
+            }
+          },
+          {
+            "id": "b7711095ea562a81",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -98,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/다이나믹 프록시.md",
+                "file": "Spring/Security Filter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/다이나믹 프록시.md",
+                "file": "Spring/Security Filter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/다이나믹 프록시.md"
+                "file": "Spring/Security Filter.md"
               }
             }
           },
@@ -160,48 +166,49 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "graph:그래프 뷰 열기": false,
+      "switcher:퀵 스위처 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5af81780535b356f",
+  "active": "efff1e71ac3d49ba",
   "lastOpenFiles": [
+    "Spring/WebSecurity & HttpSecurity.md",
+    "Spring/Spring Security 초기화.md",
+    "Spring/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/Spring Security.md",
+    "Spring/SpringCloudStream.md",
+    "Spring/Security Builder & Security Configurer.md",
+    "Spring/Spring Framework.md",
+    "Spring/Security Filter.md",
+    "Pasted image 20240411131559.png",
+    "Network/Transport Layer.md",
+    "Pasted image 20240401224815.png.md",
+    "Pasted image 20240401224344.png.md",
+    "Security Builder.md",
     "Spring/FactoryBean.md",
     "Java/다이나믹 프록시.md",
-    "Spring/MyBatis.md",
-    "Java/EJB.md",
-    "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
+    "Pasted image 20240401224344.png",
     "Pasted image 20240401224236.png",
     "Pasted image 20240401224230.png",
+    "().md",
     "Pasted image 20240327234543.png",
-    "Java/ModelMapper.md",
-    "Network/Transport Layer.md",
-    "Java/ObjectMapper.md",
-    "Java/flatMap.md",
-    "Spring/WebFlux.md",
-    "Java/JTA.md",
-    "Database/XA.md",
-    "Java/XA 트랜잭션.md",
-    "Spring/Kafka.md",
     "Spring/Spring Batch.md",
-    "Spring/SpringCloudStream.md",
-    "Spring/WebClient.md",
-    "Spring/RestTemplate.md",
     "Network/Application Layer.md",
     "conflict-files-obsidian-git.md",
-    "Operating System/가상 메모리.md",
     "Network/소켓 프로그래밍.md",
-    "Network/프로토콜.md",
-    "Operating System/데드락.md",
-    "Operating System/Segmentation.md",
-    "Operating System/메모리 할당.md",
-    "Operating System/Paging.md",
+    "Java/JTA.md",
+    "Database/XA.md",
+    "Spring/Kafka.md",
+    "Java/flatMap.md",
+    "Java/ObjectMapper.md",
+    "Java/ModelMapper.md",
+    "Java/EJB.md",
     "Software Engineering",
     "Java",
     "I",
