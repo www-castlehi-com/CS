@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Security Filter.md",
+                "file": "Spring/form Login.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,11 +23,16 @@
             "id": "b7711095ea562a81",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spring/HTTP Basic.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Security Filter.md",
+                "file": "Spring/HTTP Basic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Security Filter.md",
+                "file": "Spring/HTTP Basic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Security Filter.md"
+                "file": "Spring/HTTP Basic.md"
               }
             }
           },
@@ -164,17 +169,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a86ea6cd5624e45b",
+  "active": "b7711095ea562a81",
   "lastOpenFiles": [
+    "Spring/form Login.md",
+    "Spring/HTTP Basic.md",
     "Spring/WebSecurity & HttpSecurity.md",
-    "Spring/Spring Security 초기화.md",
-    "Spring/Spring Security - BCryptPasswordEncoder.md",
-    "Spring/Spring Security.md",
-    "Spring/SpringCloudStream.md",
     "Spring/Security Builder & Security Configurer.md",
-    "Spring/Spring Framework.md",
+    "Spring/Spring Security 초기화.md",
+    "Spring/Spring Security.md",
     "Spring/Security Filter.md",
+    "Spring/Spring Security - BCryptPasswordEncoder.md",
+    "form Lo     gin.md",
     "Pasted image 20240411131559.png",
+    "form Lo  gin.md",
+    "Spring/SpringCloudStream.md",
+    "Spring/Spring Framework.md",
     "Network/Transport Layer.md",
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
@@ -194,10 +203,6 @@
     "Java/JTA.md",
     "Database/XA.md",
     "Spring/Kafka.md",
-    "Java/flatMap.md",
-    "Java/ObjectMapper.md",
-    "Java/ModelMapper.md",
-    "Java/EJB.md",
     "Software Engineering",
     "Java",
     "I",
