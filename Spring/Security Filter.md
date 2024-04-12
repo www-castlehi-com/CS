@@ -49,6 +49,13 @@ public class SecurityFilterAutoConfiguration {
       return registration;  
    }  
 
+	public DelegatingFilterProxyRegistrationBean(String targetBeanName,  
+      ServletRegistrationBean<?>... servletRegistrationBeans) {  
+   super(servletRegistrationBeans);  
+   Assert.hasLength(targetBeanName, "TargetBeanName must not be null or empty");  
+   this.targetBeanName = targetBeanName;  
+   setName(targetBeanName);  
+}
 	//...
 }
 ```
