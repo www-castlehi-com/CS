@@ -20,16 +20,6 @@
             }
           },
           {
-            "id": "efff1e71ac3d49ba",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.12"
-              }
-            }
-          },
-          {
             "id": "b7711095ea562a81",
             "type": "leaf",
             "state": {
@@ -37,8 +27,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,7 +164,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "efff1e71ac3d49ba",
+  "active": "a86ea6cd5624e45b",
   "lastOpenFiles": [
     "Spring/WebSecurity & HttpSecurity.md",
     "Spring/Spring Security 초기화.md",
