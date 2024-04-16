@@ -203,7 +203,7 @@ configure()
 5. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장
 6. `SessionAuthenticationStrategy`를 이용해 사용자가 로그인에 성공했음을 알리고 세션 관련 작업 수행
 7. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 AuthenticationToken 인증 객체를 SecurityContext에 설정하고 이 컨텍스트를 세션에 저장
-8. `RememberMeServices`를 통해 Remember-me가 설정된 경우 loginSuccess를 호출 -> 세션이 만료되어도 기억할 수 있음
+8. `RememberMeServices`를 통해 [[rememberMe]]가 설정된 경우 loginSuccess를 호출 -> 세션이 만료되어도 기억할 수 있음
 9. `ApplicationEventPublisher`를 통해 인증 성공 이벤트 게시 -> 리스너를 통해 추가 작업 가능케 함
 10. 인증 성공 핸들러인 `AuthenticationSuccessHandler`를 호출
 
