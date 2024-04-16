@@ -8,39 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2f9cf23d040e7087",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
             "id": "84f30cb723669b77",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/anonymous.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4422773993cac8f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringSecurity/rememberMe.md",
+                "file": "Spring/SpringSecurity/Logout.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/anonymous.md",
+                "file": "Spring/SpringSecurity/Logout.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/anonymous.md",
+                "file": "Spring/SpringSecurity/Logout.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/anonymous.md"
+                "file": "Spring/SpringSecurity/Logout.md"
               }
             }
           },
@@ -179,20 +158,21 @@
   },
   "active": "84f30cb723669b77",
   "lastOpenFiles": [
-    "Pasted image 20240416152303.png",
-    "Spring/SpringSecurity/anonymous.md",
-    "Spring/SpringSecurity/rememberMe.md",
-    "Spring/SpringSecurity/Spring Security.md",
-    "Spring/Spring Framework.md",
-    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
-    "Spring/SpringSecurity",
-    "Spring/SpringSecurity/Spring Security 초기화.md",
-    "Spring/SpringSecurity/HTTP Basic.md",
     "Spring/SpringSecurity/form Login.md",
+    "Spring/SpringSecurity/Logout.md",
+    "Spring/SpringSecurity/rememberMe.md",
+    "Spring/SpringSecurity/Spring Security 초기화.md",
+    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/SpringSecurity/Spring Security.md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
+    "Spring/SpringSecurity/HTTP Basic.md",
+    "Spring/SpringSecurity/anonymous.md",
+    "Pasted image 20240416152303.png",
+    "Spring/Spring Framework.md",
+    "Spring/SpringSecurity",
     "Pasted image 20240415104021.png",
     "Spring/WebSecurity & HttpSecurity.md",
-    "Spring/SpringSecurity/Security Filter.md",
-    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
     "form Lo     gin.md",
     "Pasted image 20240411131559.png",
     "form Lo  gin.md",

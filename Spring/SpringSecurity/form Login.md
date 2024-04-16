@@ -183,7 +183,7 @@ configure()
 - `AbstractAuhenticaitonProcessingFilter`를 확장한 클래스
 - 사용자의 자격 증명을 인증하는 기본 필터
 - `HttpServletRequest`에서 제출된 사용자 이름, 비밀번호로부터 인증 수행
-- 로그인, 로그아웃 페이지 생성을 위한 `DefaultLoginPageGeneratingFilter`, `DefaultLogoutPageGeneratingFilter` 초기화
+- Login, [[Logout]] 페이지 생성을 위한 `DefaultLoginPageGeneratingFilter`, `DefaultLogoutPageGeneratingFilter` 초기화
 ### 구조
 ![](https://i.imgur.com/KZm8TO8.png)
 - 기본 필터 : `UsernamePasswordAuthenticationFilter`

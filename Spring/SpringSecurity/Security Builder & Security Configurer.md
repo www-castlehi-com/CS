@@ -25,7 +25,7 @@ ex) [[WebSecurity & HttpSecurity]]
 1. SecurityBuilder의 구현체 중 하나인 `HttpSecurity`
 2. `HttpSecurity`가 설정 클래스인 `SecurityConfigurer` 들을 생성
 3. `SecurityConfigurer`은 각각의 Filter를 가짐
-	ex) `LogoutConfigurer`은 `LogoutFilter`를 가짐
+	ex) `LogoutConfigurer`은 [[Logout]]Filter를 가짐
 # 코드
 ## SecurityBuilder
 ```java

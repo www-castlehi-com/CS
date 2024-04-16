@@ -4,7 +4,7 @@
 - `UsernamePasswordAuthenticationFilter`와 함께 사용, `AbstractAuthenticationProcessingFilter` 슈퍼클래스에서 훅을 통해 구현
 - 인증 성공 : `RememberMeServices.loginSuccess()`를 통해 RememberMe 토큰을 생성하고 쿠키로 전달
 - 인증 실패 : `RememberMeServices.loginFail()`을 통해 쿠키 삭제
-- 로그아웃 : `LogoutFilter`와 연계하여 쿠키 삭제
+- 로그아웃 : [[Logout]]Filter와 연계하여 쿠키 삭제
 ## RememberMe 토큰
 - 암호화된 토큰
 - 세션에서 해당 쿠키를 감지하여 자동 로그인이 이루어지는 방식
