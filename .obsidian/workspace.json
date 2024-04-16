@@ -21,7 +21,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/rememberMe.md",
+                "file": "Spring/SpringSecurity/anonymous.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4422773993cac8f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/SpringSecurity/rememberMe.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/rememberMe.md",
+                "file": "Spring/SpringSecurity/anonymous.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/rememberMe.md",
+                "file": "Spring/SpringSecurity/anonymous.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/rememberMe.md"
+                "file": "Spring/SpringSecurity/anonymous.md"
               }
             }
           },
@@ -167,21 +179,24 @@
   },
   "active": "84f30cb723669b77",
   "lastOpenFiles": [
-    "Spring/Spring Security 초기화.md",
-    "Spring/Security Builder & Security Configurer.md",
-    "Spring/rememberMe.md",
-    "Spring/HTTP Basic.md",
-    "Spring/form Login.md",
+    "Pasted image 20240416152303.png",
+    "Spring/SpringSecurity/anonymous.md",
+    "Spring/SpringSecurity/rememberMe.md",
+    "Spring/SpringSecurity/Spring Security.md",
+    "Spring/Spring Framework.md",
+    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
+    "Spring/SpringSecurity",
+    "Spring/SpringSecurity/Spring Security 초기화.md",
+    "Spring/SpringSecurity/HTTP Basic.md",
+    "Spring/SpringSecurity/form Login.md",
     "Pasted image 20240415104021.png",
     "Spring/WebSecurity & HttpSecurity.md",
-    "Spring/Spring Security.md",
-    "Spring/Security Filter.md",
-    "Spring/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
     "form Lo     gin.md",
     "Pasted image 20240411131559.png",
     "form Lo  gin.md",
     "Spring/SpringCloudStream.md",
-    "Spring/Spring Framework.md",
     "Network/Transport Layer.md",
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
@@ -198,8 +213,6 @@
     "Network/Application Layer.md",
     "conflict-files-obsidian-git.md",
     "Network/소켓 프로그래밍.md",
-    "Java/JTA.md",
-    "Database/XA.md",
     "Software Engineering",
     "Java",
     "I",
@@ -211,7 +224,6 @@
     "프로젝트 기술서",
     "image",
     "IT Keyword",
-    "Spring",
-    "Design Pattern"
+    "Spring"
   ]
 }
