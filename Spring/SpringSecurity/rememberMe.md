@@ -60,7 +60,7 @@ http.rememberMe(httpSecurityRememberMeConfigurer -> httpSecurityRememberMeConfig
 
 **인증 성공 시**
 6. `RememberMeAuthenticationToken`을 `SeucirytContextHolder`에 저장
-7. `SecurityContextRepository`를 이용해 세션에 security context 저장
+7. `SecurityContextRepository`를 이용해 세션에 [[SecurityContext]] 저장
 8. `ApplicationEventPublisher`를 통해 인증 성공 이벤트 게시
 
 **인증 실패 시**
@@ -282,7 +282,7 @@ public class RememberMeAuthenticationFilter extends GenericFilterBean implements
 	- `processAutoLoginCookie()` : 쿠키에서 `UserDetails` 정보 추출
 	- `createSuccessfulAuthentication` : 인증 처리
 		- key, user 객체, 권한을 이용해 `RememberMeAuthenticationToken` 생성
-- `authenticationmanager.authenticate()` : `authenticationManager`에게 인증 객체 전달
+- `authenticationmanager.authenticate()` : `authenticationManager`에게 [[Authentication]] 객체 전달
 - `securityContextHolderStrategy.setContext()` : security context 내에 저장 후 context를 세션에 저장
 	![](https://i.imgur.com/eIWVisX.png)
 - `eventPublisher.publishEvent()` : 이벤트 게시

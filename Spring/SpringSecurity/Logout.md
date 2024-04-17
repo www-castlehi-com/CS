@@ -77,7 +77,7 @@ public class LogoutFilter extends GenericFilterBean {
 ```
 - `requiresLogout` : 로그아웃 필터에 조건이 부합한지 확인
 	- `logoutRequestMatcher.matehs()` :  요청 정보 url, method가 일치한지 확인
-- `securityContextHolderStrategy.getContext().getAuthentication()` : 인증 객체(`UsernamePasswordAuthenticaitonToken`) 추출 (인증을 받았기 때문에 인증 객체 존재)
+- `securityContextHolderStrategy.getContext().getAuthentication()` : [[Authentication]] 객체(`UsernamePasswordAuthenticaitonToken`) 추출 (인증을 받았기 때문에 인증 객체 존재)
 - `handler.logout()` : 핸들러가 로그아웃 기능 실행
 	![](https://i.imgur.com/nHWG48S.png)
 	- SecurityConfig는 커스텀핸들러

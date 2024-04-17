@@ -80,6 +80,6 @@ http.anonymous(anoymous -> anonymous
 ![](https://i.imgur.com/Cid2NWo.png)
 1. Client의 요청
 2. 요청 과정에서 `AnonymousAuthenticationFilter`에 올 때까지 인증을 받지 못했다면 실행
-	- Authentication이 null이 아니라면 그 다음 필터 실행
+	- [[Authentication]]이 null이 아니라면 그 다음 필터 실행
 3. Authentication이 null일 경우, (anonymousUser, ROLE_ANONYMOUS)를 가진 `AnonymousAuthenticationToken`을 생성
-4. Authentication을 `SecurityContextHolder`에 저장
+4. Authentication을 `SecurityContextHolder`([[SecurityContext]])에 저장

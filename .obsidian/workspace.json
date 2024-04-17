@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/Spring Security.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "434ea64a8d2a13bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringSecurity/Authentication.md",
+                "file": "Spring/SpringSecurity/SecurityContext.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/Authentication.md",
+                "file": "Spring/SpringSecurity/SecurityContext.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/Authentication.md",
+                "file": "Spring/SpringSecurity/SecurityContext.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/Authentication.md"
+                "file": "Spring/SpringSecurity/SecurityContext.md"
               }
             }
           },
@@ -169,19 +156,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "434ea64a8d2a13bb",
+  "active": "84f30cb723669b77",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/Security Filter.md",
-    "Spring/SpringSecurity/Spring Security.md",
-    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
-    "Spring/SpringSecurity/Authentication.md",
-    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
-    "Spring/SpringSecurity/RequestCache, SavedRequest.md",
-    "Spring/SpringSecurity/Logout.md",
-    "Spring/SpringSecurity/form Login.md",
-    "Spring/SpringSecurity/rememberMe.md",
     "Spring/SpringSecurity/Spring Security 초기화.md",
+    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/SpringSecurity/Spring Security.md",
+    "Spring/SpringSecurity/SecurityContext.md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
+    "Spring/SpringSecurity/RequestCache.md",
+    "Spring/SpringSecurity/rememberMe.md",
+    "Spring/SpringSecurity/Logout.md",
     "Spring/SpringSecurity/HTTP Basic.md",
+    "Spring/SpringSecurity/form Login.md",
+    "Spring/SpringSecurity/Authentication.md",
     "Spring/SpringSecurity/anonymous.md",
     "Pasted image 20240416152303.png",
     "Spring/Spring Framework.md",
@@ -205,7 +193,6 @@
     "().md",
     "Pasted image 20240327234543.png",
     "Spring/Spring Batch.md",
-    "Network/Application Layer.md",
     "Software Engineering",
     "Java",
     "I",

@@ -39,7 +39,7 @@ HttpSecurity.httpBasic(httpSecurityHttpBasicConfigurer -> httpSecurityHttpBasicC
 
 **인증 성공 시**
 4. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장
-5. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 AuthenticationToken 인증 객체를 SecurityContext에 설정하고 이 컨텍스트를 request context에 저장 -> 요청 범위 내에서만 인증 상태 유지
+5. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 [[Authentication]]Token 인증 객체를 [[SecurityContext]]에 설정하고 이 컨텍스트를 request context에 저장 -> 요청 범위 내에서만 인증 상태 유지
 6. `RememberMeServices`를 통해 [[rememberMe]]가 설정된 경우 loginSuccess를 호출
 7. 다음 필터로 진행
 

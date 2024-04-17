@@ -196,13 +196,13 @@ configure()
 	- 기본적으로 login 정보를 가지고 있음
 	- 사용자가 login이 아닌 loginProc과 같은 다른 정보로 요청할 시 false를 반환
 	- true를 반환할 경우 인증 과정으로 넘어가고 false일 경우 다음 필터(`chain.doFilter`) 호출
-3. Username과 Password로 `UsernamePasswordAuthenticationToken`(Authentication interface의 구현체) 제작
+3. Username과 Password로 `UsernamePasswordAuthenticationToken`([[Authentication]] interface의 구현체) 제작
 4. Token을 `AuthenticationManager`로 전달 -> 전달받은 Token의 username, password가 db 혹은 시스템과 일치하는지 확인
 
 **인증 성공 시**
 5. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장
 6. `SessionAuthenticationStrategy`를 이용해 사용자가 로그인에 성공했음을 알리고 세션 관련 작업 수행
-7. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 AuthenticationToken 인증 객체를 SecurityContext에 설정하고 이 컨텍스트를 세션에 저장
+7. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 AuthenticationToken 인증 객체를 [[SecurityContext]]에 설정하고 이 컨텍스트를 세션에 저장
 8. `RememberMeServices`를 통해 [[rememberMe]]가 설정된 경우 loginSuccess를 호출 -> 세션이 만료되어도 기억할 수 있음
 9. `ApplicationEventPublisher`를 통해 인증 성공 이벤트 게시 -> 리스너를 통해 추가 작업 가능케 함
 10. 인증 성공 핸들러인 `AuthenticationSuccessHandler`를 호출

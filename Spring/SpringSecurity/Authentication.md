@@ -1,7 +1,7 @@
 ## 개념
 - 신원을 확인하는 방법
 - 사용자 이름, 비밀번호를 입력받아 신원 확인(**인증**) 후, 권한 부여(**인가**)
-- 토큰 개념이며 인증 후, `SecurityContext`에 저장되어 전역적으로 참조
+- 토큰 개념이며 인증 후, [[SecurityContext]]에 저장되어 전역적으로 참조
 ## 구조
 ![](https://i.imgur.com/SqoVWoy.png)
 - `getPrincipal()` 
