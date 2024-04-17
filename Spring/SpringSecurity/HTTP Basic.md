@@ -35,7 +35,7 @@ HttpSecurity.httpBasic(httpSecurityHttpBasicConfigurer -> httpSecurityHttpBasicC
 ![](https://i.imgur.com/JW3BCO0.png)
 1. `BasicAuthenticationFilter`가 요청을 받아 인증정보 유효성 체크
 2. 추출한 username, password로 `UsernamePasswordAuthenticationToken` 제작
-3. 토큰을 `AuthenticationManager`에 전달
+3. 토큰을 [[AuthenticationManager]]에 전달
 
 **인증 성공 시**
 4. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장

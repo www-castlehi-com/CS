@@ -197,7 +197,7 @@ configure()
 	- 사용자가 login이 아닌 loginProc과 같은 다른 정보로 요청할 시 false를 반환
 	- true를 반환할 경우 인증 과정으로 넘어가고 false일 경우 다음 필터(`chain.doFilter`) 호출
 3. Username과 Password로 `UsernamePasswordAuthenticationToken`([[Authentication]] interface의 구현체) 제작
-4. Token을 `AuthenticationManager`로 전달 -> 전달받은 Token의 username, password가 db 혹은 시스템과 일치하는지 확인
+4. Token을 [[AuthenticationManager]]로 전달 -> 전달받은 Token의 username, password가 db 혹은 시스템과 일치하는지 확인
 
 **인증 성공 시**
 5. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장

@@ -23,7 +23,7 @@
 ![](https://i.imgur.com/WERo9rf.png)
 **인증 처리 전**
 1. Client의 로그인 시도 -> username, password 입력
-2. `AuthenticationFilter`가 `Authentication`토큰 객체를 생성 후, `AuthenticationManager`에 전달하여 인증
+2. `AuthenticationFilter`가 `Authentication`토큰 객체를 생성 후, [[AuthenticationManager]]에 전달하여 인증
 **인증 처리 후**
 3.  `UserDetails` + authorities를 이용해 `Authentication` 객체를 생성
 	- principal :  타입이 Object이기 때문에 `UserDetails`가 아닐 수 있음

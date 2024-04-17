@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContext.md",
+                "file": "Spring/SpringSecurity/AuthenticationManager.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContext.md",
+                "file": "Spring/SpringSecurity/AuthenticationManager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContext.md",
+                "file": "Spring/SpringSecurity/AuthenticationManager.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContext.md"
+                "file": "Spring/SpringSecurity/AuthenticationManager.md"
               }
             }
           },
@@ -158,11 +158,13 @@
   },
   "active": "84f30cb723669b77",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/Spring Security 초기화.md",
-    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/WebSecurity & HttpSecurity.md",
+    "Spring/SpringSecurity/AuthenticationManager.md",
     "Spring/SpringSecurity/Spring Security.md",
     "Spring/SpringSecurity/SecurityContext.md",
-    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/Spring Security 초기화.md",
+    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
     "Spring/SpringSecurity/Security Builder & Security Configurer.md",
     "Spring/SpringSecurity/RequestCache.md",
     "Spring/SpringSecurity/rememberMe.md",
@@ -175,7 +177,6 @@
     "Spring/Spring Framework.md",
     "Spring/SpringSecurity",
     "Pasted image 20240415104021.png",
-    "Spring/WebSecurity & HttpSecurity.md",
     "form Lo     gin.md",
     "Pasted image 20240411131559.png",
     "form Lo  gin.md",
@@ -192,7 +193,6 @@
     "Pasted image 20240401224230.png",
     "().md",
     "Pasted image 20240327234543.png",
-    "Spring/Spring Batch.md",
     "Software Engineering",
     "Java",
     "I",
