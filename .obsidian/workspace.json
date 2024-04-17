@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/Logout.md",
+                "file": "Spring/SpringSecurity/RequestCache, SavedRequest.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/Logout.md",
+                "file": "Spring/SpringSecurity/RequestCache, SavedRequest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/Logout.md",
+                "file": "Spring/SpringSecurity/RequestCache, SavedRequest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/Logout.md"
+                "file": "Spring/SpringSecurity/RequestCache, SavedRequest.md"
               }
             }
           },
@@ -158,8 +158,9 @@
   },
   "active": "84f30cb723669b77",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/form Login.md",
     "Spring/SpringSecurity/Logout.md",
+    "Spring/SpringSecurity/RequestCache, SavedRequest.md",
+    "Spring/SpringSecurity/form Login.md",
     "Spring/SpringSecurity/rememberMe.md",
     "Spring/SpringSecurity/Spring Security 초기화.md",
     "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
@@ -192,7 +193,6 @@
     "Spring/Spring Batch.md",
     "Network/Application Layer.md",
     "conflict-files-obsidian-git.md",
-    "Network/소켓 프로그래밍.md",
     "Software Engineering",
     "Java",
     "I",
