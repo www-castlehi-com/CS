@@ -203,7 +203,7 @@ public abstract class AbstractAuthenticationProcessingFilter extends GenericFilt
 			
 		}
 		```
-		- `provider.authenticate()` : provider에게 인증처리 위임
+		- `provider.authenticate()` : [[AuthenticationProvider]]에게 인증처리 위임
 			```java
 			package org.springframework.security.authentication.dao;  
 			  
