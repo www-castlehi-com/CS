@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "4527d46797c19dd8",
+        "id": "95b953445c100f6d",
         "type": "tabs",
         "children": [
           {
-            "id": "c99c32a7a2b24238",
+            "id": "f16130b12064340f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContextRepository.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6a87b1f325fddff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringSecurity/SecurityContextHolderFilter.md",
+                "file": "Spring/SpringSecurity/동시 세션 제어.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContextHolderFilter.md",
+                "file": "Spring/SpringSecurity/동시 세션 제어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContextHolderFilter.md",
+                "file": "Spring/SpringSecurity/동시 세션 제어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/SecurityContextHolderFilter.md"
+                "file": "Spring/SpringSecurity/동시 세션 제어.md"
               }
             }
           },
@@ -151,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,11 +156,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b6a87b1f325fddff",
+  "active": "a437ef39703e9837",
   "lastOpenFiles": [
     "Spring/SpringSecurity/SecurityContextRepository.md",
+    "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/SpringSecurity/SecurityContextHolderFilter.md",
     "Spring/SpringSecurity/SecurityContext.md",
+    "Spring/SpringSecurity/Spring Security.md",
     "Spring/SpringSecurity/Security Filter.md",
     "Spring/SpringSecurity/Security Builder & Security Configurer.md",
     "Spring/SpringSecurity/RequestCache.md",
@@ -190,7 +179,6 @@
     "Spring/SpringSecurity/UserDetails.md",
     "Spring/SpringSecurity/Spring Security 초기화.md",
     "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
-    "Spring/SpringSecurity/Spring Security.md",
     "AuthenticaitonProvider.md",
     "Spring/WebSecurity & HttpSecurity.md",
     "Pasted image 20240416152303.png",
@@ -200,7 +188,6 @@
     "form Lo     gin.md",
     "Pasted image 20240411131559.png",
     "form Lo  gin.md",
-    "Spring/SpringCloudStream.md",
     "Pasted image 20240401224815.png",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224236.png",
