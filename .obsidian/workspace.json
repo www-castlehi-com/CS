@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/동시 세션 제어.md",
+                "file": "Spring/SpringSecurity/세션 고정 보호.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/동시 세션 제어.md",
+                "file": "Spring/SpringSecurity/세션 고정 보호.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/동시 세션 제어.md",
+                "file": "Spring/SpringSecurity/세션 고정 보호.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/동시 세션 제어.md"
+                "file": "Spring/SpringSecurity/세션 고정 보호.md"
               }
             }
           },
@@ -156,10 +156,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a437ef39703e9837",
+  "active": "f16130b12064340f",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/SecurityContextRepository.md",
+    "Spring/DTO & VO.md",
+    "Spring/SpringSecurity/세션 고정 보호.md",
     "Spring/SpringSecurity/동시 세션 제어.md",
+    "Spring/SpringSecurity/SecurityContextRepository.md",
     "Spring/SpringSecurity/SecurityContextHolderFilter.md",
     "Spring/SpringSecurity/SecurityContext.md",
     "Spring/SpringSecurity/Spring Security.md",
@@ -175,7 +177,6 @@
     "Spring/SpringSecurity/Authentication.md",
     "Spring/SpringSecurity/anonymous.md",
     "Spring/SpringSecurity/UserDetailsService.md",
-    "Spring/DTO & VO.md",
     "Spring/SpringSecurity/UserDetails.md",
     "Spring/SpringSecurity/Spring Security 초기화.md",
     "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
@@ -187,7 +188,6 @@
     "Pasted image 20240415104021.png",
     "form Lo     gin.md",
     "Pasted image 20240411131559.png",
-    "form Lo  gin.md",
     "Pasted image 20240401224815.png",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224236.png",
