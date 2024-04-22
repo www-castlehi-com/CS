@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/세션 고정 보호.md",
+                "file": "Spring/SpringSecurity/Session 생성 정책.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/세션 고정 보호.md",
+                "file": "Spring/SpringSecurity/Session 생성 정책.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/세션 고정 보호.md",
+                "file": "Spring/SpringSecurity/Session 생성 정책.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/세션 고정 보호.md"
+                "file": "Spring/SpringSecurity/Session 생성 정책.md"
               }
             }
           },
@@ -158,8 +159,9 @@
   },
   "active": "f16130b12064340f",
   "lastOpenFiles": [
-    "Spring/DTO & VO.md",
     "Spring/SpringSecurity/세션 고정 보호.md",
+    "Spring/SpringSecurity/Session 생성 정책.md",
+    "Spring/DTO & VO.md",
     "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/SpringSecurity/SecurityContextRepository.md",
     "Spring/SpringSecurity/SecurityContextHolderFilter.md",
@@ -186,7 +188,6 @@
     "Spring/Spring Framework.md",
     "Spring/SpringSecurity",
     "Pasted image 20240415104021.png",
-    "form Lo     gin.md",
     "Pasted image 20240411131559.png",
     "Pasted image 20240401224815.png",
     "Pasted image 20240401224344.png",
