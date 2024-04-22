@@ -9,7 +9,7 @@
 - 암호화된 토큰
 - 세션에서 해당 쿠키를 감지하여 자동 로그인이 이루어지는 방식
 - `base64(username + ":" + expirationTime + ":" + algorithmName + ":" + algorithmHex(username + ":" + expirationTime + ":" + password + ":" + key)`
-	- **username** : `UserDetailsService`로 식별 가능한 사용자 이름
+	- **username** : [[UserDetailsService]]로 식별 가능한 사용자 이름
 	- **password** : `UserDetails`에 일치하는 비밀번호
 	- **expirationTime** : 토큰이 만료되는 날짜, 시간
 	- **key** : 토큰 수정을 방지하기 위한 개인 키
@@ -279,7 +279,7 @@ public class RememberMeAuthenticationFilter extends GenericFilterBean implements
 	}
 	```
 	- `rememberMeCookie == null` : remeber me 쿠키가 null이면 처리 X
-	- `processAutoLoginCookie()` : 쿠키에서 `UserDetails` 정보 추출
+	- `processAutoLoginCookie()` : 쿠키에서 [[UserDetails]] 정보 추출
 	- `createSuccessfulAuthentication` : 인증 처리
 		- key, user 객체, 권한을 이용해 `RememberMeAuthenticationToken` 생성
 - `authenticationmanager.authenticate()` : [[AuthenticationManager]]에게 [[Authentication]] 객체 전달

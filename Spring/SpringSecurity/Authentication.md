@@ -7,7 +7,7 @@
 - `getPrincipal()` 
 	- 인증 주체
 	- 인증 요청 시, 사용자 이름을 의미
-	- 인증 후, UserDetails 타입의 객체
+	- 인증 후, [[UserDetails]] 타입의 객체
 - `getCredentials()`
 	- 비밀번호
 - `getAuthorities()`
@@ -264,7 +264,7 @@ public abstract class AbstractAuthenticationProcessingFilter extends GenericFilt
 			  
 			}
 			```
-			- `retrieveUser()` : 사용자 정보를 `UserDetailsService`로부터 추출
+			- `retrieveUser()` : 사용자 정보를 [[UserDetailsService]]로부터 추출
 				```java
 				@Override  
 				protected final UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication)  

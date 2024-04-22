@@ -142,7 +142,7 @@ class InitializeAuthenticationProviderBeanManagerConfigurer extends GlobalAuthen
 		return InitializeUserDetailsBeanManagerConfigurer.this.context.getBean(beanNames[0], type);  
 	}
 	```
-**UserDetails 생성**
+**[[UserDetails]] 생성**
 ```java
 package org.springframework.security.config.annotation.authentication.configuration;  
   

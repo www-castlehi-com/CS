@@ -18,7 +18,7 @@
 	- null이 아닌 응답을 받을 때까지 차례로 실행
 	- 처리할 수 있는 Providers를 들고 있지 않을 경우 부모의 ProviderManager에서 Providers로 전달
 	- 응답을 받지 못할 경우 `ProviderNotFoundException` 던짐
-4. `UserDetails`로 만든 인증 객체를 다시 Manager에게 전달
+4. [[UserDetails]]로 만든 인증 객체를 다시 Manager에게 전달
 
 ```java
 package org.springframework.security.authentication;  

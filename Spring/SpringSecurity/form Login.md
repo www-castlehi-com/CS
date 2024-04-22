@@ -200,7 +200,7 @@ configure()
 4. Token을 [[AuthenticationManager]]로 전달 -> 전달받은 Token의 username, password가 db 혹은 시스템과 일치하는지 확인
 
 **인증 성공 시**
-5. UserDetails와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장
+5. [[UserDetails]]와 권한 등을 이용해 `UsernamePasswordAuthenticationToken`을 생성 -> 사용자의 정보 저장
 6. `SessionAuthenticationStrategy`를 이용해 사용자가 로그인에 성공했음을 알리고 세션 관련 작업 수행
 7. `SecurityContextHolder`가 사용자의 **인증 상태 유지**를 위해 AuthenticationToken 인증 객체를 [[SecurityContext]]에 설정하고 이 컨텍스트를 세션에 저장
 8. `RememberMeServices`를 통해 [[rememberMe]]가 설정된 경우 loginSuccess를 호출 -> 세션이 만료되어도 기억할 수 있음
