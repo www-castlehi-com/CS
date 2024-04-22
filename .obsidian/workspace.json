@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/Session 생성 정책.md",
+                "file": "Spring/SpringSecurity/SessionManagementFilter.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/Session 생성 정책.md",
+                "file": "Spring/SpringSecurity/SessionManagementFilter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/Session 생성 정책.md",
+                "file": "Spring/SpringSecurity/SessionManagementFilter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/Session 생성 정책.md"
+                "file": "Spring/SpringSecurity/SessionManagementFilter.md"
               }
             }
           },
@@ -159,8 +159,9 @@
   },
   "active": "f16130b12064340f",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/세션 고정 보호.md",
     "Spring/SpringSecurity/Session 생성 정책.md",
+    "Spring/SpringSecurity/SessionManagementFilter.md",
+    "Spring/SpringSecurity/세션 고정 보호.md",
     "Spring/DTO & VO.md",
     "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/SpringSecurity/SecurityContextRepository.md",
@@ -185,7 +186,6 @@
     "AuthenticaitonProvider.md",
     "Spring/WebSecurity & HttpSecurity.md",
     "Pasted image 20240416152303.png",
-    "Spring/Spring Framework.md",
     "Spring/SpringSecurity",
     "Pasted image 20240415104021.png",
     "Pasted image 20240411131559.png",
