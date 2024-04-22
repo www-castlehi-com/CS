@@ -60,7 +60,7 @@ http.rememberMe(httpSecurityRememberMeConfigurer -> httpSecurityRememberMeConfig
 
 **인증 성공 시**
 6. `RememberMeAuthenticationToken`을 `SeucirytContextHolder`에 저장
-7. `SecurityContextRepository`를 이용해 세션에 [[SecurityContext]] 저장
+7. [[SecurityContextRepository]]를 이용해 세션에 [[SecurityContext]] 저장
 8. `ApplicationEventPublisher`를 통해 인증 성공 이벤트 게시
 
 **인증 실패 시**

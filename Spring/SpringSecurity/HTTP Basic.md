@@ -153,7 +153,7 @@ public class BasicAuthenticationFilter extends OncePerRequestFilter {
 -  `authenticationIsRequired(username)` : `securitContext` 내에 인증 객체가 있는지 확인 -> 있을 경우 인증을 받았다고 판단
 	> ⚠️ Session의 경우 항상 존재하지만 Request마다 저장하는 것이기 때문에 항상 null이어서 이 과정이 필수
 - `authenticationManager.authenticate(authRequest)` : `authenticationManager`에게 인증 처리 위임
-- `securityContextRepository.saveContext(~)` : securityContext에 요청 정보 저장
+- `securityContextRepository.saveContext(~)` : [[SecurityContextRepository]]가 securityContext에 요청 정보 저장
 	![](https://i.imgur.com/68eO7EF.png)
 	```java
 package org.springframework.security.web.context;  

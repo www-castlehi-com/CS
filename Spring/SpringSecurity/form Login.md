@@ -297,7 +297,7 @@ package org.springframework.security.web.authentication;
 	```
 	- `securityContextHolderStrategy.createEmptyContext()` :  비어 있는 context holder를 얻음
 	- `context.setAuthentication()` : 인증 성공한 객체 저장
-	- `securityContextRepository.saveContext()` : 내부 객체인 `HttpSessionSecurityContextRepository`를 이용해 세션에 context holder 저장
+	- `securityContextRepository.saveContext()` : [[SecurityContextRepository]]의 구현체이자 내부 객체인 `HttpSessionSecurityContextRepository`를 이용해 세션에 context holder 저장
 		```java
 		package org.springframework.security.web.context;  
 		  
