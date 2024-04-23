@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "95b953445c100f6d",
+        "id": "191c73d2f0143c06",
         "type": "tabs",
         "children": [
           {
-            "id": "f16130b12064340f",
+            "id": "ad287b3d1658556f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/ConcurrentSessionFilter.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ca64a7ca0248bc6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringSecurity/동시 세션 제어.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4b27d0a6c1aab0d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/SpringSecurity/SessionManagementFilter.md",
+                "file": "Spring/SpringSecurity/CORS.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/ConcurrentSessionFilter.md",
+                "file": "Spring/SpringSecurity/CORS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/ConcurrentSessionFilter.md",
+                "file": "Spring/SpringSecurity/CORS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/ConcurrentSessionFilter.md"
+                "file": "Spring/SpringSecurity/CORS.md"
               }
             }
           },
@@ -180,12 +156,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f16130b12064340f",
+  "active": "ad287b3d1658556f",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/Logout.md",
-    "Spring/SpringSecurity/ConcurrentSessionFilter.md",
-    "Spring/SpringSecurity/동시 세션 제어.md",
+    "Spring/SpringSecurity/CORS.md",
+    "Spring/SpringSecurity/ExceptionTranslationFilter.md",
+    "Spring/SpringSecurity/ExceptionHandling.md",
     "Spring/SpringSecurity/SessionManagementFilter.md",
+    "Spring/SpringSecurity/동시 세션 제어.md",
+    "Spring/SpringSecurity/ConcurrentSessionFilter.md",
+    "Spring/SpringSecurity/Logout.md",
     "Spring/SpringSecurity/세션 고정 보호.md",
     "Spring/SpringSecurity/Session 생성 정책.md",
     "Spring/DTO & VO.md",
@@ -205,9 +184,6 @@
     "Spring/SpringSecurity/anonymous.md",
     "Spring/SpringSecurity/UserDetailsService.md",
     "Spring/SpringSecurity/UserDetails.md",
-    "Spring/SpringSecurity/Spring Security 초기화.md",
-    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
-    "AuthenticaitonProvider.md",
     "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",
     "Pasted image 20240415104021.png",
