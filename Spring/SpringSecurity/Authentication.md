@@ -11,7 +11,7 @@
 - `getCredentials()`
 	- 비밀번호
 - `getAuthorities()`
-	- 인증 주체(`principal`)에게 부여된 권한
+	- 인증 주체(`principal`)에게 부여된 [[Authorization]]
 - `getDetails()`
 	- 인증 요청에 대한 추가적인 세부 사항
 	- IP 주소, 인증서 일련 번호 등

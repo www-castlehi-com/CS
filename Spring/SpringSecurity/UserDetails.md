@@ -5,7 +5,7 @@
 - 구현체로서 User 클래스 제공
 ## 구조
 ![](https://i.imgur.com/7EQXpYB.png)
-- `getAuthorities()` : 사용자에게 부여된 권한을 반환
+- `getAuthorities()` : 사용자에게 부여된 [[Authorization]]을 반환
 - `getUsername()` : 사용자 이름 반환
 - `isEnabled()` : 사용자의 활성화 여부
 - `isAccountNonLocked()` : 사용자가 잠겨 있는지 아닌지를 나타냄

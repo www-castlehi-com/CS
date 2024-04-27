@@ -1,6 +1,6 @@
 # AuthenticationManager
 - 필터로부터 [[Authentication]] 객체를 전달 받아 인증 시도
-- 인증 성공 시, 사용자 정보와 권한 등을 포함한 완전히 채워진 Authentication 객체 반환
+- 인증 성공 시, 사용자 정보와 [[Authorization]] 등을 포함한 완전히 채워진 Authentication 객체 반환
 - 여러 AuthenticaitonProvider를 관리 -> 순차적으로 순회하며 인증 처리 요건에 맞는 적절한 [[AuthenticationProvider]]를 찾아 인증처리 위임
 - `AuthenticationManagerBuilder`에 의해 객체 생성
 - 주로 ProviderManager가 구현체

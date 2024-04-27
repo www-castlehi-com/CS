@@ -1,7 +1,7 @@
 ## 개념
 - 사용자의 아이디, 비밀번호가 유효한지 검증
 - 다양한 인증 매커니즘 지원 (예 : 사용자 이름-비밀번호 기반, 토큰 기반, 지문 인식 등)
-- 성공적인 인증 후 User와 권한을 포함한 [[Authentication]] 객체 반환
+- 성공적인 인증 후 User와 [[Authorization]]을 포함한 [[Authentication]] 객체 반환
 - 인증 과정 중 문제가 발생할 경우, AuthenticationException 발생
 ## 구조
 ![](https://i.imgur.com/xSzbNRN.png)

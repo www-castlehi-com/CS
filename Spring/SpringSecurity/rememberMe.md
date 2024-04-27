@@ -281,7 +281,7 @@ public class RememberMeAuthenticationFilter extends GenericFilterBean implements
 	- `rememberMeCookie == null` : remeber me 쿠키가 null이면 처리 X
 	- `processAutoLoginCookie()` : 쿠키에서 [[UserDetails]] 정보 추출
 	- `createSuccessfulAuthentication` : 인증 처리
-		- key, user 객체, 권한을 이용해 `RememberMeAuthenticationToken` 생성
+		- key, user 객체, [[Authorization]]을 이용해 `RememberMeAuthenticationToken` 생성
 - `authenticationmanager.authenticate()` : [[AuthenticationManager]]에게 [[Authentication]] 객체 전달
 - `securityContextHolderStrategy.setContext()` : security context 내에 저장 후 context를 세션에 저장
 	![](https://i.imgur.com/eIWVisX.png)

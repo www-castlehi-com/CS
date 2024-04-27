@@ -5,7 +5,7 @@
 ![](https://i.imgur.com/yR74gih.png)
 **인증 요청**
 1. Client의 요청
-2. AuthenticationFilter를 통해 사용자 인증 후, [[UserDetails]] 정보와 권한 정보를 이용해 Authentication 객체를 만들어 SecurityContext에 저장
+2. AuthenticationFilter를 통해 사용자 인증 후, [[UserDetails]] 정보와 [[Authorization]] 정보를 이용해 Authentication 객체를 만들어 SecurityContext에 저장
 3. SecurityContextRepository에 명시적으로 SecurityContext를 저장
 4. SecurityContextRepository를 통해 HttpSession에 SecurityContext 저장
 
