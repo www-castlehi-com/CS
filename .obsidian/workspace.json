@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/SpringSecurity/다중 보안.md",
+                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "becd2c72268c8646",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/SpringSecurity/다중 보안.md",
+                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/SpringSecurity/다중 보안.md",
+                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/SpringSecurity/다중 보안.md"
+                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md"
               }
             }
           },
@@ -156,10 +167,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "91680574a24cde30",
+  "active": "becd2c72268c8646",
   "lastOpenFiles": [
-    "Spring/SpringSecurity/Spring MVC 통합.md",
+    "Network/IO multiplexing.md",
+    "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+    "Spring/Spring Introduction.md",
+    "Spring/Spring Introduction",
+    "Network/소켓 프로그래밍.md",
+    "Network/동기&비동기, 블로킹&논블로킹.md",
+    "Design Pattern/MVC Pattern.md",
+    "Java/HashMap.md",
+    "Java/List.md",
     "Spring/SpringSecurity/다중 보안.md",
+    "Spring/SpringSecurity/Spring MVC 통합.md",
     "Spring/SpringSecurity/Authentication.md",
     "Spring/SpringSecurity/Servlet API 통합.md",
     "Spring/SpringSecurity/AuthorizationEvent.md",
@@ -176,14 +196,6 @@
     "Spring/SpringSecurity/UserDetailsService.md",
     "Spring/SpringSecurity/UserDetails.md",
     "Spring/SpringSecurity/Spring Security 초기화.md",
-    "Spring/SpringSecurity/Spring Security - BCryptPasswordEncoder.md",
-    "Spring/SpringSecurity/Spring Security.md",
-    "Spring/SpringSecurity/SessionManagementFilter.md",
-    "Spring/SpringSecurity/Session 생성 정책.md",
-    "Spring/SpringSecurity/SecurityContextRepository.md",
-    "Spring/SpringSecurity/SecurityContextHolderFilter.md",
-    "Spring/SpringSecurity/SecurityContext.md",
-    "Spring/SpringSecurity/Security Filter.md",
     "Pasted image 20240425164920.png",
     "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",
@@ -203,7 +215,6 @@
     "Pasted image 20231210222009.png",
     "프로젝트 기술서",
     "image",
-    "IT Keyword",
-    "Spring"
+    "IT Keyword"
   ]
 }
