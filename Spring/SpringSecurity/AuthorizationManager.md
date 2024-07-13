@@ -47,7 +47,7 @@
 #### WebExpressionAuthorizationManager
 - 웹 표현식을 확인하고 허용
 ### 2️⃣ 메서드 기반 권한 부여 관리자
-- [[AOP]]로 구성
+- [[Spring/AOP]]로 구성
 
 **초기화**
 ![](https://i.imgur.com/EBihEj8.png)

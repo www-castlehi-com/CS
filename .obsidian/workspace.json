@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+                "file": "Spring/Spring Introduction/AOP.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "becd2c72268c8646",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+                "file": "Spring/Spring Introduction/AOP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+                "file": "Spring/Spring Introduction/AOP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md"
+                "file": "Spring/Spring Introduction/AOP.md"
               }
             }
           },
@@ -167,10 +156,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "becd2c72268c8646",
+  "active": "91680574a24cde30",
   "lastOpenFiles": [
-    "Network/IO multiplexing.md",
+    "Spring/AOP.md",
+    "Spring/Spring Introduction/AOP.md",
+    "Spring/Spring Introduction/JPA.md",
+    "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
+    "Spring/Spring Introduction/JDBC.md",
     "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+    "Network/IO multiplexing.md",
     "Spring/Spring Introduction.md",
     "Spring/Spring Introduction",
     "Network/소켓 프로그래밍.md",
@@ -185,17 +179,12 @@
     "Spring/SpringSecurity/AuthorizationEvent.md",
     "Spring/SpringSecurity/AuthenticationEvent.md",
     "Spring/SpringSecurity/AuthorizationManager.md",
-    "Spring/AOP.md",
     "Spring/SpringSecurity/Authorization.md",
     "Spring/SpringSecurity/메서드 기반 권한 부여.md",
     "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/SpringSecurity/정적 자원 관리.md",
     "Spring/SpringSecurity/요청 기반 권한 부여.md",
     "Spring/SpringSecurity/세션 고정 보호.md",
-    "Spring/SpringSecurity/계층적 권한.md",
-    "Spring/SpringSecurity/UserDetailsService.md",
-    "Spring/SpringSecurity/UserDetails.md",
-    "Spring/SpringSecurity/Spring Security 초기화.md",
     "Pasted image 20240425164920.png",
     "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",

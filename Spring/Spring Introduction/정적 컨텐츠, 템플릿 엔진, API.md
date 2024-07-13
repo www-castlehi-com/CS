@@ -4,7 +4,7 @@
 `resources/static`에 위치
 ### 원리
 ![](https://i.imgur.com/dBn0A0B.png)
-`resources/static`에서 요청된 html파일을 찾아 그대로 반환
+**Controller**가 없을 경우, `resources/static`에서 요청된 html파일을 찾아 그대로 반환
 ## 2️⃣ 템플릿 엔진
 MVC를 이용하여 값을 주입할 수 있음
 ![](https://i.imgur.com/akzDhPz.png)
