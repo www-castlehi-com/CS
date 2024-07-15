@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "a2213bb09b5be6c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "8396013a6b0c770a",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md"
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md"
               }
             }
           },
@@ -168,10 +181,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b435da6205862ad9",
+  "active": "a2213bb09b5be6c6",
   "lastOpenFiles": [
-    "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 3. 다른 개발자와 코드 계약.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 2. 추상화 계층.md",
     "Book/좋은 코드, 나쁜 코드",
@@ -198,7 +212,6 @@
     "Spring/SpringSecurity/AuthorizationManager.md",
     "Java/다이나믹 프록시.md",
     "Spring/SpringSecurity/SecurityContextHolderFilter.md",
-    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
     "Spring/SpringSecurity",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
