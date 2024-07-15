@@ -4,22 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "191c73d2f0143c06",
+        "id": "b6fbc59d1e69bfbc",
         "type": "tabs",
         "children": [
           {
-            "id": "91680574a24cde30",
+            "id": "b71bf1e693453acd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Introduction/AOP.md",
+                "file": "Spring/WebClient.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "1076ef7b36da139c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 257.5
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Introduction/AOP.md",
+                "file": "Spring/WebClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Introduction/AOP.md",
+                "file": "Spring/WebClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Introduction/AOP.md"
+                "file": "Spring/WebClient.md"
               }
             }
           },
@@ -138,7 +149,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -147,51 +158,47 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:그래프 뷰 열기": false,
-      "switcher:퀵 스위처 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "91680574a24cde30",
+  "active": "1076ef7b36da139c",
   "lastOpenFiles": [
-    "Spring/AOP.md",
-    "Spring/Spring Introduction/AOP.md",
-    "Spring/Spring Introduction/JPA.md",
     "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
-    "Spring/Spring Introduction/JDBC.md",
     "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
-    "Network/IO multiplexing.md",
-    "Spring/Spring Introduction.md",
+    "Spring/Spring Introduction/JPA.md",
+    "Spring/Spring Introduction/JDBC.md",
+    "Spring/Spring Introduction/AOP.md",
     "Spring/Spring Introduction",
-    "Network/소켓 프로그래밍.md",
-    "Network/동기&비동기, 블로킹&논블로킹.md",
-    "Design Pattern/MVC Pattern.md",
-    "Java/HashMap.md",
-    "Java/List.md",
-    "Spring/SpringSecurity/다중 보안.md",
-    "Spring/SpringSecurity/Spring MVC 통합.md",
-    "Spring/SpringSecurity/Authentication.md",
-    "Spring/SpringSecurity/Servlet API 통합.md",
-    "Spring/SpringSecurity/AuthorizationEvent.md",
-    "Spring/SpringSecurity/AuthenticationEvent.md",
-    "Spring/SpringSecurity/AuthorizationManager.md",
-    "Spring/SpringSecurity/Authorization.md",
+    "Spring/WebFlux.md",
+    "Database/트랜잭션.md",
+    "Database/이상 현상.md",
+    "Database/정규화.md",
+    "Spring/SpringSecurity/CORS.md",
+    "Spring/SpringSecurity/SecurityContext.md",
     "Spring/SpringSecurity/메서드 기반 권한 부여.md",
-    "Spring/SpringSecurity/동시 세션 제어.md",
-    "Spring/SpringSecurity/정적 자원 관리.md",
-    "Spring/SpringSecurity/요청 기반 권한 부여.md",
+    "Spring/SpringSecurity/Security Filter.md",
+    "Spring/SpringSecurity/Spring Security 초기화.md",
     "Spring/SpringSecurity/세션 고정 보호.md",
-    "Pasted image 20240425164920.png",
-    "Pasted image 20240416152303.png",
+    "Spring/SpringSecurity/SameSite.md",
+    "Spring/SpringSecurity/CSRF.md",
+    "Spring/SpringSecurity/AuthorizationManager.md",
+    "Java/다이나믹 프록시.md",
+    "Spring/SpringSecurity/SecurityContextHolderFilter.md",
+    "Spring/SpringSecurity/Security Builder & Security Configurer.md",
+    "Spring/SpringSecurity/동시 세션 제어.md",
+    "Spring/SpringSecurity/다중 보안.md",
+    "Spring/SpringSecurity/AuthenticationManager.md",
+    "Spring/AOP.md",
+    "Spring/SpringSecurity/Authorization.md",
     "Spring/SpringSecurity",
-    "Pasted image 20240415104021.png",
-    "Pasted image 20240411131559.png",
-    "Pasted image 20240401224815.png",
     "Pasted image 20240401224344.png",
+    "Pasted image 20240401224815.png",
     "Pasted image 20240401224236.png",
     "Pasted image 20240401224230.png",
     "Pasted image 20240327234543.png",
@@ -202,6 +209,7 @@
     "Home",
     "Spaces",
     "Pasted image 20231210222009.png",
+    "Pasted image 20231213022320.png",
     "프로젝트 기술서",
     "image",
     "IT Keyword"
