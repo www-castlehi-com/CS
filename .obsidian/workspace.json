@@ -20,13 +20,11 @@
             }
           },
           {
-            "id": "1076ef7b36da139c",
+            "id": "0eb69c706d2c28d7",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -96,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/WebClient.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/WebClient.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Spring/WebClient.md"
-              }
+              "state": {}
             }
           },
           {
@@ -167,8 +161,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1076ef7b36da139c",
+  "active": "0eb69c706d2c28d7",
   "lastOpenFiles": [
+    "Spring/WebClient.md",
+    "Book",
     "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
     "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
     "Spring/Spring Introduction/JPA.md",
@@ -195,7 +191,6 @@
     "Spring/SpringSecurity/다중 보안.md",
     "Spring/SpringSecurity/AuthenticationManager.md",
     "Spring/AOP.md",
-    "Spring/SpringSecurity/Authorization.md",
     "Spring/SpringSecurity",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
@@ -211,7 +206,6 @@
     "Pasted image 20231210222009.png",
     "Pasted image 20231213022320.png",
     "프로젝트 기술서",
-    "image",
-    "IT Keyword"
+    "image"
   ]
 }

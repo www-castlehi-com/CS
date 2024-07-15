@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"Computer Architecture\"  ",
@@ -76,6 +76,13 @@
         "a": 1,
         "rgb": 16777215
       }
+    },
+    {
+      "query": "path:Book  ",
+      "color": {
+        "a": 1,
+        "rgb": 0
+      }
     }
   ],
   "collapse-display": true,
@@ -88,6 +95,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.4185535227222321,
+  "scale": 0.36717648759496346,
   "close": true
 }
