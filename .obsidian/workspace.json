@@ -4,31 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b6fbc59d1e69bfbc",
+        "id": "0e904077c8d8e737",
         "type": "tabs",
         "children": [
           {
-            "id": "b71bf1e693453acd",
+            "id": "3063366dba03a0a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/WebClient.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "0eb69c706d2c28d7",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Book/좋은 코드, 나쁜 코드/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Book/좋은 코드, 나쁜 코드/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Book/좋은 코드, 나쁜 코드/Untitled.md"
+              }
             }
           },
           {
@@ -161,8 +156,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0eb69c706d2c28d7",
+  "active": "3063366dba03a0a3",
   "lastOpenFiles": [
+    "Book/좋은 코드, 나쁜 코드/Untitled.md",
+    "Book/좋은 코드, 나쁜 코드",
     "Spring/WebClient.md",
     "Book",
     "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
@@ -190,7 +187,6 @@
     "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/SpringSecurity/다중 보안.md",
     "Spring/SpringSecurity/AuthenticationManager.md",
-    "Spring/AOP.md",
     "Spring/SpringSecurity",
     "Pasted image 20240401224344.png",
     "Pasted image 20240401224815.png",
@@ -205,7 +201,6 @@
     "Spaces",
     "Pasted image 20231210222009.png",
     "Pasted image 20231213022320.png",
-    "프로젝트 기술서",
-    "image"
+    "프로젝트 기술서"
   ]
 }
