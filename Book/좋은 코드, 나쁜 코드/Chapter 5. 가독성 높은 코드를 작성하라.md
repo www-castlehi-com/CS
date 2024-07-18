@@ -146,3 +146,120 @@ Address? getOwnersAddress(Vehicle vehicle) {
 }
 ```
 - 더 작은 함수로 분리하며 중첩 최소화
+### 5.6.3 서술적 유형 사용
+#### **함수 호출에서의 서술적 유형**
+```java
+class MessagePriority {
+	MessagePriority(Int priority) {}
+}
+
+enum RetryPolicy {
+	ALLOW_RETRY,
+	DISALLOW_RETRY
+}
+
+void sendMessage(
+	String message,
+	MessagePriority priority,
+	RetryPolicy retryPolicy
+) {}
+
+sendMessage("hello", new MessagePriority(1), RetryPolicy.ALLOW_RETRY);
+```
+> 라인의 가독성을 높여주는 위와 같은 방법이 없을 경우, 주석문을 사용하는 것보다 그대로 두는 것이 좋음
+> 주석문을 사용할 경우, 해당 값이 바뀔 때 주석도 같이 바뀌어야 하기 때문
+### 5.7.2 잘 명명된 상수를 사용하라
+#### 명명 상수를 사용하지 않은 경우
+```java
+class Vehicle {
+	Double getMassUsTon() {}
+	Double getSpeedMph() {}
+	Double getKineticEnergyJ() {
+		return 0.5 *
+			getMassUsTon() * 907.1847 *
+			Math.pow(getSpeedMph() * 0.44704, 2);
+	}
+}
+```
+#### 잘 명명된 상수
+```java
+class Vehicle {
+	private const Double KILOGRAMS_PER_US_TON = 907.1847;
+	private const Double METERS_PER_SECOND_PER_MPH = 0.44704;
+
+	Double getKineticEnergyJ() {
+		return 0.5 *
+			getMassUsTon() * KILOGRAMS_PER_US_TON *
+			Math.pow(getSpeedMph() * METERS_PER_SECOND_PER_MPH, 2);
+	}
+}
+```
+### 5.7.3 잘 명명된 함수를 사용하라
+#### 공급자 함수
+```java
+class Vehicle {
+	//...
+
+	private static Double kilogramsPerUsTon() {
+		return 907.1847;
+	}
+
+	private static Double metersPerSecondPerMph() {
+		return 0.44704;
+	}
+}
+```
+- 상수를 사용하는 것과 동일
+#### 헬퍼 함수
+```java
+class Vehicle {
+	//...
+
+	private static Double usTonsToKilograms(Double usTons) {
+		return usTons * 907.1847;
+	}
+
+	private static Double mphToMetersPerSecond(Double mph) {
+		return mph * 0.44704;
+	}
+}
+```
+- 수량 변환 시 사용되는 계수가 있다는 사실은 함수 호출자는 모르는 구현 세부사항이므로 하위 문제로 만들어 헬퍼 함수가  처리
+- 다른 개발자들이 재사용할 가능성이 있다면 별도의 유틸리티 클래스에 두는 것이 좋음
+### 5.8.1 익명 함수는 간단한 로직에 좋다
+### 5.8.2 익명 함수는 가독성이 떨어질 수 있다
+```java
+List<UInt16> getValidIds(List<UInt16> ids) {
+	return ids
+		.filter(id -> id != 0)
+		.filter(id -> countSetBits(id & 0x7FFF) % 2 == ((id & 0x8000) >> 15));
+}
+```
+명명 함수를 사용하지 않을 경우, 함수 이름으로 유추할 수 없기 때문에 복잡한 로직에서는 가독성이 떨어질 수 있음
+### 5.8.3 대신 명명함수를 사용하라
+- 구현 세부사항을 별도의 명명함수로 빼내는 것이 좋음
+```java
+List<UInt16> getValidIds(List<UInt16> idx) {
+	return idx
+		.filter(id -> id != 0)
+		.filter(isParityBitCorrect);
+}
+
+private boolean isParityBitCorrect(UInt16 id) {}
+```
+익명 함수가 길 경우, 작은 단위의 명명 함수로 작성
+### 5.9.3 작업에 가장 적합한 도구를 사용하라
+#### 스트림을 사용하여 맵에서 값을 얻기
+```java
+Optional<String> value = map
+	.entrySet()
+	.stream()
+	.filter(entry -> entry.getKey().equals(key))
+	.map(Entry::getValue)
+	.findFirst();
+```
+#### 더 적합한 도구
+```java
+String value = map.get(key);
+```
+`Stream`과 같은 새 기능은 코드를 개선할 수 있지만, 작업에 적합한 도구를 사용하는 것이 효과적임
