@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0e904077c8d8e737",
+        "id": "191c73d2f0143c06",
         "type": "tabs",
         "children": [
           {
-            "id": "b435da6205862ad9",
+            "id": "91680574a24cde30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a2213bb09b5be6c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8396013a6b0c770a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
+                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 284.50271224975586
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
+                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
+                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md"
+                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md"
               }
             }
           },
@@ -163,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -172,49 +147,54 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "graph:그래프 뷰 열기": false,
+      "switcher:퀵 스위처 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a2213bb09b5be6c6",
+  "active": "91680574a24cde30",
   "lastOpenFiles": [
-    "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
+    "Spring/Spring Core Principles - Basics/객체 지향 설계와 스프링.md",
+    "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+    "Spring/Spring Core Principles - Basics/스프링이란.md",
+    "Spring/Spring Core Principles - Basics/스프링의 탄생.md",
+    "Spring/Spring Introduction/AOP.md",
+    "Spring/Spring Core Principles - Basics",
+    "Database/트랜잭션.md",
+    "Database/정규화.md",
+    "Database/이상 현상.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 3. 다른 개발자와 코드 계약.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 2. 추상화 계층.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
     "Book/좋은 코드, 나쁜 코드",
-    "Spring/WebClient.md",
     "Book",
-    "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
-    "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+    "Spring/AOP.md",
     "Spring/Spring Introduction/JPA.md",
+    "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
     "Spring/Spring Introduction/JDBC.md",
-    "Spring/Spring Introduction/AOP.md",
+    "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
+    "Network/IO multiplexing.md",
+    "Spring/Spring Introduction.md",
     "Spring/Spring Introduction",
-    "Spring/WebFlux.md",
-    "Database/트랜잭션.md",
-    "Database/이상 현상.md",
-    "Database/정규화.md",
-    "Spring/SpringSecurity/CORS.md",
-    "Spring/SpringSecurity/SecurityContext.md",
-    "Spring/SpringSecurity/메서드 기반 권한 부여.md",
-    "Spring/SpringSecurity/Security Filter.md",
-    "Spring/SpringSecurity/Spring Security 초기화.md",
-    "Spring/SpringSecurity/세션 고정 보호.md",
-    "Spring/SpringSecurity/SameSite.md",
-    "Spring/SpringSecurity/CSRF.md",
-    "Spring/SpringSecurity/AuthorizationManager.md",
-    "Java/다이나믹 프록시.md",
-    "Spring/SpringSecurity/SecurityContextHolderFilter.md",
+    "Network/소켓 프로그래밍.md",
+    "Network/동기&비동기, 블로킹&논블로킹.md",
+    "Design Pattern/MVC Pattern.md",
+    "Java/HashMap.md",
+    "Java/List.md",
+    "Spring/SpringSecurity/다중 보안.md",
+    "Pasted image 20240425164920.png",
+    "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",
-    "Pasted image 20240401224344.png",
+    "Pasted image 20240415104021.png",
+    "Pasted image 20240411131559.png",
     "Pasted image 20240401224815.png",
+    "Pasted image 20240401224344.png",
     "Pasted image 20240401224236.png",
     "Pasted image 20240401224230.png",
     "Pasted image 20240327234543.png",
@@ -224,8 +204,6 @@
     "image/무제 파일.canvas",
     "Home",
     "Spaces",
-    "Pasted image 20231210222009.png",
-    "Pasted image 20231213022320.png",
-    "프로젝트 기술서"
+    "Pasted image 20231210222009.png"
   ]
 }
