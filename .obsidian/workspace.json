@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md"
+                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md"
               }
             }
           },
@@ -158,8 +158,18 @@
   },
   "active": "91680574a24cde30",
   "lastOpenFiles": [
-    "Spring/Spring Core Principles - Basics/객체 지향 설계와 스프링.md",
+    "Spring/Spring Core Principles - Basics/BeanDefinition.md",
+    "Network/Transport Layer.md",
+    "Pasted image 20240401224815.png.md",
+    "Pasted image 20240401224344.png.md",
+    "Spring/Spring Boot.md",
+    "Spring/Spring Core Principles - Basics/BeanFactory.md",
+    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/IoC, DI, 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/AppConfig.md",
+    "Spring/Spring Core Principles - Basics/DI.md",
     "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+    "Spring/Spring Core Principles - Basics/객체 지향 설계와 스프링.md",
     "Spring/Spring Core Principles - Basics/스프링이란.md",
     "Spring/Spring Core Principles - Basics/스프링의 탄생.md",
     "Spring/Spring Introduction/AOP.md",
@@ -177,17 +187,7 @@
     "Spring/AOP.md",
     "Spring/Spring Introduction/JPA.md",
     "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
-    "Spring/Spring Introduction/JDBC.md",
-    "Spring/Spring Introduction/정적 컨텐츠, 템플릿 엔진, API.md",
-    "Network/IO multiplexing.md",
-    "Spring/Spring Introduction.md",
     "Spring/Spring Introduction",
-    "Network/소켓 프로그래밍.md",
-    "Network/동기&비동기, 블로킹&논블로킹.md",
-    "Design Pattern/MVC Pattern.md",
-    "Java/HashMap.md",
-    "Java/List.md",
-    "Spring/SpringSecurity/다중 보안.md",
     "Pasted image 20240425164920.png",
     "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",
