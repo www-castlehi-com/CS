@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
+                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0430e447d4450432",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
+                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md",
+                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/BeanDefinition.md"
+                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md"
               }
             }
           },
@@ -158,14 +170,25 @@
   },
   "active": "91680574a24cde30",
   "lastOpenFiles": [
+    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+    "Pasted image 20240722224400.png",
+    "Pasted image 20240722224153.png",
+    "Screenshot 2024-07-22 at 22.40.26.png",
+    "Pasted image 20240722223816.png",
+    "Pasted image 20240722223659.png",
+    "Pasted image 20240722223647.png",
+    "Pasted image 20240722223600.png",
+    "Pasted image 20240722223427.png",
+    "Pasted image 20240722223544.png",
+    "Pasted image 20240722223053.png",
+    "Spring/Spring Core Principles - Basics/IoC, DI, 컨테이너.md",
     "Spring/Spring Core Principles - Basics/BeanDefinition.md",
     "Network/Transport Layer.md",
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
     "Spring/Spring Boot.md",
     "Spring/Spring Core Principles - Basics/BeanFactory.md",
-    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
-    "Spring/Spring Core Principles - Basics/IoC, DI, 컨테이너.md",
     "Spring/Spring Core Principles - Basics/AppConfig.md",
     "Spring/Spring Core Principles - Basics/DI.md",
     "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
@@ -185,25 +208,13 @@
     "Book/좋은 코드, 나쁜 코드",
     "Book",
     "Spring/AOP.md",
-    "Spring/Spring Introduction/JPA.md",
-    "Spring/Spring Introduction/컴포넌트 스캔 범위.md",
     "Spring/Spring Introduction",
-    "Pasted image 20240425164920.png",
-    "Pasted image 20240416152303.png",
     "Spring/SpringSecurity",
-    "Pasted image 20240415104021.png",
-    "Pasted image 20240411131559.png",
-    "Pasted image 20240401224815.png",
-    "Pasted image 20240401224344.png",
-    "Pasted image 20240401224236.png",
-    "Pasted image 20240401224230.png",
-    "Pasted image 20240327234543.png",
     "Software Engineering",
     "Java",
     "I",
     "image/무제 파일.canvas",
     "Home",
-    "Spaces",
-    "Pasted image 20231210222009.png"
+    "Spaces"
   ]
 }
