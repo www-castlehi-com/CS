@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md"
+                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md"
               }
             }
           },
@@ -170,7 +170,9 @@
   },
   "active": "91680574a24cde30",
   "lastOpenFiles": [
+    "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
     "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
     "Pasted image 20240722224400.png",
     "Pasted image 20240722224153.png",
@@ -207,7 +209,6 @@
     "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
-    "Spring/AOP.md",
     "Spring/Spring Introduction",
     "Spring/SpringSecurity",
     "Software Engineering",
