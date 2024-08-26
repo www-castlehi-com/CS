@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0430e447d4450432",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md"
+                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md"
               }
             }
           },
@@ -170,9 +158,10 @@
   },
   "active": "91680574a24cde30",
   "lastOpenFiles": [
-    "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
     "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+    "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
     "Pasted image 20240722224400.png",
     "Pasted image 20240722224153.png",
@@ -183,7 +172,6 @@
     "Pasted image 20240722223600.png",
     "Pasted image 20240722223427.png",
     "Pasted image 20240722223544.png",
-    "Pasted image 20240722223053.png",
     "Spring/Spring Core Principles - Basics/IoC, DI, 컨테이너.md",
     "Spring/Spring Core Principles - Basics/BeanDefinition.md",
     "Network/Transport Layer.md",
