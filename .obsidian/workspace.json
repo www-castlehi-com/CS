@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/의존관계 주입.md"
+                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md"
               }
             }
           },
@@ -158,8 +158,9 @@
   },
   "active": "91680574a24cde30",
   "lastOpenFiles": [
-    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
     "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
     "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
     "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
@@ -194,7 +195,6 @@
     "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 3. 다른 개발자와 코드 계약.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 2. 추상화 계층.md",
-    "Book/좋은 코드, 나쁜 코드/Chapter 1. 코드 품질.md",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
     "Spring/Spring Introduction",
