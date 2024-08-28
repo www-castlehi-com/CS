@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "191c73d2f0143c06",
+        "id": "8547aef22f4a26c5",
         "type": "tabs",
         "children": [
           {
-            "id": "91680574a24cde30",
+            "id": "b18cdac381945b5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "752a09e7bbd94493",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md"
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md"
               }
             }
           },
@@ -156,12 +169,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "91680574a24cde30",
+  "active": "752a09e7bbd94493",
   "lastOpenFiles": [
-    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
-    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
     "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
     "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
     "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
     "Pasted image 20240722224400.png",
@@ -191,10 +207,7 @@
     "Database/트랜잭션.md",
     "Database/정규화.md",
     "Database/이상 현상.md",
-    "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
-    "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 3. 다른 개발자와 코드 계약.md",
-    "Book/좋은 코드, 나쁜 코드/Chapter 2. 추상화 계층.md",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
     "Spring/Spring Introduction",
