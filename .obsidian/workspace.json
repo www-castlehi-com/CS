@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "191c73d2f0143c06",
+        "id": "1b0782133ae71802",
         "type": "tabs",
         "children": [
           {
-            "id": "13b6bd1d7bfd3c8a",
+            "id": "883425358e8bd98c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md"
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md"
               }
             }
           },
@@ -156,17 +156,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "13b6bd1d7bfd3c8a",
+  "active": "883425358e8bd98c",
   "lastOpenFiles": [
-    "Spring/Spring Introduction/JPA.md",
-    "Spring/Spring Core Principles - Basics/빈 스코프.md",
-    "Spring/Spring Core Principles - Basics/프로토타입 스코프.md",
-    "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
-    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
-    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+    "Spring/Spring Core Principles - Basics/빈 스코프.md",
+    "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 5. 가독성 높은 코드를 작성하라.md",
     "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
     "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
     "Pasted image 20240723210630.png",
     "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
     "Pasted image 20240722224400.png",
@@ -194,7 +195,6 @@
     "Spring/Spring Introduction/AOP.md",
     "Spring/Spring Core Principles - Basics",
     "Database/트랜잭션.md",
-    "Database/정규화.md",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
     "Spring/Spring Introduction",
