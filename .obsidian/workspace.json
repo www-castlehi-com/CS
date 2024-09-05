@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md"
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md"
               }
             }
           },
@@ -158,8 +158,9 @@
   },
   "active": "883425358e8bd98c",
   "lastOpenFiles": [
-    "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
     "Spring/Spring Core Principles - Basics/빈 스코프.md",
     "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 4. 오류.md",
@@ -194,7 +195,6 @@
     "Spring/Spring Core Principles - Basics/스프링의 탄생.md",
     "Spring/Spring Introduction/AOP.md",
     "Spring/Spring Core Principles - Basics",
-    "Database/트랜잭션.md",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
     "Spring/Spring Introduction",
