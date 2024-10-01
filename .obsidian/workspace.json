@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md"
+                "file": "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md"
               }
             }
           },
@@ -158,8 +158,8 @@
   },
   "active": "13b6bd1d7bfd3c8a",
   "lastOpenFiles": [
-    "Spring/Spring Introduction/JPA.md",
     "Spring/Spring Core Principles - Basics/빈 스코프.md",
+    "Spring/Spring Introduction/JPA.md",
     "Spring/Spring Core Principles - Basics/프로토타입 스코프.md",
     "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
     "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
