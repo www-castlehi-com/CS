@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "5045a324c2040d9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "98a13442aadf3dbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b296ca8e38be5aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9c5a6ec9bfc66af5",
+    "type": "split",
+    "children": [
+      {
+        "id": "48cc73e56045efe6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "161950c1edd8f3f9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d463b715ba466e70",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "postcon",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "822f67a3abbe56cc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 284.50271224975586
+  },
+  "right": {
+    "id": "16cd2fb0469b5a31",
+    "type": "split",
+    "children": [
+      {
+        "id": "2eceaea64c3247e8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd53d6c8d4503936",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a437ef39703e9837",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9f30580f094d9654",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "08cfcc2562ca1460",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spring/Spring Core Principles - Basics/빈 스코프.md"
+              }
+            }
+          },
+          {
+            "id": "e720562fef53dd8a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:그래프 뷰 열기": false,
+      "switcher:퀵 스위처 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "161950c1edd8f3f9",
+  "lastOpenFiles": [
+    "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
+    "Spring/Spring Core Principles - Basics/빈 스코프.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
+    "Spring/Spring Core Principles - Basics/스프링 컨테이너.md",
+    "conflict-files-obsidian-git.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
+    "Book/좋은 코드, 나쁜 코드/Chapter 7. 코드를 오용하기 어렵게 만들라.md",
+    "Spring/Spring Introduction/JPA.md",
+    "Spring/Spring Core Principles - Basics/프로토타입 스코프.md",
+    "Spring/Spring Core Principles - Basics/조회 대상 빈이 2개 이상일 때.md",
+    "Spring/Spring Core Principles - Basics/의존관계 주입.md",
+    "Spring/Spring Core Principles - Basics/컴포넌트 스캔.md",
+    "Pasted image 20240723210630.png",
+    "Spring/Spring Core Principles - Basics/싱글톤 컨테이너.md",
+    "Pasted image 20240722224400.png",
+    "Pasted image 20240722224153.png",
+    "Screenshot 2024-07-22 at 22.40.26.png",
+    "Pasted image 20240722223816.png",
+    "Pasted image 20240722223659.png",
+    "Pasted image 20240722223647.png",
+    "Pasted image 20240722223600.png",
+    "Pasted image 20240722223427.png",
+    "Pasted image 20240722223544.png",
+    "Spring/Spring Core Principles - Basics/IoC, DI, 컨테이너.md",
+    "Spring/Spring Core Principles - Basics/BeanDefinition.md",
+    "Network/Transport Layer.md",
+    "Pasted image 20240401224815.png.md",
+    "Pasted image 20240401224344.png.md",
+    "Spring/Spring Boot.md",
+    "Spring/Spring Core Principles - Basics/BeanFactory.md",
+    "Spring/Spring Core Principles - Basics/AppConfig.md",
+    "Spring/Spring Core Principles - Basics/DI.md",
+    "Spring/Spring Core Principles - Basics/좋은 객체 지향 프로그래밍.md",
+    "Spring/Spring Core Principles - Basics/객체 지향 설계와 스프링.md",
+    "Spring/Spring Core Principles - Basics/스프링이란.md",
+    "Spring/Spring Core Principles - Basics/스프링의 탄생.md",
+    "Spring/Spring Core Principles - Basics",
+    "Book/좋은 코드, 나쁜 코드",
+    "Book",
+    "Spring/Spring Introduction",
+    "Spring/SpringSecurity",
+    "Software Engineering",
+    "Java",
+    "I",
+    "image/무제 파일.canvas",
+    "Home",
+    "Spaces"
+  ]
+}
