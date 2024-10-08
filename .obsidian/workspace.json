@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.50271224975586
+    "width": 200
   },
   "right": {
     "id": "16cd2fb0469b5a31",
@@ -156,7 +156,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "161950c1edd8f3f9",
+  "active": "9b296ca8e38be5aa",
   "lastOpenFiles": [
     "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
     "Spring/Spring Core Principles - Basics/빈 스코프.md",
