@@ -30,3 +30,25 @@
 	- GET, HEAD, POST, PATCH 캐시 가능
 	- 실제로는 GET, HEAD 정도만 캐시로 사용
 	- POST, PATCH는 바디까지 캐시 키로 고려해야 하므로 쉽지 않음
+## 클라이언트에서 서버로 데이터 전송
+### 조회
+#### 1️⃣ 정적 데이터 조회
+- 이미지, 정적 텍스트 문서
+- 쿼리 파라미터 없이 리소스 경로로 단순 조회
+#### 2️⃣ 동적 데이터 조회
+- 검색, 게시판 목록에서 정렬 필터
+- 쿼리 파라미터를 사용해서 데이터 전달
+### 데이터 전송
+- HTML Form submit시 POST 전송
+- Content-type
+	- `applicatoin/x-www-form-urlencoded`
+		- form의 내용을 메시지 바디를 통해서 전송
+		- 전송 데이터를 url encoding
+	- `multipart/form-data`
+		- 파일 업로드와 같은 바이너리 데이터 전송시 사용
+		- 다른 종류의 파일과 폼의 내용 함께 전송 가능
+### 컨트롤 URI
+- 동사로 된 리소스 경로 사용
+- POST의 /new, /edit, /delete가 컨트롤 URI
+- HTTP 메서드로 해결하기 어려운 경우에만 사용
+ 
