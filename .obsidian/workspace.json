@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/HTTP-Web-Basic/HTTP 상태코드.md",
+                "file": "Network/HTTP-Web-Basic/HTTP 헤더.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/HTTP-Web-Basic/HTTP 상태코드.md",
+                "file": "Network/HTTP-Web-Basic/HTTP 헤더.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network/HTTP-Web-Basic/HTTP 상태코드.md",
+                "file": "Network/HTTP-Web-Basic/HTTP 헤더.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/HTTP-Web-Basic/HTTP 상태코드.md"
+                "file": "Network/HTTP-Web-Basic/HTTP 헤더.md"
               }
             }
           },
@@ -158,8 +158,9 @@
   },
   "active": "ecdc3d57bd010cb6",
   "lastOpenFiles": [
-    "Network/HTTP-Web-Basic/HTTP 메서드.md",
     "Network/HTTP-Web-Basic/HTTP 상태코드.md",
+    "Network/HTTP-Web-Basic/HTTP 헤더.md",
+    "Network/HTTP-Web-Basic/HTTP 메서드.md",
     "Network/HTTP-Web-Basic/URI와 웹 브라우저 요청 흐름.md",
     "Network/HTTP-Web-Basic/HTTP 기본.md",
     "Network/HTTP-Web-Basic/인터넷 네트워크.md",
@@ -195,7 +196,6 @@
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
     "Spring/Spring Boot.md",
-    "Spring/Spring Core Principles - Basics/BeanFactory.md",
     "Spring/Spring Core Principles - Basics",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
