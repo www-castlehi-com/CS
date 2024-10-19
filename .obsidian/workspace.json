@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/HTTP-Web-Basic/HTTP 헤더.md",
+                "file": "Spring/Spring-MVC-Part-1/웹 애플리케이션 이해.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTTP 헤더"
+              "title": "웹 애플리케이션 이해"
             }
           }
         ]
@@ -176,15 +176,16 @@
   },
   "active": "ecdc3d57bd010cb6",
   "lastOpenFiles": [
-    "Network/HTTP-Web-Basic/HTTP 상태코드.md",
     "Network/HTTP-Web-Basic/HTTP 헤더.md",
+    "Spring/Spring-MVC-Part-1/웹 애플리케이션 이해.md",
+    "Spring/Spring-MVC-Part-1",
+    "Spring/무제 파일.md",
+    "Network/HTTP-Web-Basic/HTTP 상태코드.md",
     "Network/HTTP-Web-Basic/HTTP 메서드.md",
     "Network/HTTP-Web-Basic/URI와 웹 브라우저 요청 흐름.md",
     "Network/HTTP-Web-Basic/HTTP 기본.md",
     "Network/HTTP-Web-Basic/인터넷 네트워크.md",
     "Network/HTTP-Web-Basic",
-    "Spring/무제 파일.md",
-    "Spring/무제 폴더",
     "Spring/Spring Core Principles - Basics/빈 스코프.md",
     "Spring/Spring Core Principles - Basics/빈 생명주기 콜백.md",
     "Book/좋은 코드, 나쁜 코드/Chapter 6. 예측 가능한 코드를 작성하라.md",
@@ -213,7 +214,6 @@
     "Network/Transport Layer.md",
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
-    "Spring/Spring Boot.md",
     "Spring/Spring Core Principles - Basics",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
