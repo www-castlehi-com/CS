@@ -218,3 +218,82 @@
 ### 캐시 시간 초과
 - 캐시 유효 시간 (**Cache-Control**)이 초과하면, 서버를 통해 데이터를 재조회하고, 캐시를 갱신
 - 네트워크 다운로드가 재발생함
+- 캐시 만료 후 캐시의 데이터와 서버의 데이터가 같다는 사실을 확인할 방법 필요
+## 검증 헤더와 조건부 요청
+#### 1️⃣ Last-Modified, If-Modified-Since
+ 1. 검증 헤더 : **Last-Modified**
+ 2. 조건부 요청 : **if-modified-since**
+ 3. 변경 없을 경우
+	 - **304 Not Modified**
+	 - Http Body X
+	 - 클라이언트는 캐시에 저장되어 있는 데이터 재활용
+	 - 네트워크 다운로드는 발생하지만 용량이 적은 헤더 정보만 다운로드
+
+**단점**
+- 1초 미만 단위로 캐시 조정 불가능
+- 날짜 기반 로직 사용
+- 같은 데이터를 수정해서 데이터 결과가 똑같은 경우에도 날짜가 다름
+- 서버에서 별도의 캐시 로직을 관리하고 싶은 경우
+	ex) 스페이스, 주석처럼 영향이 없는 변경 시 캐시를 유지하고 싶은 경우
+#### 2️⃣ ETag, If-None-Match
+**특징**
+- ETag(Entity Tag)
+- 캐시용 데이터에 임의의 고유한 버전 이름을 제공
+	ex) ETag: "v1.0", ETag: "a2jiodwjekjl3"
+- 데이터가 변경될 경우 이름을 변경 (Hash 재생성)
+	ex) ETag: "aaaaa" -> ETag: "bbbbb"
+- ETag만 보내서 같으면 유지, 다르면 다시 받기
+
+1. 검증 헤더 : **ETag**
+2. 조건부 요청 : **If-None-Match**
+3. 변경 없을 경우
+	 - **304 Not Modified**
+	 - Http Body X
+	 - 클라이언트는 캐시에 저장되어 있는 데이터 재활용
+	 - 네트워크 다운로드는 발생하지만 용량이 적은 헤더 정보만 다운로드
+	 - 캐시 제어 로직을 **서버에서 관리**, 클라이언트는 캐시 매커니즘을 모름
+## 캐시와 조건부 요청 헤더
+### 캐시 제어 헤더
+#### 1️⃣ Cache-Control
+- **Cache-Control: max-age** : 캐시 유효 시간, 초 단위
+- **Cache-Control: no-cache** : 데이터는 캐시해도 되지만, 항상 원 서버에 검증하고 사용
+- **Cache-Control: no-store** : 데이터에 민감한 정보가 있으므로 저장 X
+#### 2️⃣ Pragma
+- 하위 호환
+- **Pragma:no-cache**
+- HTTP 1.0 하위 호환
+#### 3️⃣ Expires
+- 하위 호환
+- `expires: Mon, 01 Jan 1990 00:00:00 GMT`
+- 캐시 만료일을 정확한 날짜로 지정
+- HTTP 1.0 부터 사용
+- 더 유연한 **Cache-Control: max-age** 권장
+- Cache-Control: max-age와 함께 사용하면 Expires 무시
+## 프록시 캐시
+![](https://i.imgur.com/izkAFB7.png)
+### Cache-Control
+#### 1️⃣ Cache-Control: public
+- 응답이 public 캐시에 저장되어도 됨
+#### 2️⃣ Cache-Control: private
+- 응답이 해당 사용자만을 위한 것
+- private 캐시에 저장해야 함 (기본값)
+#### 3️⃣ Cache-Control: s-maxage
+- 프록시 캐시에만 적용되는 max-age
+#### 4️⃣ Age 
+- HTTP 헤더
+- 오리진 서버에서 응답 후 프록시 캐시 내에 머문 시간 (초)
+## 캐시 무효화
+### 캐시 무효화 응답
+#### 1️⃣ Cache-Control: no-cache
+- 데이터는 캐시해도 되지만, 항상 **원 서버에 검증**하고 사용
+![](https://i.imgur.com/dnPUo02.png)
+#### 2️⃣ Cache-Control: no-store
+- 데이터에 민감한 정보가 있으므로 저장 X
+- 메모리에서 사용하고 최대한 빨리 삭제
+#### 3️⃣ Cache-Control: must-revalidate
+- 캐시 만료 후 최초 조회 시 **원 서버에 검증**
+- 원 서버 접근 실패 시 반드시 오류 발생 - **504(Gateway Timeout)**
+- 캐시 유효 시간 내라면 캐시를 사용
+![](https://i.imgur.com/C0fYFpw.png)
+#### 4️⃣ Pragma: no-cache
+- HTTP 1.0 하위 호환
