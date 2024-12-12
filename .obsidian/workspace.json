@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Chapter 8. 코드를 모듈화하라"
             }
+          },
+          {
+            "id": "78e1f4ab636c5753",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -174,7 +187,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "883425358e8bd98c",
+  "active": "78e1f4ab636c5753",
   "lastOpenFiles": [
     "Spring/Spring-MVC-Part-1/웹 애플리케이션 이해.md",
     "Spring/Spring-MVC-Part-1",
