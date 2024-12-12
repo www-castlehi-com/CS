@@ -25,12 +25,14 @@
             "id": "78e1f4ab636c5753",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.7"
+                "file": "Spring/SpringSecurity/세션 고정 보호.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "세션 고정 보호"
             }
           }
         ],
@@ -189,6 +191,7 @@
   },
   "active": "78e1f4ab636c5753",
   "lastOpenFiles": [
+    "Spring/SpringSecurity/동시 세션 제어.md",
     "Spring/Spring-MVC-Part-1/웹 애플리케이션 이해.md",
     "Spring/Spring-MVC-Part-1",
     "Network/HTTP-Web-Basic/HTTP 헤더.md",
@@ -227,7 +230,6 @@
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
     "Spring/Spring Boot.md",
-    "Spring/Spring Core Principles - Basics/BeanFactory.md",
     "Spring/Spring Core Principles - Basics",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
