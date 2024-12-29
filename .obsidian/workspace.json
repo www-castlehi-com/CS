@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "883425358e8bd98c",
+            "id": "62a8b0d4fb0dbbb4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
+                "file": "Spring/Spring-MVC-Part-1/서블릿.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "서블릿"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
             }
           },
           {
@@ -48,13 +52,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "delegating",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "검색"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +100,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "백링크"
             }
           },
           {
@@ -102,10 +111,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "나가는 링크"
             }
           },
           {
@@ -116,7 +126,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -124,9 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Book/좋은 코드, 나쁜 코드/Chapter 8. 코드를 모듈화하라.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "개요"
             }
           },
           {
@@ -134,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ],
@@ -156,9 +170,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "883425358e8bd98c",
+  "active": "62a8b0d4fb0dbbb4",
   "lastOpenFiles": [
     "Spring/Spring-MVC-Part-1/웹 애플리케이션 이해.md",
+    "Spring/Spring-MVC-Part-1/서블릿.md",
     "Spring/Spring-MVC-Part-1",
     "Network/HTTP-Web-Basic/HTTP 헤더.md",
     "Network/HTTP-Web-Basic/HTTP 상태코드.md",
@@ -196,7 +211,6 @@
     "Pasted image 20240401224815.png.md",
     "Pasted image 20240401224344.png.md",
     "Spring/Spring Boot.md",
-    "Spring/Spring Core Principles - Basics/BeanFactory.md",
     "Spring/Spring Core Principles - Basics",
     "Book/좋은 코드, 나쁜 코드",
     "Book",
