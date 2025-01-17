@@ -46,7 +46,7 @@ public class MvcMemberSaveServlet extends HttpServlet {
 	> - 리다이렉트 : 클라이언트가 요청하며, 인지 가능하고 URL 경로도 실제로 변경
 	> - 포워드 : 서버 내부에서 일어나는 호출이며 클라이언트 인지 X
 - `/WEB-INF` : 외부에서 직접 JSP를 호출할 수 없음 -> 오직 컨트롤러를 통한 호출
-## 뷰
+### 뷰
 ```jsp
 <%--  
   Created by IntelliJ IDEA.  User: seongha  Date: 1/14/25  Time: 20:18  To change this template use File | Settings | File Templates.--%>  
@@ -91,4 +91,4 @@ HttpServletRequest request, HttpServletResponse response
 - 기능이 복잡할 수록 공통으로 처리해야 하는 부분이 많아짐
 - 공통 기능을 메서드로 뽑게 되면, 결과적으로 해당 메서드를 항상 호출해야 하며 호출하지 않으면 문제가 발생함
 ## 해결
-- **프론트 컨트롤러 패턴**을 도입 -> 입구를 하나로 만듦
+- **[[프론트 컨트롤러 패턴]]**을 도입 -> 입구를 하나로 만듦
