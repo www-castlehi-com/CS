@@ -39,7 +39,7 @@ public class RequestHeaderController {
 - HTTP API에서 주로 사용
 - JSON, XML, TEXT 등이 있으며 데이터 형식은 주로 **JSON** 사용
 - POST, PUT, PATCH
-## 데이터 조회 방법
+
 ### Servlet
 ```java
 package hello.springmvc.basic.request;  
@@ -175,3 +175,39 @@ public class RequestParamController {
 }
 ```
 - 파라미터의 값이 1개가 확실하다면 `Map`, 그렇지 않다면 `MultiValueMap` 사용
+### @ModelAttribute
+```java
+package hello.springmvc.basic;  
+  
+@Data  
+public class HelloData {  
+  
+    private String username;  
+    private int age;  
+}
+```
+- `@Data`
+	- `@Getter`, `@Setter`, `@ToString`, `@EqualsAndHashCode`, `@RequiredArgsConstructor`를 자동으로 적용
+```java
+package hello.springmvc.basic.request;  
+  
+@Slf4j  
+@Controller  
+public class RequestParamController {  
+  
+    @ResponseBody  
+    @RequestMapping("/model-attribute-v1")  
+    public String modelAttributeV1(@ModelAttribute HelloData helloData) {  
+       log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());  
+         
+       return "ok";  
+    }  
+}
+```
+1. `HelloData` 객체 생성
+2. 요청 파라미터 이름으로 `HelloData` 객체의 프로퍼티를 찾고, setter를 호출해서 파라미터의 값을 바인딩
+
+- 다른 파라미터 입력 시 `BindException` 발생
+-  `@ModelAttribute` 생략 가능
+	- `String`, `int`, `Integer`와 같은 단순 타입 = `@RequestParam`
+	- 나머지 = `@ModelAttribute` (argument resolver로 지정해둔 타입 외)
