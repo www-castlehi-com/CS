@@ -26,19 +26,10 @@ public class RequestHeaderController {
 	- 하나의 키에 여러 값을 받을 수 있는 Map
 	- **keyA=value1&keyA=value2**
 # 데이터 조회
-## 데이터 전달 방법
-### 1️⃣ GET - 쿼리 파라미터
+## 1️⃣ GET - 쿼리 파라미터
 - `/url**?username=hello&age=20`
 - 메시지 바디 없이, URL의 쿼리 파라미터에 데이터를 포함해서 전달
 > 검색, 필터, 페이징 등에서 사용
-### 2️⃣ POST - HTML Form
-- `Content-Type: application/x-www-form-urlencoded`
-- 메시지 바디에 쿼리 파라미터 형식으로 전달 `username=hello&age=20`
-> 회원 가입, 상품 주문, HTML Form 사용
-### 3️⃣ HTTP Message Body에 데이터를 직접 담아 요청
-- HTTP API에서 주로 사용
-- JSON, XML, TEXT 등이 있으며 데이터 형식은 주로 **JSON** 사용
-- POST, PUT, PATCH
 
 ### Servlet
 ```java
@@ -211,3 +202,101 @@ public class RequestParamController {
 -  `@ModelAttribute` 생략 가능
 	- `String`, `int`, `Integer`와 같은 단순 타입 = `@RequestParam`
 	- 나머지 = `@ModelAttribute` (argument resolver로 지정해둔 타입 외)
+## 2️⃣ POST - HTML Form
+- `Content-Type: application/x-www-form-urlencoded`
+- 메시지 바디에 쿼리 파라미터 형식으로 전달 `username=hello&age=20`
+> 회원 가입, 상품 주문, HTML Form 사용
+## 3️⃣ HTTP Message Body에 데이터를 직접 담아 요청
+- HTTP API에서 주로 사용
+- JSON, XML, TEXT 등이 있으며 데이터 형식은 주로 **JSON** 사용
+- POST, PUT, PATCH
+### Input, Output 스트림
+```java
+/**  
+ * InputStream(Reader): HTTP 요청 메시지 바디의 내용을 직접 조회  
+ * OutputStream(Writer): HTTP 응답 메시지의 바디에 직접 결과 출력  
+ */  
+@PostMapping("/request-body-string-v2")  
+public void requestBodyStringV2(InputStream inputStream, Writer responseWriter) throws IOException {  
+    String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);  
+  
+    log.info("messageBody={}", messageBody);  
+  
+    responseWriter.write("ok");  
+}
+```
+### HttpEntity
+```java
+/**  
+ * HttpEntity: HTTP header, body 정보를 편리하게 조회  
+ * - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)  
+ * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용  
+ *  
+ * 응답에서도 HttpEntity 사용 가능  
+ * - 메시지 바디 정보 직접 반환(view 조회X)  
+ * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용  
+ */  
+@PostMapping("/request-body-string-v3")  
+public HttpEntity<String> requestBodyStringV3(HttpEntity<String> httpEntity) throws IOException {  
+    String messageBody = httpEntity.getBody();  
+  
+    log.info("messageBody={}", messageBody);  
+  
+    return new HttpEntity<>("ok");  
+}
+
+@ResponseBody  
+@PostMapping("/request-body-json-v4")  
+public HttpEntity<String> requestBodyJsonV4(HttpEntity<HelloData> data) {  
+    HelloData helloData = data.getBody();  
+    log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());  
+  
+    return new HttpEntity<>("ok");  
+}
+```
+- `HttpEntity`를 상속받은 객체
+	- `RequestEntity`
+		- HttpMethod, url 정보 추가
+		- 요청에서 사용
+	- `ResponseEntity`
+		- HTTP 상태 코드 설정 가능
+		  `return new ResponseEntity<String>("Hello World", responseHeaders, HttpStatus.CREATED)`
+		- 응답에서 사용
+### @RequestBody
+```java
+/**  
+ * @RequestBody  
+ * - 메시지 바디 정보를 직접 조회(@RequestParam X, @ModelAttribute X)  
+ * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용  
+ *  
+ * @ResponseBody  
+ * - 메시지 바디 정보 직접 반환(view 조회X)  
+ * - HttpMessageConverter 사용 -> StringHttpMessageConverter 적용  
+ */  
+@ResponseBody  
+@PostMapping("/request-body-string-v4")  
+public String requestBodyStringV4(@RequestBody String messageBody) throws IOException {  
+    log.info("messageBody={}", messageBody);  
+  
+    return "ok";  
+}
+
+/**  
+ * @RequestBody 생략 불가능 (@ModelAttribute 가 적용되어 버림)  
+ * HttpMessageConverter 사용 -> MappingJackson2HttpMessageConverter (content-type: application/json)  
+ * * @ResponseBody 적용  
+ * - 메시지 바디 정보 직접 반환 (view 조회 X)  
+ * - HttpMessageConverter 사용 -> MappingJackson2HttpMessageConverter 적용 (Accept: application/json)  
+ */@ResponseBody  
+@PostMapping("/request-body-json-v5")  
+public HelloData requestBodyJsonV5(@RequestBody HelloData helloData) {  
+    log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());  
+  
+    return helloData;  
+}
+```
+- 헤더 정보가 필요할 경우 `HttpEntity` 혹은 `@RequestHeader` 사용
+- 요청 메시지가 json일 경우 content-type이 application/json인지 확인
+
+- `@RequestBody` 요청 : JSON 요청 -> HTTP 메시지 컨버터 -> 객체
+- `@ResponseBody` 응답 : 객체 -> HTTP 메시지 컨버터 -> JSON 응답
