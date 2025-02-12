@@ -60,7 +60,7 @@ static class Hello {
 반환값이 객체일 경우 json 형식으로 전달됨
 ### 원리
 ![](https://i.imgur.com/LvrbrmL.png)
-`ViewResolver` 대신 `HttpMessageConverter`가 해당 객체를 형태를 바꾸어 전달함
+`ViewResolver` 대신 `HttpMessageConverter`([[HTTP 메시지 컨버터]])가 해당 객체를 형태를 바꾸어 전달함
 
 - 기본 문자 처리 : `StringHttpMessageConverter`
 - 기본 객체 처리 : `MappingJackson2HttpMessageConverter`
