@@ -202,6 +202,31 @@ public class RequestParamController {
 -  `@ModelAttribute` 생략 가능
 	- `String`, `int`, `Integer`와 같은 단순 타입 = `@RequestParam`
 	- 나머지 = `@ModelAttribute` (argument resolver로 지정해둔 타입 외)
+```java
+package hello.itemservice.web.basic;  
+  
+@Controller  
+@RequestMapping("/basic/items")  
+@RequiredArgsConstructor  
+public class BasicItemController {  
+  
+    //... 
+  
+    @PostMapping("/add")  
+    public String addItemV2(@ModelAttribute(name = "item") Item item, Model model) {  
+       itemRepository.save(item);  
+  
+       // model.addAttribute("item", item);  
+  
+       return "basic/item";  
+    }  
+  
+    //...
+}
+```
+- `name(value)` 속성을 사용하여 객체를 자동으로 model에 주입
+- 이름을 생략할 경우 **클래스명** 사용
+	- 클래스의 첫글자만 소문자로 변경해서 등록 (`Item` -> `item`)
 ## 2️⃣ POST - HTML Form
 - `Content-Type: application/x-www-form-urlencoded`
 - 메시지 바디에 쿼리 파라미터 형식으로 전달 `username=hello&age=20`
