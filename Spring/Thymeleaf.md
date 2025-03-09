@@ -230,3 +230,10 @@ HTML에서는 checked 속성이 있을 경우 무조건 checked 처리가 됨
 </div>
 ```
 히든 필드와 관련된 부분도 함께 추가
+## 오류 검증
+### `#fields`
+- `BindingResult`가 제공하는 검증 오류 접근
+### th:errors
+- 해당 필드에 오류가 있는 경우 태그 출력
+### th:errorclass
+- `th:errors`에서 지정한 필드에 오류가 있을 경우 `class `정보 추가
