@@ -37,12 +37,173 @@ public interface HandlerExceptionResolver {
 - `configureHandlerExceptionResolvers(..)` 사용 시  스프링이 기본으로 등록하는 `ExceptionResolver`가 제거됨
 # 스프링
 ## 종류
-### 1️⃣ `ExceptionHandlerExceptionResolver`
-### 2️⃣ `ResponseStatusExceptionResolver`
+`HandlerExceptionResolverComposite`에 다음 순서로 등록
+### 1️⃣ `ResponseStatusExceptionResolver`
 #### 개념
 - HTTP 상태 코드 지정
   `@ResponseStatus(value = HttpStatus.NOT_FOUND)`
+- `ResponseStatusException` 사용
+	- 개발자가 직접 변경할 수 없는 예외에 적용
+	- 조건에 따라 동적으로 변경시킬 경우에 적용
 #### 처리
 1. `@ResponseStatus`가 달려있는 예외
 2. `ResponseStatusException` 예외
-### 3️⃣ `DefaultHandlerExceptionResolver`
+#### 원리
+```java
+package org.springframework.web.servlet.mvc.annotation;  
+  
+public class ResponseStatusExceptionResolver extends AbstractHandlerExceptionResolver implements MessageSourceAware {  
+    //...
+  
+    @Nullable  
+    protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, @Nullable Object handler, Exception ex) {  
+        try {  
+            if (ex instanceof ResponseStatusException rse) {  
+			    return this.resolveResponseStatusException(rse, request, response, handler);  
+			}
+  
+            ResponseStatus status = (ResponseStatus)AnnotatedElementUtils.findMergedAnnotation(ex.getClass(), ResponseStatus.class);  
+            if (status != null) {  
+                return this.resolveResponseStatus(status, request, response, handler, ex);  
+            }  
+  
+            //... 
+        }  
+  
+        return null;  
+    }  
+  
+    //...
+}
+```
+1. `ResponseStatus`  혹은 `ResponseStatusException` 찾기
+```java
+package org.springframework.web.servlet.mvc.annotation;  
+  
+public class ResponseStatusExceptionResolver extends AbstractHandlerExceptionResolver implements MessageSourceAware {  
+    //...
+  
+    protected ModelAndView resolveResponseStatus(ResponseStatus responseStatus, HttpServletRequest request, HttpServletResponse response, @Nullable Object handler, Exception ex) throws Exception {  
+        //...
+        return this.applyStatusAndReason(statusCode, reason, response);  
+    }  
+  
+    //...
+  
+    protected ModelAndView applyStatusAndReason(int statusCode, @Nullable String reason, HttpServletResponse response) throws IOException {  
+        if (!StringUtils.hasLength(reason)) {  
+            //...
+        } else {  
+            //...
+            response.sendError(statusCode, resolvedReason);  
+        }  
+  
+        return new ModelAndView();  
+    }  
+}
+```
+2. `response.sendError()` 혹은 빈 `ModelAndView` 반환
+### 2️⃣ `DefaultHandlerExceptionResolver`
+#### 개념
+- 스프링 내부에서 발생하는 스프링 예외 해결
+	> 파라미터 바인딩 시점에 타입 오류(`TypeMismatchException`) 에러
+	> - 스프링이 500 오류를 발생
+	> - HTTP에서는 400오류를 사용해야 함
+#### 원리
+```java
+package org.springframework.web.servlet.mvc.support;  
+
+public class DefaultHandlerExceptionResolver extends AbstractHandlerExceptionResolver {  
+    //...
+  
+    @Nullable  
+    protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, @Nullable Object handler, Exception ex) {  
+        try {  
+            if (ex instanceof ErrorResponse errorResponse) {  
+                //...
+            }  
+  
+            //...
+  
+            if (ex instanceof TypeMismatchException theEx) {  
+                return this.handleTypeMismatch(theEx, request, response, handler);  
+            }  
+  
+            //...
+        }  
+  
+        return null;  
+    }  
+  
+    //...
+  
+    protected ModelAndView handleTypeMismatch(TypeMismatchException ex, HttpServletRequest request, HttpServletResponse response, @Nullable Object handler) throws IOException {  
+        response.sendError(400);  
+        return new ModelAndView();  
+    }  
+  
+    //...
+}
+```
+1. 스프링이 발생한 에러를 잡아 handle 메소드 호출
+2. handle 메소드에서 `response.sendError()` 혹은 빈 `ModelAndView` 반환
+### 3️⃣ `ExceptionHandlerExceptionResolver`
+#### `@ExceptionHandler`
+##### 예외 처리 방법
+**범위**
+- 해당 컨트롤러만 효력
+**우선순위**
+```java
+@ExceptionHandler(부모예외.class)
+public String 부모예외처리() (부모예외 e) {}
+
+@ExceptionHandler(자식예외.class)
+public String 자식예외처리() (부모예외 e) {}
+```
+- 자식예외의 우선권 > 부모예외의 우선권
+**배치 처리**
+```java
+@ExceptionHandler({AException.class, BException.class})
+public String ex(Exception e) {
+	log.info("exception e", e);
+}
+```
+##### 문제
+- 정상 코드와 예외 처리 코드가 하나의 컨트롤러에 섞여 있음
+##### `@ControllerAdvice`
+##### RestControllerAdvice
+```java
+@ControllerAdvice  
+@ResponseBody  
+public @interface RestControllerAdvice {}
+```
+##### 예외 처리 방법
+```java
+@Slf4j  
+@RestControllerAdvice  
+public class ExControllerAdvice {  
+  
+    @ResponseStatus(HttpStatus.BAD_REQUEST)  
+    @ExceptionHandler(IllegalArgumentException.class)  
+    public ErrorResult illegalHandler(IllegalArgumentException e) {  
+       log.error("[exceptionHandler] ex", e);  
+       return new ErrorResult("BAD", e.getMessage());  
+    }  
+  
+    @ExceptionHandler  
+    public ResponseEntity<ErrorResult> userExHandler(UserException e) {  
+       log.error("[exceptionHandler] ex", e);  
+       ErrorResult errorResult = new ErrorResult("USER-EX", e.getMessage());  
+       return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);  
+    }  
+  
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)  
+    @ExceptionHandler  
+    public ErrorResult exHandler(Exception e) {  
+       log.error("[exceptionHandler] ex", e);  
+       return new ErrorResult("EX", "내부 오류");  
+    }  
+}
+```
+- 대상으로 지정한 여러 컨트롤러에 `@ExceptionHandler`, `@InitBindier` 기능을 부여
+- 대상을 지정하지 않을 시 글로벌 적용
