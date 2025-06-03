@@ -85,6 +85,7 @@
 - `getConnection()` : 데이터베이스 커넥션 획득
 ## SQL 전달
 - `sql` : 데이터베이스에 전달할 SQL을 정의
+	- `statement`를 사용할 경우 사용자가 악의적으로 `1=1`을 주입해 SQL Injection이 발생할 수 있음 -> `prepareStatment` 사용
 - `con.prepareStatement(sql)`
 	- 데이터베이스에 전달할 SQL과 파라미터로 전달할 데이터 준비
 	- `pstmt.setString()`, `pstmt.setInt()` : SQL의 인자값에 파라미터 준비
