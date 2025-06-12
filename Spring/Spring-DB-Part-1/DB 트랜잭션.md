@@ -48,3 +48,72 @@
 - 세션1에서 데이터를 조회한 다음에 이 데이터를 이용하여 애플리케이션에서 계산을 수행하여아 할 때 조회 시에 락 획득
 ![](https://i.imgur.com/75Z4Yd0.png)
 - `select for update` 구문 사용
+# 적용
+## DB 트랜잭션 사용
+### 원리
+![](https://i.imgur.com/7RgceMc.png)
+- 트랜잭션은 비즈니스 로직이 있는 서비스 계층에서 시작
+- 비즈니스 로직이 잘못될 경우 해당 비즈니스 로직으로 인해 문제가 되는 부분을 함께 롤백
+- 서비스 계층에서 커넥션을 만들고, 트랜잭션 커밋 이후에 커넥션 종료
+- 트랜잭션을 사용하는 동안 같은 커넥션 유지
+### 사용
+```java
+public Member findById(Connection con, String memberId) throws SQLException {  
+    //...
+  
+    try {  
+       pstmt = con.prepareStatement(sql);  
+       //...
+    } catch (SQLException e) {  
+       log.error("db error", e);  
+       throw e;  
+    } finally {  
+       // connection은 여기서 닫지 않는다.  
+       JdbcUtils.closeResultSet(rs);  
+       JdbcUtils.closeStatement(pstmt);  
+    }  
+}  
+  
+public void update(Connection con, String memberId, int money) throws SQLException {  
+    String sql = "update member set money = ? where member_id = ?";  
+  
+    PreparedStatement pstmt = null;  
+  
+    try {  
+       pstmt = con.prepareStatement(sql);  
+       //...
+    } catch (SQLException e) {  
+       log.error("db error", e);  
+       throw e;  
+    } finally {  
+       // connection은 여기서 닫지 않는다.  
+       JdbcUtils.closeStatement(pstmt);  
+    }  
+}
+```
+- `connection` 외부 주입 -> `con = getConnection()` 코드 제외
+- 리포지토리에서 커넥션 종료 X
+```java
+public void accountTransfer(String fromId, String toId, int money) throws SQLException {  
+    Connection con = dataSource.getConnection();  
+    try {  
+       con.setAutoCommit(false); // 트랜잭션 시작  
+  
+       bizLogic(con, fromId, toId, money);  
+  
+       con.commit();  
+    } catch (Exception e) {  
+       con.rollback();  
+       throw new IllegalStateException(e);  
+    } finally {  
+       release(con);  
+    }  
+}
+```
+- 서비스 단에서 커넥션 생성 후 repository 단에 동일한 커넥션 전달
+- `commit`, `rollback` 이후 커넥션 종료
+	- 커넥션 풀에 autoCommit을 false로 설정하고 전달할 경우, 다음에 해당 커넥션을 얻을 때 false 옵션이 적용되어 옵션 되돌리기
+### 단점
+- 서비스 계층이 지저분
+- 코드 복잡
+- 커넥션 유지하도록 코드 변경하는 것이 번거로움
