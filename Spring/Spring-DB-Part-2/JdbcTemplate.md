@@ -74,3 +74,74 @@ private RowMapper<Item> itemRowMapper() {
 - 각 상황에 맞추어 조건문을 써야하고 파라미터도 생성해야 함
 
 > vs **MyBatis** : SQL을 직접 사용할 때 동적 쿼리를 쉽게 작성
+# 이름 지정 바인딩
+## 배경 
+- 파라미터를 순서대로 바인딩
+- SQL의 코드의 순서를 변경할 경우 문제 발생
+## 사용법
+- `Map`처럼 `key`, `value` 데이터 구조를 만들어 전달
+	- `key` : `:파라미터이름`으로 지정한 파라미터 이름
+	- `value` : 해당 파라미터의 값
+- `template.update(sql, param, keyHolder);`로 `param` 전달
+## 파라미터 종류
+### 1️⃣ Map
+- `Map` 사용
+```java
+Map<String, Object> param = Map.of("id", id);
+Item item = template.queryForObject(sql, param, itemRowMapper());
+```
+### 2️⃣ SqlParameterSource
+#### 1. MapSqlParameterSource
+- `Map`과 유사하지만, SQL 타입을 지정할 수 있는 등 SQL에 좀 더 특화된 기능 제공
+- 메서드 체인을 통한 사용 제공
+```java
+SqlParameterSource param = new MapSqlParameterSource()  
+       .addValue("itemName", updateParam.getItemName())  
+       .addValue("price", updateParam.getPrice())  
+       .addValue("quantity", updateParam.getQuantity())  
+       .addValue("id", itemId);
+template.update(sql, param);
+```
+#### 2. BeanPropertySqlParameterSource
+- 자바빈 프로퍼티 규약을 통해서 자동으로 파라미터 객체 생성
+- `getXxx() -> xxx`
+```java
+SqlParameterSource param = new BeanPropertySqlParameterSource(cond);
+KeyHolder keyHolder = new GeneratedKeyHolder();
+template.update(sql, param, keyHolder);
+```
+## 결과 매핑
+### BeanPropertyRowMapper
+- `ResultSet`의 결과를 받아서 자바빈 규약에 맞추어 데이터 변환
+- 리플렉션 기능 사용
+#### 별칭
+- `as`를 사용해 SQL 조회 결과의 이름을 변경
+- 데이터베이스 컬럼 이름과 객체 이름이 완전히 다를 때 문제 해결
+#### 관례의 불일치
+- 자바 객체는 카멜 (`camelCase`) 표기법 사용
+- 관계형 데이터베이스에서는 스네이크 (`snake_case`) 표기법 사용
+- 스네이크 표기법을 카멜 표기법으로 자동 변환
+# SimpleJdbcInsert
+- INSERT SQL을 직접 작성하지 않도록 기능 제공
+- 생성 시점에 데이터베이스 테이블의 메타 데이터 조회
+## 생성
+```java
+this.jdbcInsert = new SimpleJdbcInsert(dataSource)  
+       .withTableName("item")  
+       .usingGeneratedKeyColumns("id");  
+       // .usingColumns("item_name", "price", "quantity"); // 생략 가능
+```
+- `withTableName` : 데이터를 저장할 테이블 명 지정
+- `usingGeneratedKeyColumns` : `key`를 생성하는 PK 컬럼 명 지정
+- `usingColumns` : INSERT SQL에 사용할 컬럼 지정하며 특정 값만 저장하고 싶을 때 사용. 생략할 경우 전체 컬럼 사용
+## 사용
+```java
+@Override  
+public Item save(Item item) {  
+    SqlParameterSource param = new BeanPropertySqlParameterSource(item);  
+    Number key = jdbcInsert.executeAndReturnKey(param);  
+    item.setId(key.longValue());  
+  
+    return item;  
+}
+```
