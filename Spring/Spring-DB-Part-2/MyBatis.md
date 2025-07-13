@@ -69,6 +69,7 @@ return template.query(sql, param, itemRowMapper());
 ```properties
 implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 ```
+- `spring-boot-starter-jdbc`도 포함됨
 ![](https://i.imgur.com/VHzyKRy.png)
 - `mybatis-spring-boot-starter` : MyBatis를 스프링 부트에서 편리하게 사용할 수 있게 시작하는 라이브러리
 - `mybatis-spring-boot-autoconfigure` : MyBatis와 스프링 부트 설정 라이브러리
