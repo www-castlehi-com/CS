@@ -96,14 +96,75 @@ public class Item {
 
 > - JPA를 설정할 경우 `EntityManagerFactory`, JPA 트랜잭션 매니저 (`JpaTransacitonManager`), 데이터 소스 등등 다양한  설정이 필요하지만 스프링 부트가 위 과정을 모두 자동화
 > - 스프링 부트 자동 설정은 `JpaBaseConfiguration` 에서 담당
-## JPQL
+
+# Query 방법
+## 1️⃣ JPQL
+### 개념
 - Java Persistence Query Language
 - 여러 데이터를 복잡한 조건으로 조회할 때 사용
+### 사용
 - 파라미터 입력 : `where price <= :maxPrice`
 - 파라미터 바인딩 : `query.setParameter("maxPrice", maxPrice)`
-# 문제점
-- 동적 쿼리 문제
-- Querydsl 활용하여 사용
+### 예시
+```java
+@Test
+public void jpql() {
+	String query = 
+		"select m from Member m " + 
+		"where m.age between 20 and 40 " +
+		" and m.name like '김%'" + 
+		"order by m.age desc";
+
+	List<Member> resultList = entityManager.createQuery(query, Member.class)
+												.setMaxResults(3).getResultList();
+}
+```
+
+### 장점
+- SQL Query와 비슷해서 익숙함
+### 단점
+- type-safe 하지 않음
+- 동적 쿼리 생성 어려움
+## 2️⃣ Criteria API
+
+### 예시
+```java
+@Test
+public void jpaCriteriaQuery() {
+
+	CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+	CriteriaQuery<Member> cq = cb.createQuery(Member.class);
+	Root<Member> root = cq.from(Member.class);
+
+	Path<Integer> age = root.get("age");
+	Predicate between = cb.between(age, 20, 40);
+
+	Path<String> path = root.get("name");
+	Predicate like = cb.like(path, "김%");
+
+	CriteriaQuery<Member> query = cq.where(cb.and(between, like));
+	query.orderBy(cb.desc(age));
+
+	List<Member> resultList = entityManager.createQuery(query).setMaxResults(3).getResultList();
+}
+```
+### 장점
+- 동적 쿼리 생성이 JPQL보다는 쉬움
+### 단점
+- type-safe 하지 않음
+- 복잡함
+- 알아야 할 것이 많음
+## 3️⃣ MetaModel Criteria API
+### 소개
+- Criteria API + MetaModel
+- Criteria API와 거의 동일
+### 사용법
+`root.get("age") -> root.get(Member_.age)`
+### 장점
+- type-safe
+### 단점
+- 복잡함
+## 4️⃣ [[Querydsl]]
 # 예외 변환
 - `EntityManager`는 순수한 JPA 기술이고, 스프링과 관계가 없기 때문에 JPA 관련 예외를 발생 시킨다
 	- `PersistenceException`과 그 하위 예외
