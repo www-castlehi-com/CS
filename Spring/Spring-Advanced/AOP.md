@@ -60,9 +60,20 @@
 - 어드바이스가 적용될 수 있는 위치, 메소드 실행, 생성자 호출, 필드 값 접근, static 메서드 접근 같은 프로그램 실행 중 지점
 - AOP를 적용할 수 있는 모든 지점
 	- 스프링 AOP는 프록시 방식을 사용하므로 항상 메서드 시점으로 제한된다.
+### 기능
+- `getArgs()` : 메서드 인수 반환
+- `getThis()` : 프록시 객체 반환
+- `getTarget()` : 대상 객체 반환
+- `getSignature()` : 조인되는 메서드에 대한 설명 반환
+- `toString()` : 조인되는 방법에 대한 유용한 설명
 ## 2️⃣ 포인트컷
 - 조인 포인트 중 어드바이스가 적용될 위치를 선별하는 기능
 - 주로 AspectJ 표현식을 사용해서 지정
+### `@Pointcut`
+- 포인트컷 표현식 사용
+- **포인트컷 시그니처** : 메서드 이름 + 파라미터
+- 메서드의 반환 타입은 `void`여야 한다.
+- 코드 내용은 비워둔다.
 ## 3️⃣ 타겟
 - 어드바이스를 받는 객체
 - 포인트컷으로 결정
@@ -70,6 +81,61 @@
 - 부가 기능
 - 특정 조인 포인트에서 Aspect에 의해 취해지는 조치
 - Around, Before, After 등이 있음
+### 순서
+- 어드바이스를 각각의 애스펙트로 분리하고, `@Order` 애노테이션을 통해 실행 순서를 적용한다.
+	- 숫자가 작을 수록 먼저 실행된다.
+### 종류
+```java
+@Around("hello.aop.order.aop.Pointcuts.orderAndService()")  
+public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {  
+    try {  
+       // @Before  
+       log.info("[트랜잭션 시작] {}", joinPoint.getSignature());  
+  
+       Object result = joinPoint.proceed();  
+  
+       // @AfterReturning  
+       log.info("[트랜잭션 커밋] {}", joinPoint.getSignature());  
+  
+       return result;  
+    } catch (Exception e) {  
+       // @AfterThrowing  
+       log.info("[트랜잭션 롤백] {}", joinPoint.getSignature());  
+       throw e;  
+    } finally {  
+       // @After  
+       log.info("[리소스 릴리즈] {}", joinPoint.getSignature());  
+    }  
+}
+```
+- `@Around`
+	- 메서드 호출 전후에 수행
+	- 가장 강력한 어드바이스
+	- 조인 포인트 실행 여부 선택, 반환 값 변환, 예외 변환 등이 가능
+		- 조인 포인트를 실행할 수 있는 기능이 있으므로 `proceed()`가 있는 `ProceedingJoinPoint`를 사용
+		- `proceed()`를 여러번 실행할 수 있음
+- `@Before`
+	- 조인 포인트 실행 이전에 실행
+	- 메서드 종료 시 자동으로 다음 타겟이 호출
+	- 예외가 발생하면 다음 코드가 호출되지 않음
+- `@AfterReturning` 
+	- 조인 포인트가 정상 완료 후 실행
+	- 리턴값을 반환하지 않기 때문에 변경은 불가
+	- `returning` 속성에 사용된 이름은 어드바이스 메서드의 매게변수 이름과 일치해야함
+	- `returning` 절에 지정된 타입의 값을 반환하는 메서드만 대상으로 실행
+- `@AfterThrowing`
+	- 메서드가 예외를 던지는 경우 실행
+	- `throwing` 속성에 사용된 이름은 어드바이스 메서드의 매게변수 이름과 일치해야 함
+	- `throwing` 절에 지정된 타입과 맞는 예외를 대상으로 실행
+- `@After`
+	- 조인 포인트가 정상 또는 예외에 관계없이 실행 (finally)
+	- 정상 및 예외 반환 조건 모두 처리
+	- 일반적으로 리소스를 해제하는데 사용
+### 우선순위
+![](https://i.imgur.com/0uHgr5C.png)
+- 스프링 5.2.7버전부터 동일한 `@Aspect` 안에서 동일한 조인포인트의 우선순위 존재
+	- `@Around` -> `@Before` -> `@After` -> `@AfterReturning` -> `@AfterThrowing`
+- 호출 순서와 리턴 순서는 반대
 ## 5️⃣ 애스펙트 
 - 어드바이스 + 포인트컷
 - `@Aspect`
