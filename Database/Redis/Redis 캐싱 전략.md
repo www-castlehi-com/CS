@@ -4,21 +4,24 @@
 ## 2. 캐싱이란?
 캐시에 접근해서 데이터를 빠르게 가져오는 방식을 의미한다.
 ## 3. 캐싱 전략
-캐싱 전략은 다양하지만 현업에서 가장 많이 사용하고 있는 캐싱 전략은 **Cache Aside, Write Around** 전략이 있다.
-### 3.1 Cache Aside (= Look Aside, Lazy Loading)
+### 3.1 조회 전략
 데이터를 어떻게 조회할 지에 대한 전략이다.
-
+#### 3.1.1 Cache Aside (= Look Aside, Lazy Loading)
 캐시에서 데이터를 우선으로 찾고, 없을 경우 데이터베이스에서 조회한다.
-#### 흐름
+##### 흐름
 1. 캐시에 데이터가 있을 경우 (= Cache Hit)
    ![](https://i.imgur.com/9tM1JAy.png)
 2. 캐시에 데이터가 없을 경우 (= Cache Miss)
    ![](https://i.imgur.com/NIKFHNs.png)
-### 3.2 Write Around 전략
+### 3.2 쓰기 전략
 데이터를 저장할 때에 대한 전략이다.
-
+#### 3.2.1 Write Around 전략
 데이터를 저장할 때는 레디스에 저장하지 않고 데이터베이스에만 저장한다.
 ![](https://i.imgur.com/POCfLfk.png)
+#### 3.2.2 Write Back 전략
+클라이언트의 요청이 들어오면 먼저 Redis에 데이터를 쌓아두고 클라이언트에 먼저 응답을 반환하고나서, Redis에 쌓인 데이터를 스케줄러가 주기적으로 DB에 한꺼번에 저장하는 방식이다.
+Redis가 데이터를 쌓아두는 Queue 역할을 한다.
+![](https://i.imgur.com/2XgaTxj.png)
 ### 3.3 Cache Aside, Write Around 전략의 한계점
 - 캐시된 데이터와 DB 데이터가 일치하지 않을 수 있다. 즉, 데이터의 일관성을 보장할 수 없다.
 - 메모리에 저장하기 때문에 DB에 비해 많은 양의 데이터를 저장할 수 없다.
