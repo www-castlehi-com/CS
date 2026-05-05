@@ -37,7 +37,13 @@ $ ttl seongha:pet
 만료 시간이 반환된다.
 키가 없는 경우 -2가 반환된다.
 키는 존재하지만 만료 시간이 설정되어 있지 않은 경우 -1을 반환한다.
-### 1.7 모든 데이터 삭제하기
+### 1.7 EXPIRE
+```shell
+# EXPIRE [key] [seconds]
+$ EXPIRE ranking 10 
+```
+이미 존재하는 key에 만료 시간을 설정한다.
+### 1.8 모든 데이터 삭제하기
 ```shell
 $ flushall
 ```
