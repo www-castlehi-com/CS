@@ -32,18 +32,18 @@ LPOP my_list
 ```
 리스트의 양쪽(RPOP : 오른쪽 / LPOP : 왼쪽)에서 데이터를 꺼내온다.
 ## 2️⃣ String
-### 1.1 명령어 옵션
+### 2.1 명령어 옵션
 ```
 # SET [key] [value] NX
 SET hobby golf NX
 ```
 지정한 키가 없을 때에만 데이터를 저장한다.
 ## 3️⃣ Sorted Set
-### 1.1 개념
+### 3.1 개념
 ![](https://i.imgur.com/TcE7bxg.png)
 score(점수)를 기준으로 자동 정렬되는 중복 없는 자료구조이다.
 랭킹 시스템, 실시간 인기 데이터 관리 등 순서와 가중치가 중요한 경우에 주로 활용된다.
-### 1.2 명령어
+### 3.2 명령어
 #### 삽입
 ```shell
 # ZADD [key] [score] [member]
@@ -85,3 +85,113 @@ ZCARD ranking
 # ZREMRANGEBYSCORE [key] [min score] [max score]
 ZREMRANGEBYSCORE ranking 0 3
 ```
+## 4️⃣ Geospatial
+### 4.1 개념
+위치 데이터(경도, 위도)를 저장하고 검색하는데 최적화된 자료구조이다.
+특정 위치 기준으로 주어진 거리 내의 데이터를 찾아야 할 때 자주 사용한다.
+### 4.2 명령어
+#### 저장
+```shell
+# GEOADD [key] [위도] [경도] [member]
+GEOADD cafe 127.0276 37.4979 a_cafe
+```
+내부적으로 Sorted Set처럼 저장된다.
+#### 조회
+```shell
+ZRANGE cafe 0 -1
+```
+Sorted Set처럼 저장되니 모든 member를 조회할 때에는 `ZRANGE`를 사용할 수 있다.
+```shell
+#GEOPOS [key] [member...]
+GEOPOS cafe a_cafe b_cafe c_cafe
+```
+#### 거리 조회
+```shell
+#GEODIST [key] [member1] [member2] [단위]
+GEODIST cafe a_cafe b_cafe m
+```
+두 데이터 사이의 직선 거리를 조회한다.
+```shell
+# GEOSEARCH [key] FROMLONLAT [위도] [경도] BYRADIUS [반경] [단위] [ASC/DESC] WITHDIST
+GEOSEARCH cafe FROMLONLAT 127.0280 37.4975 BYRADIUS 1000 m ASC WITHDIST
+```
+특정 위치를 기준으로 원하는 반경 내에 있는 데이터를 조회한다.
+## 5️⃣ Set
+### 5.1 개념
+![](https://i.imgur.com/PWNsKPP.png)
+정렬되지 않은 중복 없는 자료구조이다.
+순서는 중요하지 않지만, 중복되면 안되는 데이터를 다룰 때 적합하다.
+### 5.2 명령어
+#### 삽입
+```shell
+# SADD [key] [member ...]
+SADD member seongha
+```
+Set에 데이터를 저장한다.
+한 번에 여러 개의 값을 넣을 수도 있으며 중복되는 값이 요청될 경우 삽입되지 않는다.
+#### 조회
+```shell
+# SMEMBERS [key]
+SMEMBERS member
+```
+모든 데이터를 조회한다.
+```shell
+# SCARD [key]
+SCARD member
+```
+데이터의 개수를 조회한다.
+## 6️⃣ Bitmap
+### 6.1 개념
+![](https://i.imgur.com/IKu8LtS.png)
+아주 적은 메모리로 대량의 boolean 상태를 저장할 때 사용하는 자료구조이다.
+Set처럼 중복을 허용하지 않는다.
+사용자별 일일 출석 여부를 확인하거나 대규모 이벤트에서 사용자별 참석 여부를 확인하거나 하루 동안 서비스에 방문한 사용자 수인 DAU를 구할 때 사용한다.
+
+key, offset, value 구성 요소를 가진다.
+offset에는 0 이상의 정수만 넣을 수 있어 인덱스 역할을 한다.
+value에는 0 또는 1 숫자(boolean) 만을 입력할 수 있다.
+### 6.2 명령어
+#### 삽입
+```shell
+# SETBIT [key] [offset] [value]
+SETBIT user:attend 4 1
+```
+#### 조회
+```shell
+# GETBIT [key] [offset]
+GETBIT user:attend 2
+GETBIT user:attend 7
+```
+특정 offset의 value를 확인한다.
+저장되어 있지 않은 offset 요청 시 0을 출력한다.
+```shell
+# BITCOUNT [key]
+BITCOUNT user:attend
+```
+value가 1로 저장된 모든 데이터의 개수를 카운팅한다.
+## 7️⃣  Hash
+### 7.1 개념
+![](https://i.imgur.com/v7d9fav.png)
+하나의 key 안에 여러 개의 field-value 쌍을 저장할 수 있는 자료구조다.
+여러 속성들을 묶어서 저장할 때 적합하다.
+### 7.2 명령어
+#### 삽입
+```shell
+# HSET [key] [field] [value]
+HSET user name seongha
+HSET user age 27
+HSET user hobby game
+```
+#### 조회
+```shell
+# HGETALL [key]
+HGETALL user
+```
+Hash에 들어있는 모든 field, value를 조회한다.
+```shell
+# HGET [key] [field]
+HGET user name
+HGET user age
+HGET user hobby
+```
+Hash에 들어있는 특정 field의 value를 조회한다.

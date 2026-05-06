@@ -47,6 +47,12 @@ $ EXPIRE ranking 10
 ```shell
 $ flushall
 ```
+### 1.9 메모리 확인
+```shell
+# MEMORY USAGE [key]
+$ MEMORY USAGE dau:2026-05-06
+```
+key의 데이터를 저장하는데 사용된 메모리를 확인한다.
 ## 2. key 네이밍 컨벤션
 콜론(:)을  활용해 계층적으로 의미를 구분해서 사용한다.
 > ex.
